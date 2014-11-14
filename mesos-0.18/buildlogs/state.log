@@ -1,0 +1,24 @@
+2014-08-10 14:43:57,036 - Mock Version: 1.1.41
+2014-08-10 14:43:57,047 - Start: device setup
+2014-08-10 14:43:57,049 - Finish: device setup
+2014-08-10 14:43:57,049 - Start: yum update
+2014-08-10 14:45:24,165 - Finish: yum update
+2014-08-10 14:45:24,489 - Finish: lock buildroot
+2014-08-10 14:45:24,489 - Finish: chroot init
+2014-08-10 14:45:24,559 - Finish: run
+2014-08-10 14:45:28,146 - Mock Version: 1.1.41
+2014-08-10 14:45:28,155 - Start: device setup
+2014-08-10 14:45:28,158 - Finish: device setup
+2014-08-10 14:45:28,158 - Start: yum update
+2014-08-10 14:45:28,168 - Finish: yum update
+2014-08-10 14:45:29,041 - Finish: lock buildroot
+2014-08-10 14:45:29,041 - Finish: chroot init
+2014-08-10 14:45:29,111 - Start: build phase for mesos-0.18.2-4.453b973.el7.centos.src.rpm
+2014-08-10 14:45:29,111 - Start: device setup
+2014-08-10 14:45:29,124 - Finish: device setup
+2014-08-10 14:45:29,134 - Start: build setup for mesos-0.18.2-4.453b973.el7.centos.src.rpm
+2014-08-10 14:49:00,497 - Finish: build setup for mesos-0.18.2-4.453b973.el7.centos.src.rpm
+2014-08-10 14:49:00,497 - Start: rpmbuild -bb mesos-0.18.2-4.453b973.el7.centos.src.rpm
+2014-08-10 15:05:25,264 - Finish: rpmbuild -bb mesos-0.18.2-4.453b973.el7.centos.src.rpm
+2014-08-10 15:05:25,279 - Finish: build phase for mesos-0.18.2-4.453b973.el7.centos.src.rpm
+2014-08-10 15:05:25,279 - Finish: run

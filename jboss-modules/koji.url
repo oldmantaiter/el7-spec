@@ -1,0 +1,2 @@
+srpm_url: https://kojipkgs.fedoraproject.org//packages/jboss-modules/1.1.1/9.fc19/src/jboss-modules-1.1.1-9.fc19.src.rpm
+package_url: http://koji.fedoraproject.org/koji/buildinfo?buildID=388152

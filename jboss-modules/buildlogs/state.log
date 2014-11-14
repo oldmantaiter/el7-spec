@@ -1,0 +1,24 @@
+2014-08-08 20:17:22,179 - Mock Version: 1.1.41
+2014-08-08 20:17:22,190 - Start: device setup
+2014-08-08 20:17:22,193 - Finish: device setup
+2014-08-08 20:17:22,193 - Start: yum update
+2014-08-08 20:20:51,727 - Finish: yum update
+2014-08-08 20:20:53,080 - Finish: lock buildroot
+2014-08-08 20:20:53,080 - Finish: chroot init
+2014-08-08 20:20:53,152 - Finish: run
+2014-08-08 20:20:56,413 - Mock Version: 1.1.41
+2014-08-08 20:20:57,140 - Start: device setup
+2014-08-08 20:20:57,203 - Finish: device setup
+2014-08-08 20:20:57,203 - Start: yum update
+2014-08-08 20:20:57,214 - Finish: yum update
+2014-08-08 20:21:00,503 - Finish: lock buildroot
+2014-08-08 20:21:00,503 - Finish: chroot init
+2014-08-08 20:21:00,575 - Start: build phase for jboss-modules-1.1.1-9.el7.centos.src.rpm
+2014-08-08 20:21:00,575 - Start: device setup
+2014-08-08 20:21:00,634 - Finish: device setup
+2014-08-08 20:21:00,645 - Start: build setup for jboss-modules-1.1.1-9.el7.centos.src.rpm
+2014-08-08 20:31:05,437 - Finish: build setup for jboss-modules-1.1.1-9.el7.centos.src.rpm
+2014-08-08 20:31:05,438 - Start: rpmbuild -bb jboss-modules-1.1.1-9.el7.centos.src.rpm
+2014-08-08 20:33:10,939 - Finish: rpmbuild -bb jboss-modules-1.1.1-9.el7.centos.src.rpm
+2014-08-08 20:33:10,956 - Finish: build phase for jboss-modules-1.1.1-9.el7.centos.src.rpm
+2014-08-08 20:33:10,957 - Finish: run

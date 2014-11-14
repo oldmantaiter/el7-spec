@@ -1,0 +1,280 @@
+Mock Version: 1.1.41
+Mock Version: 1.1.41
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bs --target noarch --nodeps builddir/build/SPECS/maven-injection-plugin.spec'], False, '/var/lib/mock/el7-build-148-88/root/', None, 86400, True, False, 996, 135, None, False, {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0xfbde10>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bs --target noarch --nodeps builddir/build/SPECS/maven-injection-plugin.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+warning: Could not canonicalize hostname: syseng01.internal.chango.com
+Building target platforms: noarch
+Building for target noarch
+Wrote: /builddir/build/SRPMS/maven-injection-plugin-1.0.2-8.el7.centos.src.rpm
+Child return code was: 0
+LEAVE do --> 
+
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bb --target noarch --nodeps  builddir/build/SPECS/maven-injection-plugin.spec'], False, '/var/lib/mock/el7-build-148-88/root/', None, 86400, True, False, 996, 135, None, False, {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0xfbde10>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bb --target noarch --nodeps  builddir/build/SPECS/maven-injection-plugin.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+Building target platforms: noarch
+Building for target noarch
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.Abw82c
++ umask 022
++ cd /builddir/build/BUILD
++ cd /builddir/build/BUILD
++ rm -rf maven-injection-plugin-1.0.2
++ /usr/bin/xz -dc /builddir/build/SOURCES/maven-injection-plugin-1.0.2.tar.xz
++ /usr/bin/tar -xf -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd maven-injection-plugin-1.0.2
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.o6CK0y
++ umask 022
++ cd /builddir/build/BUILD
++ cd maven-injection-plugin-1.0.2
++ mvn-rpmbuild install javadoc:aggregate
+***************************************************************
+* WARNING!  mvn-rpmbuild is deprecated and it will be removed *
+* in future.  Users should migrate to using %mvn_build macro  *
+* or call XMvn directly if greater flexibility is required.   *
+***************************************************************
+[INFO] Scanning for projects...
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-clean-plugin:pom:2.4.1
+[WARNING] The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.4.1 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-clean-plugin:2.4.1: Plugin org.apache.maven.plugins:maven-clean-plugin:2.4.1 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-clean-plugin:jar:2.4.1
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-deploy-plugin:pom:2.5
+[WARNING] The POM for org.apache.maven.plugins:maven-deploy-plugin:jar:2.5 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-deploy-plugin:2.5: Plugin org.apache.maven.plugins:maven-deploy-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-deploy-plugin:jar:2.5
+[WARNING] Failed to resolve artifact: org.codehaus.mojo:build-helper-maven-plugin:pom:1.5
+[WARNING] The POM for org.codehaus.mojo:build-helper-maven-plugin:jar:1.5 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.codehaus.mojo:build-helper-maven-plugin:1.5: Plugin org.codehaus.mojo:build-helper-maven-plugin:1.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.codehaus.mojo:build-helper-maven-plugin:jar:1.5
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-checkstyle-plugin:pom:2.5
+[WARNING] The POM for org.apache.maven.plugins:maven-checkstyle-plugin:jar:2.5 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-checkstyle-plugin:2.5: Plugin org.apache.maven.plugins:maven-checkstyle-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-checkstyle-plugin:jar:2.5
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-clean-plugin:pom:2.4.1
+[WARNING] The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.4.1 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-clean-plugin:2.4.1: Plugin org.apache.maven.plugins:maven-clean-plugin:2.4.1 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-clean-plugin:jar:2.4.1
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-deploy-plugin:pom:2.5
+[WARNING] The POM for org.apache.maven.plugins:maven-deploy-plugin:jar:2.5 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-deploy-plugin:2.5: Plugin org.apache.maven.plugins:maven-deploy-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-deploy-plugin:jar:2.5
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-ear-plugin:pom:2.4.2
+[WARNING] The POM for org.apache.maven.plugins:maven-ear-plugin:jar:2.4.2 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-ear-plugin:2.4.2: Plugin org.apache.maven.plugins:maven-ear-plugin:2.4.2 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-ear-plugin:jar:2.4.2
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-eclipse-plugin:pom:2.8
+[WARNING] The POM for org.apache.maven.plugins:maven-eclipse-plugin:jar:2.8 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-eclipse-plugin:2.8: Plugin org.apache.maven.plugins:maven-eclipse-plugin:2.8 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-eclipse-plugin:jar:2.8
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-ejb-plugin:pom:2.2.1
+[WARNING] The POM for org.apache.maven.plugins:maven-ejb-plugin:jar:2.2.1 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-ejb-plugin:2.2.1: Plugin org.apache.maven.plugins:maven-ejb-plugin:2.2.1 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-ejb-plugin:jar:2.2.1
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-idea-plugin:pom:2.2
+[WARNING] The POM for org.apache.maven.plugins:maven-idea-plugin:jar:2.2 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-idea-plugin:2.2: Plugin org.apache.maven.plugins:maven-idea-plugin:2.2 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-idea-plugin:jar:2.2
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Injection Maven Mojo 1.0.2
+[INFO] ------------------------------------------------------------------------
+[WARNING] Failed to resolve artifact: com.sun:tools:pom:any
+[WARNING] The POM for com.sun:tools:jar:any is missing, no dependency information available
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-java-version) @ maven-injection-plugin ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven-version) @ maven-injection-plugin ---
+[INFO] 
+[INFO] --- maven-plugin-plugin:3.1:descriptor (default-descriptor) @ maven-injection-plugin ---
+[ERROR] 
+Artifact Ids of the format maven-___-plugin are reserved for 
+plugins in the Group Id org.apache.maven.plugins
+Please change your artifactId to the format ___-maven-plugin
+In the future this error will break the build.
+[INFO] Using 'UTF-8' encoding to read mojo metadata.
+[INFO] Applying mojo extractor for language: java-annotations
+[INFO] Mojo extractor for language: java-annotations found 0 mojo descriptors.
+[INFO] Applying mojo extractor for language: java
+[WARNING] org.jboss.maven.plugins.injection.BytecodeInjectionMojo#project:
+[WARNING]   The syntax
+[WARNING]     @parameter expression="${property}"
+[WARNING]   is deprecated, please use
+[WARNING]     @parameter property="property"
+[WARNING]   instead.
+[INFO] Mojo extractor for language: java found 1 mojo descriptors.
+[INFO] Applying mojo extractor for language: bsh
+[INFO] Mojo extractor for language: bsh found 0 mojo descriptors.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ maven-injection-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /builddir/build/BUILD/maven-injection-plugin-1.0.2/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ maven-injection-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 5 source files to /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.5
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ maven-injection-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /builddir/build/BUILD/maven-injection-plugin-1.0.2/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ maven-injection-plugin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.15:test (default-test) @ maven-injection-plugin ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ maven-injection-plugin ---
+[INFO] Building jar: /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/maven-injection-plugin-1.0.2.jar
+[INFO] 
+[INFO] --- maven-plugin-plugin:3.1:addPluginArtifactMetadata (default-addPluginArtifactMetadata) @ maven-injection-plugin ---
+[INFO] 
+[INFO] --- maven-source-plugin:2.2.1:jar-no-fork (attach-sources) @ maven-injection-plugin ---
+[INFO] Building jar: /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/maven-injection-plugin-1.0.2-sources.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ maven-injection-plugin ---
+[INFO] Installing /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/maven-injection-plugin-1.0.2.jar to /builddir/build/BUILD/maven-injection-plugin-1.0.2/.m2/org/jboss/maven/plugins/maven-injection-plugin/1.0.2/maven-injection-plugin-1.0.2.jar
+[INFO] Installing /builddir/build/BUILD/maven-injection-plugin-1.0.2/pom.xml to /builddir/build/BUILD/maven-injection-plugin-1.0.2/.m2/org/jboss/maven/plugins/maven-injection-plugin/1.0.2/maven-injection-plugin-1.0.2.pom
+[INFO] Installing /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/maven-injection-plugin-1.0.2-sources.jar to /builddir/build/BUILD/maven-injection-plugin-1.0.2/.m2/org/jboss/maven/plugins/maven-injection-plugin/1.0.2/maven-injection-plugin-1.0.2-sources.jar
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Injection Maven Mojo 1.0.2
+[INFO] ------------------------------------------------------------------------
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-clean-plugin:pom:2.4.1
+[WARNING] The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.4.1 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-clean-plugin:2.4.1: Plugin org.apache.maven.plugins:maven-clean-plugin:2.4.1 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-clean-plugin:jar:2.4.1
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-deploy-plugin:pom:2.5
+[WARNING] The POM for org.apache.maven.plugins:maven-deploy-plugin:jar:2.5 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-deploy-plugin:2.5: Plugin org.apache.maven.plugins:maven-deploy-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-deploy-plugin:jar:2.5
+[WARNING] Failed to resolve artifact: org.codehaus.mojo:build-helper-maven-plugin:pom:1.5
+[WARNING] The POM for org.codehaus.mojo:build-helper-maven-plugin:jar:1.5 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.codehaus.mojo:build-helper-maven-plugin:1.5: Plugin org.codehaus.mojo:build-helper-maven-plugin:1.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.codehaus.mojo:build-helper-maven-plugin:jar:1.5
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-checkstyle-plugin:pom:2.5
+[WARNING] The POM for org.apache.maven.plugins:maven-checkstyle-plugin:jar:2.5 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-checkstyle-plugin:2.5: Plugin org.apache.maven.plugins:maven-checkstyle-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-checkstyle-plugin:jar:2.5
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-clean-plugin:pom:2.4.1
+[WARNING] The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.4.1 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-clean-plugin:2.4.1: Plugin org.apache.maven.plugins:maven-clean-plugin:2.4.1 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-clean-plugin:jar:2.4.1
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-deploy-plugin:pom:2.5
+[WARNING] The POM for org.apache.maven.plugins:maven-deploy-plugin:jar:2.5 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-deploy-plugin:2.5: Plugin org.apache.maven.plugins:maven-deploy-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-deploy-plugin:jar:2.5
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-ear-plugin:pom:2.4.2
+[WARNING] The POM for org.apache.maven.plugins:maven-ear-plugin:jar:2.4.2 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-ear-plugin:2.4.2: Plugin org.apache.maven.plugins:maven-ear-plugin:2.4.2 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-ear-plugin:jar:2.4.2
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-eclipse-plugin:pom:2.8
+[WARNING] The POM for org.apache.maven.plugins:maven-eclipse-plugin:jar:2.8 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-eclipse-plugin:2.8: Plugin org.apache.maven.plugins:maven-eclipse-plugin:2.8 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-eclipse-plugin:jar:2.8
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-ejb-plugin:pom:2.2.1
+[WARNING] The POM for org.apache.maven.plugins:maven-ejb-plugin:jar:2.2.1 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-ejb-plugin:2.2.1: Plugin org.apache.maven.plugins:maven-ejb-plugin:2.2.1 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-ejb-plugin:jar:2.2.1
+[WARNING] Failed to resolve artifact: org.apache.maven.plugins:maven-idea-plugin:pom:2.2
+[WARNING] The POM for org.apache.maven.plugins:maven-idea-plugin:jar:2.2 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-idea-plugin:2.2: Plugin org.apache.maven.plugins:maven-idea-plugin:2.2 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-idea-plugin:jar:2.2
+[INFO] 
+[INFO] >>> maven-javadoc-plugin:2.9:aggregate (default-cli) @ maven-injection-plugin >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-java-version) @ maven-injection-plugin ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven-version) @ maven-injection-plugin ---
+[INFO] 
+[INFO] <<< maven-javadoc-plugin:2.9:aggregate (default-cli) @ maven-injection-plugin <<<
+[INFO] 
+[INFO] --- maven-javadoc-plugin:2.9:aggregate (default-cli) @ maven-injection-plugin ---
+[INFO] 
+Loading source files for package org.jboss.maven.plugins.injection...
+Constructing Javadoc information...
+Standard Doclet version 1.7.0_51
+Building tree for all the packages and classes...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/BytecodeInjection.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/BytecodeInjectionMojo.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/BytecodeInjectionMojo.InjectionTarget.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/Constant.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/MethodBodyReturn.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/TargetMember.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/package-frame.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/package-summary.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/package-tree.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/constant-values.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/class-use/Constant.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/class-use/BytecodeInjectionMojo.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/class-use/BytecodeInjectionMojo.InjectionTarget.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/class-use/MethodBodyReturn.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/class-use/TargetMember.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/class-use/BytecodeInjection.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/org/jboss/maven/plugins/injection/package-use.html...
+Building index for all the packages and classes...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/overview-tree.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/index-all.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/deprecated-list.html...
+Building index for all classes...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/allclasses-frame.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/allclasses-noframe.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/index.html...
+Generating /builddir/build/BUILD/maven-injection-plugin-1.0.2/target/site/apidocs/help-doc.html...
+7 warnings
+[WARNING] Javadoc Warnings
+[WARNING] /builddir/build/BUILD/maven-injection-plugin-1.0.2/src/main/java/org/jboss/maven/plugins/injection/BytecodeInjectionMojo.java:60: warning - @goal is an unknown tag.
+[WARNING] /builddir/build/BUILD/maven-injection-plugin-1.0.2/src/main/java/org/jboss/maven/plugins/injection/BytecodeInjectionMojo.java:60: warning - @phase is an unknown tag.
+[WARNING] /builddir/build/BUILD/maven-injection-plugin-1.0.2/src/main/java/org/jboss/maven/plugins/injection/BytecodeInjectionMojo.java:60: warning - @requiresDependencyResolution is an unknown tag.
+[WARNING] /builddir/build/BUILD/maven-injection-plugin-1.0.2/src/main/java/org/jboss/maven/plugins/injection/BytecodeInjectionMojo.java:67: warning - @parameter is an unknown tag.
+[WARNING] /builddir/build/BUILD/maven-injection-plugin-1.0.2/src/main/java/org/jboss/maven/plugins/injection/BytecodeInjectionMojo.java:67: warning - @required is an unknown tag.
+[WARNING] /builddir/build/BUILD/maven-injection-plugin-1.0.2/src/main/java/org/jboss/maven/plugins/injection/BytecodeInjectionMojo.java:75: warning - @parameter is an unknown tag.
+[WARNING] /builddir/build/BUILD/maven-injection-plugin-1.0.2/src/main/java/org/jboss/maven/plugins/injection/BytecodeInjectionMojo.java:75: warning - @required is an unknown tag.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.646s
+[INFO] Finished at: Fri Aug 08 20:34:01 UTC 2014
+[INFO] Final Memory: 31M/910M
+[INFO] ------------------------------------------------------------------------
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.4wNbze
++ umask 022
++ cd /builddir/build/BUILD
++ '[' /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch '!=' / ']'
++ rm -rf /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch
+++ dirname /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch
++ cd maven-injection-plugin-1.0.2
++ install -d -m 755 /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/share/java
++ cp -p target/maven-injection-plugin-1.0.2.jar /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/share/java/maven-injection-plugin.jar
++ install -d -m 755 /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/share/javadoc/maven-injection-plugin
++ cp -rp target/site/apidocs /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/share/javadoc/maven-injection-plugin
++ install -d -m 755 /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/share/maven-poms
++ install -pm 644 pom.xml /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/share/maven-poms/JPP-maven-injection-plugin.pom
++ set -e
++ _pompart=JPP-maven-injection-plugin.pom
++ _jarpart=maven-injection-plugin.jar
++ _filelist=.mfiles
++ install -dm 755 /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/share/maven-fragments
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/lib/java/maven-injection-plugin.jar ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f '/builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch%{_javajnidir}/maven-injection-plugin.jar' ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/share/java/maven-injection-plugin.jar ']'
++ _jpath=/builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/share/java/maven-injection-plugin.jar
++ python -m /usr/share/java-utils/maven_depmap -p /usr -n '' /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/share/maven-fragments/maven-injection-plugin /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/share/maven-poms/JPP-maven-injection-plugin.pom /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch/usr/share/java/maven-injection-plugin.jar
++ sed -i s:/builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch:: .mfiles
++ sort -u -o .mfiles .mfiles
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 50000000 /builddir/build/BUILD/maven-injection-plugin-1.0.2
+/usr/lib/rpm/sepdebugcrcfix: Updated 0 CRC32s, 0 CRC32s did match.
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
++ /usr/lib/rpm/redhat/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-java-repack-jars
+Processing files: maven-injection-plugin-1.0.2-8.el7.centos.noarch
+Provides: maven-injection-plugin = 1.0.2-8.el7.centos mvn(org.jboss.maven.plugins:maven-injection-plugin) = 1.0.2
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: jpackage-utils
+Processing files: maven-injection-plugin-javadoc-1.0.2-8.el7.centos.noarch
+Provides: maven-injection-plugin-javadoc = 1.0.2-8.el7.centos
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: jpackage-utils
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch
+Wrote: /builddir/build/RPMS/maven-injection-plugin-1.0.2-8.el7.centos.noarch.rpm
+Wrote: /builddir/build/RPMS/maven-injection-plugin-javadoc-1.0.2-8.el7.centos.noarch.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.lnkRrk
++ umask 022
++ cd /builddir/build/BUILD
++ cd maven-injection-plugin-1.0.2
++ /usr/bin/rm -rf /builddir/build/BUILDROOT/maven-injection-plugin-1.0.2-8.el7.centos.noarch
++ exit 0
+Child return code was: 0
+LEAVE do --> 
+

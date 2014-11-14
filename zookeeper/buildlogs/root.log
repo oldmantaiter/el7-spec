@@ -1,0 +1,1282 @@
+INFO backend.py:1073:  Mock Version: 1.1.41
+DEBUG backend.py:353:  rootdir = /var/lib/mock/el7-build-307-171/root/
+DEBUG backend.py:354:  resultdir = /var/lib/mock/el7-build-307-171/result
+INFO backend.py:357:  calling preinit hooks
+DEBUG backend.py:537:  create skeleton dirs
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/var/lib/rpm
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/var/lib/rpm
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/var/lib/yum
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/var/lib/yum
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/var/lib/dbus
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/var/lib/dbus
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/var/log
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/var/log
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/var/cache/yum
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/var/cache/yum
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc/rpm
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/etc/rpm
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/tmp
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/tmp
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/tmp/ccache
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/tmp/ccache
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/var/tmp
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/var/tmp
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc/yum.repos.d
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/etc/yum.repos.d
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc/yum
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/etc/yum
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/proc
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/proc
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/sys
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/sys
+DEBUG backend.py:558:  touch required files
+DEBUG util.py:78:  touching file: /var/lib/mock/el7-build-307-171/root/etc/fstab
+DEBUG util.py:78:  touching file: /var/lib/mock/el7-build-307-171/root/var/log/yum.log
+DEBUG backend.py:372:  configure yum
+DEBUG backend.py:386:  configure yum priorities
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc/yum/pluginconf.d
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/etc/yum/pluginconf.d
+DEBUG backend.py:388:  configure yum rhnplugin
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc/yum/pluginconf.d
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc/pki/mock
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/etc/pki/mock
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc
+DEBUG util.py:93:  remove tree: /var/lib/mock/el7-build-307-171/root/dev
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/dev/pts
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/dev/pts
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/dev/shm
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/dev/shm
+DEBUG backend.py:500:  kernel version == 3.10.0-123.el7.x86_64
+DEBUG util.py:333:  Executing command: ['/bin/mount', '-n', '-t', 'proc', 'proc', '/var/lib/mock/el7-build-307-171/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/mount', '-n', '-t', 'sysfs', 'mock_chroot_sys', '/var/lib/mock/el7-build-307-171/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'mock_chroot_shmfs', '/var/lib/mock/el7-build-307-171/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'mock_chroot_devpts', '/var/lib/mock/el7-build-307-171/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG backend.py:1000:  ['/usr/bin/yum', '--installroot', '/var/lib/mock/el7-build-307-171/root/', 'groupinstall', 'build']
+DEBUG util.py:333:  Executing command: ['/usr/bin/yum', '--installroot', '/var/lib/mock/el7-build-307-171/root/', 'groupinstall', 'build'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'LC_MESSAGES': 'C', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'HOSTNAME': 'mock'}
+DEBUG util.py:283:  There is no installed groups file.
+DEBUG util.py:283:  Maybe run: yum groups mark convert (see man yum)
+DEBUG util.py:283:  ================================================================================
+DEBUG util.py:283:   Package                   Arch      Version                     Repository
+DEBUG util.py:283:                                                                             Size
+DEBUG util.py:283:  ================================================================================
+DEBUG util.py:283:  Installing for group install "build":
+DEBUG util.py:283:   bash                      x86_64    4.2.45-5.el7                build    1.0 M
+DEBUG util.py:283:   bzip2                     x86_64    1.0.6-12.el7                build     52 k
+DEBUG util.py:283:   coreutils                 x86_64    8.22-11.el7                 build    3.2 M
+DEBUG util.py:283:   cpio                      x86_64    2.11-22.el7                 build    210 k
+DEBUG util.py:283:   diffutils                 x86_64    3.3-4.el7                   build    322 k
+DEBUG util.py:283:   findutils                 x86_64    1:4.5.11-3.el7              build    558 k
+DEBUG util.py:283:   gawk                      x86_64    4.0.2-4.el7                 build    873 k
+DEBUG util.py:283:   gcc                       x86_64    4.8.2-16.el7                build     16 M
+DEBUG util.py:283:   gcc-c++                   x86_64    4.8.2-16.el7                build    7.2 M
+DEBUG util.py:283:   grep                      x86_64    2.16-1.el7                  build    351 k
+DEBUG util.py:283:   gzip                      x86_64    1.5-7.el7                   build    129 k
+DEBUG util.py:283:   info                      x86_64    5.1-4.el7                   build    233 k
+DEBUG util.py:283:   make                      x86_64    1:3.82-21.el7               build    420 k
+DEBUG util.py:283:   patch                     x86_64    2.7.1-8.el7                 build    110 k
+DEBUG util.py:283:   redhat-rpm-config         noarch    9.1.0-63.el7.centos         build     76 k
+DEBUG util.py:283:   rpm-build                 x86_64    4.11.1-16.el7               build    140 k
+DEBUG util.py:283:   sed                       x86_64    4.2.2-5.el7                 build    231 k
+DEBUG util.py:283:   shadow-utils              x86_64    2:4.1.5.1-13.el7            build    1.1 M
+DEBUG util.py:283:   tar                       x86_64    2:1.26-29.el7               build    843 k
+DEBUG util.py:283:   unzip                     x86_64    6.0-13.el7                  build    165 k
+DEBUG util.py:283:   which                     x86_64    2.20-7.el7                  build     41 k
+DEBUG util.py:283:  Installing for dependencies:
+DEBUG util.py:283:   audit-libs                x86_64    2.3.3-4.el7                 build     77 k
+DEBUG util.py:283:   basesystem                noarch    10.0-7.el7.centos           build    5.0 k
+DEBUG util.py:283:   binutils                  x86_64    2.23.52.0.1-16.el7          build    5.0 M
+DEBUG util.py:283:   bzip2-libs                x86_64    1.0.6-12.el7                build     40 k
+DEBUG util.py:283:   ca-certificates           noarch    2013.1.95-71.el7            build    375 k
+DEBUG util.py:283:   centos-release            x86_64    7-0.1406.el7.centos.2.3     build     20 k
+DEBUG util.py:283:   chkconfig                 x86_64    1.3.61-4.el7                build    172 k
+DEBUG util.py:283:   compat-lua-libs           x86_64    5.1.4-5.fc20                build    159 k
+DEBUG util.py:283:   cpp                       x86_64    4.8.2-16.el7                build    5.9 M
+DEBUG util.py:283:   cracklib                  x86_64    2.9.0-11.el7                build     80 k
+DEBUG util.py:283:   cracklib-dicts            x86_64    2.9.0-11.el7                build    3.6 M
+DEBUG util.py:283:   curl                      x86_64    7.29.0-19.el7               build    261 k
+DEBUG util.py:283:   cyrus-sasl-lib            x86_64    2.1.26-17.el7               build    154 k
+DEBUG util.py:283:   dbus-libs                 x86_64    1:1.6.12-8.el7              build    150 k
+DEBUG util.py:283:   dwz                       x86_64    0.11-3.el7                  build     99 k
+DEBUG util.py:283:   elfutils                  x86_64    0.158-3.el7                 build    260 k
+DEBUG util.py:283:   elfutils-libelf           x86_64    0.158-3.el7                 build    188 k
+DEBUG util.py:283:   elfutils-libs             x86_64    0.158-3.el7                 build    238 k
+DEBUG util.py:283:   expat                     x86_64    2.1.0-8.el7                 build     80 k
+DEBUG util.py:283:   file                      x86_64    5.11-21.el7                 build     54 k
+DEBUG util.py:283:   file-libs                 x86_64    5.11-21.el7                 build    336 k
+DEBUG util.py:283:   filesystem                x86_64    3.2-18.el7                  build    1.0 M
+DEBUG util.py:283:   gdb                       x86_64    7.6.1-51.el7                build    2.4 M
+DEBUG util.py:283:   gdbm                      x86_64    1.10-8.el7                  build     70 k
+DEBUG util.py:283:   glib2                     x86_64    2.36.3-5.el7                build    2.1 M
+DEBUG util.py:283:   glibc                     x86_64    2.17-55.el7                 build    3.6 M
+DEBUG util.py:283:   glibc-common              x86_64    2.17-55.el7                 build     11 M
+DEBUG util.py:283:   glibc-devel               x86_64    2.17-55.el7                 build    1.0 M
+DEBUG util.py:283:   glibc-headers             x86_64    2.17-55.el7                 build    650 k
+DEBUG util.py:283:   gmp                       x86_64    1:5.1.1-5.el7               build    273 k
+DEBUG util.py:283:   gnupg2                    x86_64    2.0.22-3.el7                build    1.5 M
+DEBUG util.py:283:   groff-base                x86_64    1.22.2-8.el7                build    942 k
+DEBUG util.py:283:   kernel-headers            x86_64    3.10.0-123.el7              build    1.4 M
+DEBUG util.py:283:   keyutils-libs             x86_64    1.5.8-3.el7                 build     25 k
+DEBUG util.py:283:   krb5-libs                 x86_64    1.11.3-49.el7               build    810 k
+DEBUG util.py:283:   libacl                    x86_64    2.2.51-12.el7               build     27 k
+DEBUG util.py:283:   libassuan                 x86_64    2.1.0-3.el7                 build     63 k
+DEBUG util.py:283:   libattr                   x86_64    2.4.46-12.el7               build     18 k
+DEBUG util.py:283:   libblkid                  x86_64    2.23.2-16.el7               build    162 k
+DEBUG util.py:283:   libcap                    x86_64    2.22-8.el7                  build     47 k
+DEBUG util.py:283:   libcap-ng                 x86_64    0.7.3-5.el7                 build     24 k
+DEBUG util.py:283:   libcom_err                x86_64    1.42.9-4.el7                build     40 k
+DEBUG util.py:283:   libcurl                   x86_64    7.29.0-19.el7               build    212 k
+DEBUG util.py:283:   libdb                     x86_64    5.3.21-17.el7               build    718 k
+DEBUG util.py:283:   libdb-utils               x86_64    5.3.21-17.el7               build    101 k
+DEBUG util.py:283:   libffi                    x86_64    3.0.13-11.el7               build     29 k
+DEBUG util.py:283:   libgcc                    x86_64    4.8.2-16.el7                build     86 k
+DEBUG util.py:283:   libgcrypt                 x86_64    1.5.3-4.el7                 build    251 k
+DEBUG util.py:283:   libgomp                   x86_64    4.8.2-16.el7                build    104 k
+DEBUG util.py:283:   libgpg-error              x86_64    1.12-3.el7                  build     87 k
+DEBUG util.py:283:   libidn                    x86_64    1.28-3.el7                  build    209 k
+DEBUG util.py:283:   libmount                  x86_64    2.23.2-16.el7               build    165 k
+DEBUG util.py:283:   libmpc                    x86_64    1.0.1-3.el7                 build     51 k
+DEBUG util.py:283:   libpwquality              x86_64    1.2.3-4.el7                 build     84 k
+DEBUG util.py:283:   libselinux                x86_64    2.2.2-6.el7                 build    145 k
+DEBUG util.py:283:   libsemanage               x86_64    2.1.10-16.el7               build    121 k
+DEBUG util.py:283:   libsepol                  x86_64    2.1.9-3.el7                 build    154 k
+DEBUG util.py:283:   libssh2                   x86_64    1.4.3-8.el7                 build    133 k
+DEBUG util.py:283:   libstdc++                 x86_64    4.8.2-16.el7                build    288 k
+DEBUG util.py:283:   libstdc++-devel           x86_64    4.8.2-16.el7                build    1.5 M
+DEBUG util.py:283:   libtasn1                  x86_64    3.3-3.el7                   build    316 k
+DEBUG util.py:283:   libuser                   x86_64    0.60-5.el7                  build    397 k
+DEBUG util.py:283:   libutempter               x86_64    1.1.6-4.el7                 build     25 k
+DEBUG util.py:283:   libuuid                   x86_64    2.23.2-16.el7               build     72 k
+DEBUG util.py:283:   libverto                  x86_64    0.2.5-4.el7                 build     16 k
+DEBUG util.py:283:   libxml2                   x86_64    2.9.1-5.el7                 build    664 k
+DEBUG util.py:283:   mpfr                      x86_64    3.1.1-4.el7                 build    203 k
+DEBUG util.py:283:   ncurses                   x86_64    5.9-13.20130511.el7         build    303 k
+DEBUG util.py:283:   ncurses-base              noarch    5.9-13.20130511.el7         build     68 k
+DEBUG util.py:283:   ncurses-libs              x86_64    5.9-13.20130511.el7         build    316 k
+DEBUG util.py:283:   nspr                      x86_64    4.10.2-4.el7                build    125 k
+DEBUG util.py:283:   nss                       x86_64    3.15.4-6.el7                build    877 k
+DEBUG util.py:283:   nss-softokn               x86_64    3.15.4-2.el7                build    307 k
+DEBUG util.py:283:   nss-softokn-freebl        x86_64    3.15.4-2.el7                build    196 k
+DEBUG util.py:283:   nss-sysinit               x86_64    3.15.4-6.el7                build     48 k
+DEBUG util.py:283:   nss-tools                 x86_64    3.15.4-6.el7                build    468 k
+DEBUG util.py:283:   nss-util                  x86_64    3.15.4-2.el7                build     69 k
+DEBUG util.py:283:   openldap                  x86_64    2.4.39-3.el7                build    343 k
+DEBUG util.py:283:   openssl-libs              x86_64    1:1.0.1e-34.el7             build    939 k
+DEBUG util.py:283:   p11-kit                   x86_64    0.18.7-4.el7                build    100 k
+DEBUG util.py:283:   p11-kit-trust             x86_64    0.18.7-4.el7                build     74 k
+DEBUG util.py:283:   pam                       x86_64    1.1.8-9.el7                 build    712 k
+DEBUG util.py:283:   pcre                      x86_64    8.32-12.el7                 build    417 k
+DEBUG util.py:283:   perl                      x86_64    4:5.16.3-283.el7            build    8.0 M
+DEBUG util.py:283:   perl-Carp                 noarch    1.26-244.el7                build     19 k
+DEBUG util.py:283:   perl-Encode               x86_64    2.51-7.el7                  build    1.5 M
+DEBUG util.py:283:   perl-Exporter             noarch    5.68-3.el7                  build     28 k
+DEBUG util.py:283:   perl-File-Path            noarch    2.09-2.el7                  build     26 k
+DEBUG util.py:283:   perl-File-Temp            noarch    0.23.01-3.el7               build     56 k
+DEBUG util.py:283:   perl-Filter               x86_64    1.49-3.el7                  build     76 k
+DEBUG util.py:283:   perl-Getopt-Long          noarch    2.40-2.el7                  build     56 k
+DEBUG util.py:283:   perl-HTTP-Tiny            noarch    0.033-3.el7                 build     38 k
+DEBUG util.py:283:   perl-PathTools            x86_64    3.40-5.el7                  build     82 k
+DEBUG util.py:283:   perl-Pod-Escapes          noarch    1:1.04-283.el7              build     49 k
+DEBUG util.py:283:   perl-Pod-Perldoc          noarch    3.20-4.el7                  build     87 k
+DEBUG util.py:283:   perl-Pod-Simple           noarch    1:3.28-4.el7                build    216 k
+DEBUG util.py:283:   perl-Pod-Usage            noarch    1.63-3.el7                  build     27 k
+DEBUG util.py:283:   perl-Scalar-List-Utils    x86_64    1.27-248.el7                build     36 k
+DEBUG util.py:283:   perl-Socket               x86_64    2.010-3.el7                 build     49 k
+DEBUG util.py:283:   perl-Storable             x86_64    2.45-3.el7                  build     77 k
+DEBUG util.py:283:   perl-Text-ParseWords      noarch    3.29-4.el7                  build     14 k
+DEBUG util.py:283:   perl-Thread-Queue         noarch    3.02-2.el7                  build     17 k
+DEBUG util.py:283:   perl-Time-Local           noarch    1.2300-2.el7                build     24 k
+DEBUG util.py:283:   perl-constant             noarch    1.27-2.el7                  build     19 k
+DEBUG util.py:283:   perl-libs                 x86_64    4:5.16.3-283.el7            build    686 k
+DEBUG util.py:283:   perl-macros               x86_64    4:5.16.3-283.el7            build     42 k
+DEBUG util.py:283:   perl-parent               noarch    1:0.225-244.el7             build     12 k
+DEBUG util.py:283:   perl-podlators            noarch    2.5.1-3.el7                 build    112 k
+DEBUG util.py:283:   perl-srpm-macros          noarch    1-8.el7                     build    4.6 k
+DEBUG util.py:283:   perl-threads              x86_64    1.87-4.el7                  build     49 k
+DEBUG util.py:283:   perl-threads-shared       x86_64    1.43-6.el7                  build     39 k
+DEBUG util.py:283:   pinentry                  x86_64    0.8.1-14.el7                build     72 k
+DEBUG util.py:283:   pkgconfig                 x86_64    1:0.27.1-4.el7              build     54 k
+DEBUG util.py:283:   popt                      x86_64    1.13-16.el7                 build     42 k
+DEBUG util.py:283:   pth                       x86_64    2.0.7-22.el7                build     89 k
+DEBUG util.py:283:   python-libs               x86_64    2.7.5-16.el7                build    5.6 M
+DEBUG util.py:283:   readline                  x86_64    6.2-9.el7                   build    192 k
+DEBUG util.py:283:   rpm                       x86_64    4.11.1-16.el7               build    1.1 M
+DEBUG util.py:283:   rpm-build-libs            x86_64    4.11.1-16.el7               build     99 k
+DEBUG util.py:283:   rpm-libs                  x86_64    4.11.1-16.el7               build    268 k
+DEBUG util.py:283:   setup                     noarch    2.8.71-4.el7                build    164 k
+DEBUG util.py:283:   shared-mime-info          x86_64    1.1-7.el7                   build    370 k
+DEBUG util.py:283:   sqlite                    x86_64    3.7.17-4.el7                build    393 k
+DEBUG util.py:283:   systemd-libs              x86_64    208-11.el7                  build    153 k
+DEBUG util.py:283:   tzdata                    noarch    2014b-1.el7                 build    430 k
+DEBUG util.py:283:   ustr                      x86_64    1.0.4-16.el7                build     92 k
+DEBUG util.py:283:   util-linux                x86_64    2.23.2-16.el7               build    1.8 M
+DEBUG util.py:283:   xz                        x86_64    5.1.2-8alpha.el7            build    199 k
+DEBUG util.py:283:   xz-libs                   x86_64    5.1.2-8alpha.el7            build    102 k
+DEBUG util.py:283:   zip                       x86_64    3.0-10.el7                  build    260 k
+DEBUG util.py:283:   zlib                      x86_64    1.2.7-13.el7                build     89 k
+DEBUG util.py:283:  Transaction Summary
+DEBUG util.py:283:  ================================================================================
+DEBUG util.py:283:  Install  21 Packages (+131 Dependent packages)
+DEBUG util.py:283:  Total download size: 112 M
+DEBUG util.py:283:  Installed size: 420 M
+DEBUG util.py:283:  warning: /etc/hosts created as /etc/hosts.rpmnew
+DEBUG util.py:283:  Installed:
+DEBUG util.py:283:    bash.x86_64 0:4.2.45-5.el7                                                    
+DEBUG util.py:283:    bzip2.x86_64 0:1.0.6-12.el7                                                   
+DEBUG util.py:283:    coreutils.x86_64 0:8.22-11.el7                                                
+DEBUG util.py:283:    cpio.x86_64 0:2.11-22.el7                                                     
+DEBUG util.py:283:    diffutils.x86_64 0:3.3-4.el7                                                  
+DEBUG util.py:283:    findutils.x86_64 1:4.5.11-3.el7                                               
+DEBUG util.py:283:    gawk.x86_64 0:4.0.2-4.el7                                                     
+DEBUG util.py:283:    gcc.x86_64 0:4.8.2-16.el7                                                     
+DEBUG util.py:283:    gcc-c++.x86_64 0:4.8.2-16.el7                                                 
+DEBUG util.py:283:    grep.x86_64 0:2.16-1.el7                                                      
+DEBUG util.py:283:    gzip.x86_64 0:1.5-7.el7                                                       
+DEBUG util.py:283:    info.x86_64 0:5.1-4.el7                                                       
+DEBUG util.py:283:    make.x86_64 1:3.82-21.el7                                                     
+DEBUG util.py:283:    patch.x86_64 0:2.7.1-8.el7                                                    
+DEBUG util.py:283:    redhat-rpm-config.noarch 0:9.1.0-63.el7.centos                                
+DEBUG util.py:283:    rpm-build.x86_64 0:4.11.1-16.el7                                              
+DEBUG util.py:283:    sed.x86_64 0:4.2.2-5.el7                                                      
+DEBUG util.py:283:    shadow-utils.x86_64 2:4.1.5.1-13.el7                                          
+DEBUG util.py:283:    tar.x86_64 2:1.26-29.el7                                                      
+DEBUG util.py:283:    unzip.x86_64 0:6.0-13.el7                                                     
+DEBUG util.py:283:    which.x86_64 0:2.20-7.el7                                                     
+DEBUG util.py:283:  Dependency Installed:
+DEBUG util.py:283:    audit-libs.x86_64 0:2.3.3-4.el7                                               
+DEBUG util.py:283:    basesystem.noarch 0:10.0-7.el7.centos                                         
+DEBUG util.py:283:    binutils.x86_64 0:2.23.52.0.1-16.el7                                          
+DEBUG util.py:283:    bzip2-libs.x86_64 0:1.0.6-12.el7                                              
+DEBUG util.py:283:    ca-certificates.noarch 0:2013.1.95-71.el7                                     
+DEBUG util.py:283:    centos-release.x86_64 0:7-0.1406.el7.centos.2.3                               
+DEBUG util.py:283:    chkconfig.x86_64 0:1.3.61-4.el7                                               
+DEBUG util.py:283:    compat-lua-libs.x86_64 0:5.1.4-5.fc20                                         
+DEBUG util.py:283:    cpp.x86_64 0:4.8.2-16.el7                                                     
+DEBUG util.py:283:    cracklib.x86_64 0:2.9.0-11.el7                                                
+DEBUG util.py:283:    cracklib-dicts.x86_64 0:2.9.0-11.el7                                          
+DEBUG util.py:283:    curl.x86_64 0:7.29.0-19.el7                                                   
+DEBUG util.py:283:    cyrus-sasl-lib.x86_64 0:2.1.26-17.el7                                         
+DEBUG util.py:283:    dbus-libs.x86_64 1:1.6.12-8.el7                                               
+DEBUG util.py:283:    dwz.x86_64 0:0.11-3.el7                                                       
+DEBUG util.py:283:    elfutils.x86_64 0:0.158-3.el7                                                 
+DEBUG util.py:283:    elfutils-libelf.x86_64 0:0.158-3.el7                                          
+DEBUG util.py:283:    elfutils-libs.x86_64 0:0.158-3.el7                                            
+DEBUG util.py:283:    expat.x86_64 0:2.1.0-8.el7                                                    
+DEBUG util.py:283:    file.x86_64 0:5.11-21.el7                                                     
+DEBUG util.py:283:    file-libs.x86_64 0:5.11-21.el7                                                
+DEBUG util.py:283:    filesystem.x86_64 0:3.2-18.el7                                                
+DEBUG util.py:283:    gdb.x86_64 0:7.6.1-51.el7                                                     
+DEBUG util.py:283:    gdbm.x86_64 0:1.10-8.el7                                                      
+DEBUG util.py:283:    glib2.x86_64 0:2.36.3-5.el7                                                   
+DEBUG util.py:283:    glibc.x86_64 0:2.17-55.el7                                                    
+DEBUG util.py:283:    glibc-common.x86_64 0:2.17-55.el7                                             
+DEBUG util.py:283:    glibc-devel.x86_64 0:2.17-55.el7                                              
+DEBUG util.py:283:    glibc-headers.x86_64 0:2.17-55.el7                                            
+DEBUG util.py:283:    gmp.x86_64 1:5.1.1-5.el7                                                      
+DEBUG util.py:283:    gnupg2.x86_64 0:2.0.22-3.el7                                                  
+DEBUG util.py:283:    groff-base.x86_64 0:1.22.2-8.el7                                              
+DEBUG util.py:283:    kernel-headers.x86_64 0:3.10.0-123.el7                                        
+DEBUG util.py:283:    keyutils-libs.x86_64 0:1.5.8-3.el7                                            
+DEBUG util.py:283:    krb5-libs.x86_64 0:1.11.3-49.el7                                              
+DEBUG util.py:283:    libacl.x86_64 0:2.2.51-12.el7                                                 
+DEBUG util.py:283:    libassuan.x86_64 0:2.1.0-3.el7                                                
+DEBUG util.py:283:    libattr.x86_64 0:2.4.46-12.el7                                                
+DEBUG util.py:283:    libblkid.x86_64 0:2.23.2-16.el7                                               
+DEBUG util.py:283:    libcap.x86_64 0:2.22-8.el7                                                    
+DEBUG util.py:283:    libcap-ng.x86_64 0:0.7.3-5.el7                                                
+DEBUG util.py:283:    libcom_err.x86_64 0:1.42.9-4.el7                                              
+DEBUG util.py:283:    libcurl.x86_64 0:7.29.0-19.el7                                                
+DEBUG util.py:283:    libdb.x86_64 0:5.3.21-17.el7                                                  
+DEBUG util.py:283:    libdb-utils.x86_64 0:5.3.21-17.el7                                            
+DEBUG util.py:283:    libffi.x86_64 0:3.0.13-11.el7                                                 
+DEBUG util.py:283:    libgcc.x86_64 0:4.8.2-16.el7                                                  
+DEBUG util.py:283:    libgcrypt.x86_64 0:1.5.3-4.el7                                                
+DEBUG util.py:283:    libgomp.x86_64 0:4.8.2-16.el7                                                 
+DEBUG util.py:283:    libgpg-error.x86_64 0:1.12-3.el7                                              
+DEBUG util.py:283:    libidn.x86_64 0:1.28-3.el7                                                    
+DEBUG util.py:283:    libmount.x86_64 0:2.23.2-16.el7                                               
+DEBUG util.py:283:    libmpc.x86_64 0:1.0.1-3.el7                                                   
+DEBUG util.py:283:    libpwquality.x86_64 0:1.2.3-4.el7                                             
+DEBUG util.py:283:    libselinux.x86_64 0:2.2.2-6.el7                                               
+DEBUG util.py:283:    libsemanage.x86_64 0:2.1.10-16.el7                                            
+DEBUG util.py:283:    libsepol.x86_64 0:2.1.9-3.el7                                                 
+DEBUG util.py:283:    libssh2.x86_64 0:1.4.3-8.el7                                                  
+DEBUG util.py:283:    libstdc++.x86_64 0:4.8.2-16.el7                                               
+DEBUG util.py:283:    libstdc++-devel.x86_64 0:4.8.2-16.el7                                         
+DEBUG util.py:283:    libtasn1.x86_64 0:3.3-3.el7                                                   
+DEBUG util.py:283:    libuser.x86_64 0:0.60-5.el7                                                   
+DEBUG util.py:283:    libutempter.x86_64 0:1.1.6-4.el7                                              
+DEBUG util.py:283:    libuuid.x86_64 0:2.23.2-16.el7                                                
+DEBUG util.py:283:    libverto.x86_64 0:0.2.5-4.el7                                                 
+DEBUG util.py:283:    libxml2.x86_64 0:2.9.1-5.el7                                                  
+DEBUG util.py:283:    mpfr.x86_64 0:3.1.1-4.el7                                                     
+DEBUG util.py:283:    ncurses.x86_64 0:5.9-13.20130511.el7                                          
+DEBUG util.py:283:    ncurses-base.noarch 0:5.9-13.20130511.el7                                     
+DEBUG util.py:283:    ncurses-libs.x86_64 0:5.9-13.20130511.el7                                     
+DEBUG util.py:283:    nspr.x86_64 0:4.10.2-4.el7                                                    
+DEBUG util.py:283:    nss.x86_64 0:3.15.4-6.el7                                                     
+DEBUG util.py:283:    nss-softokn.x86_64 0:3.15.4-2.el7                                             
+DEBUG util.py:283:    nss-softokn-freebl.x86_64 0:3.15.4-2.el7                                      
+DEBUG util.py:283:    nss-sysinit.x86_64 0:3.15.4-6.el7                                             
+DEBUG util.py:283:    nss-tools.x86_64 0:3.15.4-6.el7                                               
+DEBUG util.py:283:    nss-util.x86_64 0:3.15.4-2.el7                                                
+DEBUG util.py:283:    openldap.x86_64 0:2.4.39-3.el7                                                
+DEBUG util.py:283:    openssl-libs.x86_64 1:1.0.1e-34.el7                                           
+DEBUG util.py:283:    p11-kit.x86_64 0:0.18.7-4.el7                                                 
+DEBUG util.py:283:    p11-kit-trust.x86_64 0:0.18.7-4.el7                                           
+DEBUG util.py:283:    pam.x86_64 0:1.1.8-9.el7                                                      
+DEBUG util.py:283:    pcre.x86_64 0:8.32-12.el7                                                     
+DEBUG util.py:283:    perl.x86_64 4:5.16.3-283.el7                                                  
+DEBUG util.py:283:    perl-Carp.noarch 0:1.26-244.el7                                               
+DEBUG util.py:283:    perl-Encode.x86_64 0:2.51-7.el7                                               
+DEBUG util.py:283:    perl-Exporter.noarch 0:5.68-3.el7                                             
+DEBUG util.py:283:    perl-File-Path.noarch 0:2.09-2.el7                                            
+DEBUG util.py:283:    perl-File-Temp.noarch 0:0.23.01-3.el7                                         
+DEBUG util.py:283:    perl-Filter.x86_64 0:1.49-3.el7                                               
+DEBUG util.py:283:    perl-Getopt-Long.noarch 0:2.40-2.el7                                          
+DEBUG util.py:283:    perl-HTTP-Tiny.noarch 0:0.033-3.el7                                           
+DEBUG util.py:283:    perl-PathTools.x86_64 0:3.40-5.el7                                            
+DEBUG util.py:283:    perl-Pod-Escapes.noarch 1:1.04-283.el7                                        
+DEBUG util.py:283:    perl-Pod-Perldoc.noarch 0:3.20-4.el7                                          
+DEBUG util.py:283:    perl-Pod-Simple.noarch 1:3.28-4.el7                                           
+DEBUG util.py:283:    perl-Pod-Usage.noarch 0:1.63-3.el7                                            
+DEBUG util.py:283:    perl-Scalar-List-Utils.x86_64 0:1.27-248.el7                                  
+DEBUG util.py:283:    perl-Socket.x86_64 0:2.010-3.el7                                              
+DEBUG util.py:283:    perl-Storable.x86_64 0:2.45-3.el7                                             
+DEBUG util.py:283:    perl-Text-ParseWords.noarch 0:3.29-4.el7                                      
+DEBUG util.py:283:    perl-Thread-Queue.noarch 0:3.02-2.el7                                         
+DEBUG util.py:283:    perl-Time-Local.noarch 0:1.2300-2.el7                                         
+DEBUG util.py:283:    perl-constant.noarch 0:1.27-2.el7                                             
+DEBUG util.py:283:    perl-libs.x86_64 4:5.16.3-283.el7                                             
+DEBUG util.py:283:    perl-macros.x86_64 4:5.16.3-283.el7                                           
+DEBUG util.py:283:    perl-parent.noarch 1:0.225-244.el7                                            
+DEBUG util.py:283:    perl-podlators.noarch 0:2.5.1-3.el7                                           
+DEBUG util.py:283:    perl-srpm-macros.noarch 0:1-8.el7                                             
+DEBUG util.py:283:    perl-threads.x86_64 0:1.87-4.el7                                              
+DEBUG util.py:283:    perl-threads-shared.x86_64 0:1.43-6.el7                                       
+DEBUG util.py:283:    pinentry.x86_64 0:0.8.1-14.el7                                                
+DEBUG util.py:283:    pkgconfig.x86_64 1:0.27.1-4.el7                                               
+DEBUG util.py:283:    popt.x86_64 0:1.13-16.el7                                                     
+DEBUG util.py:283:    pth.x86_64 0:2.0.7-22.el7                                                     
+DEBUG util.py:283:    python-libs.x86_64 0:2.7.5-16.el7                                             
+DEBUG util.py:283:    readline.x86_64 0:6.2-9.el7                                                   
+DEBUG util.py:283:    rpm.x86_64 0:4.11.1-16.el7                                                    
+DEBUG util.py:283:    rpm-build-libs.x86_64 0:4.11.1-16.el7                                         
+DEBUG util.py:283:    rpm-libs.x86_64 0:4.11.1-16.el7                                               
+DEBUG util.py:283:    setup.noarch 0:2.8.71-4.el7                                                   
+DEBUG util.py:283:    shared-mime-info.x86_64 0:1.1-7.el7                                           
+DEBUG util.py:283:    sqlite.x86_64 0:3.7.17-4.el7                                                  
+DEBUG util.py:283:    systemd-libs.x86_64 0:208-11.el7                                              
+DEBUG util.py:283:    tzdata.noarch 0:2014b-1.el7                                                   
+DEBUG util.py:283:    ustr.x86_64 0:1.0.4-16.el7                                                    
+DEBUG util.py:283:    util-linux.x86_64 0:2.23.2-16.el7                                             
+DEBUG util.py:283:    xz.x86_64 0:5.1.2-8alpha.el7                                                  
+DEBUG util.py:283:    xz-libs.x86_64 0:5.1.2-8alpha.el7                                             
+DEBUG util.py:283:    zip.x86_64 0:3.0-10.el7                                                       
+DEBUG util.py:283:    zlib.x86_64 0:1.2.7-13.el7                                                    
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:93:  remove tree: /var/lib/mock/el7-build-307-171/root/builddir
+DEBUG util.py:333:  Executing command: ['/usr/sbin/userdel', '-r', '-f', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:283:  userdel: user 'mockbuild' does not exist
+DEBUG util.py:373:  Child return code was: 6
+DEBUG util.py:333:  Executing command: ['/usr/sbin/groupdel', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:283:  groupdel: group 'mockbuild' does not exist
+DEBUG util.py:373:  Child return code was: 6
+DEBUG util.py:333:  Executing command: ['/usr/sbin/groupadd', '-g', '135', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: /usr/sbin/useradd -o -m -u 996 -g 135 -d /builddir -n mockbuild with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/RPMS
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/RPMS
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/SRPMS
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/SRPMS
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/SOURCES
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/SOURCES
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/SPECS
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/SPECS
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/BUILD
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/BUILD
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/BUILDROOT
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/BUILDROOT
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/originals
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/originals
+DEBUG util.py:333:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/el7-build-307-171/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/el7-build-307-171/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/el7-build-307-171/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/el7-build-307-171/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+INFO backend.py:673:  Installed packages:
+DEBUG util.py:333:  Executing command: rpm --root /var/lib/mock/el7-build-307-171/root/ -qa with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:283:  centos-release-7-0.1406.el7.centos.2.3.x86_64
+DEBUG util.py:283:  filesystem-3.2-18.el7.x86_64
+DEBUG util.py:283:  kernel-headers-3.10.0-123.el7.x86_64
+DEBUG util.py:283:  perl-srpm-macros-1-8.el7.noarch
+DEBUG util.py:283:  nss-softokn-freebl-3.15.4-2.el7.x86_64
+DEBUG util.py:283:  glibc-2.17-55.el7.x86_64
+DEBUG util.py:283:  libstdc++-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  bash-4.2.45-5.el7.x86_64
+DEBUG util.py:283:  pcre-8.32-12.el7.x86_64
+DEBUG util.py:283:  zlib-1.2.7-13.el7.x86_64
+DEBUG util.py:283:  bzip2-libs-1.0.6-12.el7.x86_64
+DEBUG util.py:283:  nspr-4.10.2-4.el7.x86_64
+DEBUG util.py:283:  nss-util-3.15.4-2.el7.x86_64
+DEBUG util.py:283:  popt-1.13-16.el7.x86_64
+DEBUG util.py:283:  libacl-2.2.51-12.el7.x86_64
+DEBUG util.py:283:  chkconfig-1.3.61-4.el7.x86_64
+DEBUG util.py:283:  readline-6.2-9.el7.x86_64
+DEBUG util.py:283:  libgpg-error-1.12-3.el7.x86_64
+DEBUG util.py:283:  compat-lua-libs-5.1.4-5.fc20.x86_64
+DEBUG util.py:283:  grep-2.16-1.el7.x86_64
+DEBUG util.py:283:  libcom_err-1.42.9-4.el7.x86_64
+DEBUG util.py:283:  libgcrypt-1.5.3-4.el7.x86_64
+DEBUG util.py:283:  nss-softokn-3.15.4-2.el7.x86_64
+DEBUG util.py:283:  libtasn1-3.3-3.el7.x86_64
+DEBUG util.py:283:  libffi-3.0.13-11.el7.x86_64
+DEBUG util.py:283:  gdbm-1.10-8.el7.x86_64
+DEBUG util.py:283:  ca-certificates-2013.1.95-71.el7.noarch
+DEBUG util.py:283:  cpp-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  groff-base-1.22.2-8.el7.x86_64
+DEBUG util.py:283:  perl-HTTP-Tiny-0.033-3.el7.noarch
+DEBUG util.py:283:  perl-Pod-Perldoc-3.20-4.el7.noarch
+DEBUG util.py:283:  perl-Text-ParseWords-3.29-4.el7.noarch
+DEBUG util.py:283:  perl-Pod-Usage-1.63-3.el7.noarch
+DEBUG util.py:283:  perl-macros-5.16.3-283.el7.x86_64
+DEBUG util.py:283:  perl-Storable-2.45-3.el7.x86_64
+DEBUG util.py:283:  perl-Filter-1.49-3.el7.x86_64
+DEBUG util.py:283:  perl-constant-1.27-2.el7.noarch
+DEBUG util.py:283:  perl-Socket-2.010-3.el7.x86_64
+DEBUG util.py:283:  perl-File-Temp-0.23.01-3.el7.noarch
+DEBUG util.py:283:  perl-PathTools-3.40-5.el7.x86_64
+DEBUG util.py:283:  perl-Pod-Simple-3.28-4.el7.noarch
+DEBUG util.py:283:  perl-5.16.3-283.el7.x86_64
+DEBUG util.py:283:  pinentry-0.8.1-14.el7.x86_64
+DEBUG util.py:283:  patch-2.7.1-8.el7.x86_64
+DEBUG util.py:283:  elfutils-0.158-3.el7.x86_64
+DEBUG util.py:283:  libdb-utils-5.3.21-17.el7.x86_64
+DEBUG util.py:283:  bzip2-1.0.6-12.el7.x86_64
+DEBUG util.py:283:  zip-3.0-10.el7.x86_64
+DEBUG util.py:283:  libgomp-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  cpio-2.11-22.el7.x86_64
+DEBUG util.py:283:  libxml2-2.9.1-5.el7.x86_64
+DEBUG util.py:283:  pkgconfig-0.27.1-4.el7.x86_64
+DEBUG util.py:283:  glibc-headers-2.17-55.el7.x86_64
+DEBUG util.py:283:  xz-5.1.2-8alpha.el7.x86_64
+DEBUG util.py:283:  libstdc++-devel-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  libsemanage-2.1.10-16.el7.x86_64
+DEBUG util.py:283:  dbus-libs-1.6.12-8.el7.x86_64
+DEBUG util.py:283:  libcap-ng-0.7.3-5.el7.x86_64
+DEBUG util.py:283:  nss-tools-3.15.4-6.el7.x86_64
+DEBUG util.py:283:  openssl-libs-1.0.1e-34.el7.x86_64
+DEBUG util.py:283:  gzip-1.5-7.el7.x86_64
+DEBUG util.py:283:  cracklib-dicts-2.9.0-11.el7.x86_64
+DEBUG util.py:283:  nss-3.15.4-6.el7.x86_64
+DEBUG util.py:283:  libpwquality-1.2.3-4.el7.x86_64
+DEBUG util.py:283:  coreutils-8.22-11.el7.x86_64
+DEBUG util.py:283:  libblkid-2.23.2-16.el7.x86_64
+DEBUG util.py:283:  libutempter-1.1.6-4.el7.x86_64
+DEBUG util.py:283:  nss-sysinit-3.15.4-6.el7.x86_64
+DEBUG util.py:283:  gcc-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  gdb-7.6.1-51.el7.x86_64
+DEBUG util.py:283:  libcurl-7.29.0-19.el7.x86_64
+DEBUG util.py:283:  rpm-libs-4.11.1-16.el7.x86_64
+DEBUG util.py:283:  redhat-rpm-config-9.1.0-63.el7.centos.noarch
+DEBUG util.py:283:  rpm-build-libs-4.11.1-16.el7.x86_64
+DEBUG util.py:283:  gcc-c++-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  which-2.20-7.el7.x86_64
+DEBUG util.py:283:  libgcc-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  setup-2.8.71-4.el7.noarch
+DEBUG util.py:283:  basesystem-10.0-7.el7.centos.noarch
+DEBUG util.py:283:  ncurses-base-5.9-13.20130511.el7.noarch
+DEBUG util.py:283:  tzdata-2014b-1.el7.noarch
+DEBUG util.py:283:  glibc-common-2.17-55.el7.x86_64
+DEBUG util.py:283:  xz-libs-5.1.2-8alpha.el7.x86_64
+DEBUG util.py:283:  ncurses-libs-5.9-13.20130511.el7.x86_64
+DEBUG util.py:283:  libsepol-2.1.9-3.el7.x86_64
+DEBUG util.py:283:  libselinux-2.2.2-6.el7.x86_64
+DEBUG util.py:283:  info-5.1-4.el7.x86_64
+DEBUG util.py:283:  libdb-5.3.21-17.el7.x86_64
+DEBUG util.py:283:  elfutils-libelf-0.158-3.el7.x86_64
+DEBUG util.py:283:  gmp-5.1.1-5.el7.x86_64
+DEBUG util.py:283:  libattr-2.4.46-12.el7.x86_64
+DEBUG util.py:283:  libcap-2.22-8.el7.x86_64
+DEBUG util.py:283:  mpfr-3.1.1-4.el7.x86_64
+DEBUG util.py:283:  sed-4.2.2-5.el7.x86_64
+DEBUG util.py:283:  audit-libs-2.3.3-4.el7.x86_64
+DEBUG util.py:283:  libmpc-1.0.1-3.el7.x86_64
+DEBUG util.py:283:  file-libs-5.11-21.el7.x86_64
+DEBUG util.py:283:  libuuid-2.23.2-16.el7.x86_64
+DEBUG util.py:283:  sqlite-3.7.17-4.el7.x86_64
+DEBUG util.py:283:  gawk-4.0.2-4.el7.x86_64
+DEBUG util.py:283:  p11-kit-0.18.7-4.el7.x86_64
+DEBUG util.py:283:  expat-2.1.0-8.el7.x86_64
+DEBUG util.py:283:  p11-kit-trust-0.18.7-4.el7.x86_64
+DEBUG util.py:283:  file-5.11-21.el7.x86_64
+DEBUG util.py:283:  libassuan-2.1.0-3.el7.x86_64
+DEBUG util.py:283:  perl-parent-0.225-244.el7.noarch
+DEBUG util.py:283:  perl-podlators-2.5.1-3.el7.noarch
+DEBUG util.py:283:  perl-Pod-Escapes-1.04-283.el7.noarch
+DEBUG util.py:283:  perl-Encode-2.51-7.el7.x86_64
+DEBUG util.py:283:  perl-libs-5.16.3-283.el7.x86_64
+DEBUG util.py:283:  perl-threads-1.87-4.el7.x86_64
+DEBUG util.py:283:  perl-Carp-1.26-244.el7.noarch
+DEBUG util.py:283:  perl-Exporter-5.68-3.el7.noarch
+DEBUG util.py:283:  perl-Time-Local-1.2300-2.el7.noarch
+DEBUG util.py:283:  perl-threads-shared-1.43-6.el7.x86_64
+DEBUG util.py:283:  perl-File-Path-2.09-2.el7.noarch
+DEBUG util.py:283:  perl-Scalar-List-Utils-1.27-248.el7.x86_64
+DEBUG util.py:283:  perl-Getopt-Long-2.40-2.el7.noarch
+DEBUG util.py:283:  perl-Thread-Queue-3.02-2.el7.noarch
+DEBUG util.py:283:  tar-1.26-29.el7.x86_64
+DEBUG util.py:283:  elfutils-libs-0.158-3.el7.x86_64
+DEBUG util.py:283:  dwz-0.11-3.el7.x86_64
+DEBUG util.py:283:  cyrus-sasl-lib-2.1.26-17.el7.x86_64
+DEBUG util.py:283:  unzip-6.0-13.el7.x86_64
+DEBUG util.py:283:  findutils-4.5.11-3.el7.x86_64
+DEBUG util.py:283:  libidn-1.28-3.el7.x86_64
+DEBUG util.py:283:  diffutils-3.3-4.el7.x86_64
+DEBUG util.py:283:  glib2-2.36.3-5.el7.x86_64
+DEBUG util.py:283:  shared-mime-info-1.1-7.el7.x86_64
+DEBUG util.py:283:  glibc-devel-2.17-55.el7.x86_64
+DEBUG util.py:283:  ncurses-5.9-13.20130511.el7.x86_64
+DEBUG util.py:283:  ustr-1.0.4-16.el7.x86_64
+DEBUG util.py:283:  libverto-0.2.5-4.el7.x86_64
+DEBUG util.py:283:  pth-2.0.7-22.el7.x86_64
+DEBUG util.py:283:  keyutils-libs-1.5.8-3.el7.x86_64
+DEBUG util.py:283:  krb5-libs-1.11.3-49.el7.x86_64
+DEBUG util.py:283:  openldap-2.4.39-3.el7.x86_64
+DEBUG util.py:283:  cracklib-2.9.0-11.el7.x86_64
+DEBUG util.py:283:  libmount-2.23.2-16.el7.x86_64
+DEBUG util.py:283:  systemd-libs-208-11.el7.x86_64
+DEBUG util.py:283:  libuser-0.60-5.el7.x86_64
+DEBUG util.py:283:  pam-1.1.8-9.el7.x86_64
+DEBUG util.py:283:  shadow-utils-4.1.5.1-13.el7.x86_64
+DEBUG util.py:283:  util-linux-2.23.2-16.el7.x86_64
+DEBUG util.py:283:  binutils-2.23.52.0.1-16.el7.x86_64
+DEBUG util.py:283:  python-libs-2.7.5-16.el7.x86_64
+DEBUG util.py:283:  libssh2-1.4.3-8.el7.x86_64
+DEBUG util.py:283:  curl-7.29.0-19.el7.x86_64
+DEBUG util.py:283:  rpm-4.11.1-16.el7.x86_64
+DEBUG util.py:283:  gnupg2-2.0.22-3.el7.x86_64
+DEBUG util.py:283:  rpm-build-4.11.1-16.el7.x86_64
+DEBUG util.py:283:  make-3.82-21.el7.x86_64
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:121:  kill orphans
+INFO backend.py:1073:  Mock Version: 1.1.41
+DEBUG backend.py:353:  rootdir = /var/lib/mock/el7-build-307-171/root/
+DEBUG backend.py:354:  resultdir = /var/lib/mock/el7-build-307-171/result
+INFO backend.py:357:  calling preinit hooks
+DEBUG backend.py:537:  create skeleton dirs
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/var/lib/rpm
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/var/lib/yum
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/var/lib/dbus
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/var/log
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/var/cache/yum
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc/rpm
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/tmp
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/tmp/ccache
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/var/tmp
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc/yum.repos.d
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc/yum
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/proc
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/sys
+DEBUG backend.py:558:  touch required files
+DEBUG util.py:78:  touching file: /var/lib/mock/el7-build-307-171/root/etc/fstab
+DEBUG util.py:78:  touching file: /var/lib/mock/el7-build-307-171/root/var/log/yum.log
+DEBUG backend.py:372:  configure yum
+DEBUG backend.py:386:  configure yum priorities
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc/yum/pluginconf.d
+DEBUG backend.py:388:  configure yum rhnplugin
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc/yum/pluginconf.d
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/etc/pki/mock
+DEBUG util.py:93:  remove tree: /var/lib/mock/el7-build-307-171/root/dev
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/dev/pts
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/dev/pts
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/dev/shm
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/dev/shm
+DEBUG backend.py:500:  kernel version == 3.10.0-123.el7.x86_64
+DEBUG util.py:333:  Executing command: ['/bin/mount', '-n', '-t', 'proc', 'proc', '/var/lib/mock/el7-build-307-171/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/mount', '-n', '-t', 'sysfs', 'mock_chroot_sys', '/var/lib/mock/el7-build-307-171/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'mock_chroot_shmfs', '/var/lib/mock/el7-build-307-171/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'mock_chroot_devpts', '/var/lib/mock/el7-build-307-171/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/usr/sbin/userdel', '-r', '-f', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/usr/sbin/groupdel', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:283:  groupdel: group 'mockbuild' does not exist
+DEBUG util.py:373:  Child return code was: 6
+DEBUG util.py:333:  Executing command: ['/usr/sbin/groupadd', '-g', '135', 'mockbuild'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: /usr/sbin/useradd -o -m -u 996 -g 135 -d /builddir -n mockbuild with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/RPMS
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/RPMS
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/SRPMS
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/SRPMS
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/SOURCES
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/SOURCES
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/SPECS
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/SPECS
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/BUILD
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/BUILD
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/BUILDROOT
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/BUILDROOT
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/builddir/build/originals
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/builddir/build/originals
+DEBUG util.py:333:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/el7-build-307-171/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/el7-build-307-171/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/el7-build-307-171/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/el7-build-307-171/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+INFO backend.py:673:  Installed packages:
+DEBUG util.py:333:  Executing command: rpm --root /var/lib/mock/el7-build-307-171/root/ -qa with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:283:  centos-release-7-0.1406.el7.centos.2.3.x86_64
+DEBUG util.py:283:  filesystem-3.2-18.el7.x86_64
+DEBUG util.py:283:  kernel-headers-3.10.0-123.el7.x86_64
+DEBUG util.py:283:  perl-srpm-macros-1-8.el7.noarch
+DEBUG util.py:283:  nss-softokn-freebl-3.15.4-2.el7.x86_64
+DEBUG util.py:283:  glibc-2.17-55.el7.x86_64
+DEBUG util.py:283:  libstdc++-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  bash-4.2.45-5.el7.x86_64
+DEBUG util.py:283:  pcre-8.32-12.el7.x86_64
+DEBUG util.py:283:  zlib-1.2.7-13.el7.x86_64
+DEBUG util.py:283:  bzip2-libs-1.0.6-12.el7.x86_64
+DEBUG util.py:283:  nspr-4.10.2-4.el7.x86_64
+DEBUG util.py:283:  nss-util-3.15.4-2.el7.x86_64
+DEBUG util.py:283:  popt-1.13-16.el7.x86_64
+DEBUG util.py:283:  libacl-2.2.51-12.el7.x86_64
+DEBUG util.py:283:  chkconfig-1.3.61-4.el7.x86_64
+DEBUG util.py:283:  readline-6.2-9.el7.x86_64
+DEBUG util.py:283:  libgpg-error-1.12-3.el7.x86_64
+DEBUG util.py:283:  compat-lua-libs-5.1.4-5.fc20.x86_64
+DEBUG util.py:283:  grep-2.16-1.el7.x86_64
+DEBUG util.py:283:  libcom_err-1.42.9-4.el7.x86_64
+DEBUG util.py:283:  libgcrypt-1.5.3-4.el7.x86_64
+DEBUG util.py:283:  nss-softokn-3.15.4-2.el7.x86_64
+DEBUG util.py:283:  libtasn1-3.3-3.el7.x86_64
+DEBUG util.py:283:  libffi-3.0.13-11.el7.x86_64
+DEBUG util.py:283:  gdbm-1.10-8.el7.x86_64
+DEBUG util.py:283:  ca-certificates-2013.1.95-71.el7.noarch
+DEBUG util.py:283:  cpp-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  groff-base-1.22.2-8.el7.x86_64
+DEBUG util.py:283:  perl-HTTP-Tiny-0.033-3.el7.noarch
+DEBUG util.py:283:  perl-Pod-Perldoc-3.20-4.el7.noarch
+DEBUG util.py:283:  perl-Text-ParseWords-3.29-4.el7.noarch
+DEBUG util.py:283:  perl-Pod-Usage-1.63-3.el7.noarch
+DEBUG util.py:283:  perl-macros-5.16.3-283.el7.x86_64
+DEBUG util.py:283:  perl-Storable-2.45-3.el7.x86_64
+DEBUG util.py:283:  perl-Filter-1.49-3.el7.x86_64
+DEBUG util.py:283:  perl-constant-1.27-2.el7.noarch
+DEBUG util.py:283:  perl-Socket-2.010-3.el7.x86_64
+DEBUG util.py:283:  perl-File-Temp-0.23.01-3.el7.noarch
+DEBUG util.py:283:  perl-PathTools-3.40-5.el7.x86_64
+DEBUG util.py:283:  perl-Pod-Simple-3.28-4.el7.noarch
+DEBUG util.py:283:  perl-5.16.3-283.el7.x86_64
+DEBUG util.py:283:  pinentry-0.8.1-14.el7.x86_64
+DEBUG util.py:283:  patch-2.7.1-8.el7.x86_64
+DEBUG util.py:283:  elfutils-0.158-3.el7.x86_64
+DEBUG util.py:283:  libdb-utils-5.3.21-17.el7.x86_64
+DEBUG util.py:283:  bzip2-1.0.6-12.el7.x86_64
+DEBUG util.py:283:  zip-3.0-10.el7.x86_64
+DEBUG util.py:283:  libgomp-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  cpio-2.11-22.el7.x86_64
+DEBUG util.py:283:  libxml2-2.9.1-5.el7.x86_64
+DEBUG util.py:283:  pkgconfig-0.27.1-4.el7.x86_64
+DEBUG util.py:283:  glibc-headers-2.17-55.el7.x86_64
+DEBUG util.py:283:  xz-5.1.2-8alpha.el7.x86_64
+DEBUG util.py:283:  libstdc++-devel-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  libsemanage-2.1.10-16.el7.x86_64
+DEBUG util.py:283:  dbus-libs-1.6.12-8.el7.x86_64
+DEBUG util.py:283:  libcap-ng-0.7.3-5.el7.x86_64
+DEBUG util.py:283:  nss-tools-3.15.4-6.el7.x86_64
+DEBUG util.py:283:  openssl-libs-1.0.1e-34.el7.x86_64
+DEBUG util.py:283:  gzip-1.5-7.el7.x86_64
+DEBUG util.py:283:  cracklib-dicts-2.9.0-11.el7.x86_64
+DEBUG util.py:283:  nss-3.15.4-6.el7.x86_64
+DEBUG util.py:283:  libpwquality-1.2.3-4.el7.x86_64
+DEBUG util.py:283:  coreutils-8.22-11.el7.x86_64
+DEBUG util.py:283:  libblkid-2.23.2-16.el7.x86_64
+DEBUG util.py:283:  libutempter-1.1.6-4.el7.x86_64
+DEBUG util.py:283:  nss-sysinit-3.15.4-6.el7.x86_64
+DEBUG util.py:283:  gcc-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  gdb-7.6.1-51.el7.x86_64
+DEBUG util.py:283:  libcurl-7.29.0-19.el7.x86_64
+DEBUG util.py:283:  rpm-libs-4.11.1-16.el7.x86_64
+DEBUG util.py:283:  redhat-rpm-config-9.1.0-63.el7.centos.noarch
+DEBUG util.py:283:  rpm-build-libs-4.11.1-16.el7.x86_64
+DEBUG util.py:283:  gcc-c++-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  which-2.20-7.el7.x86_64
+DEBUG util.py:283:  libgcc-4.8.2-16.el7.x86_64
+DEBUG util.py:283:  setup-2.8.71-4.el7.noarch
+DEBUG util.py:283:  basesystem-10.0-7.el7.centos.noarch
+DEBUG util.py:283:  ncurses-base-5.9-13.20130511.el7.noarch
+DEBUG util.py:283:  tzdata-2014b-1.el7.noarch
+DEBUG util.py:283:  glibc-common-2.17-55.el7.x86_64
+DEBUG util.py:283:  xz-libs-5.1.2-8alpha.el7.x86_64
+DEBUG util.py:283:  ncurses-libs-5.9-13.20130511.el7.x86_64
+DEBUG util.py:283:  libsepol-2.1.9-3.el7.x86_64
+DEBUG util.py:283:  libselinux-2.2.2-6.el7.x86_64
+DEBUG util.py:283:  info-5.1-4.el7.x86_64
+DEBUG util.py:283:  libdb-5.3.21-17.el7.x86_64
+DEBUG util.py:283:  elfutils-libelf-0.158-3.el7.x86_64
+DEBUG util.py:283:  gmp-5.1.1-5.el7.x86_64
+DEBUG util.py:283:  libattr-2.4.46-12.el7.x86_64
+DEBUG util.py:283:  libcap-2.22-8.el7.x86_64
+DEBUG util.py:283:  mpfr-3.1.1-4.el7.x86_64
+DEBUG util.py:283:  sed-4.2.2-5.el7.x86_64
+DEBUG util.py:283:  audit-libs-2.3.3-4.el7.x86_64
+DEBUG util.py:283:  libmpc-1.0.1-3.el7.x86_64
+DEBUG util.py:283:  file-libs-5.11-21.el7.x86_64
+DEBUG util.py:283:  libuuid-2.23.2-16.el7.x86_64
+DEBUG util.py:283:  sqlite-3.7.17-4.el7.x86_64
+DEBUG util.py:283:  gawk-4.0.2-4.el7.x86_64
+DEBUG util.py:283:  p11-kit-0.18.7-4.el7.x86_64
+DEBUG util.py:283:  expat-2.1.0-8.el7.x86_64
+DEBUG util.py:283:  p11-kit-trust-0.18.7-4.el7.x86_64
+DEBUG util.py:283:  file-5.11-21.el7.x86_64
+DEBUG util.py:283:  libassuan-2.1.0-3.el7.x86_64
+DEBUG util.py:283:  perl-parent-0.225-244.el7.noarch
+DEBUG util.py:283:  perl-podlators-2.5.1-3.el7.noarch
+DEBUG util.py:283:  perl-Pod-Escapes-1.04-283.el7.noarch
+DEBUG util.py:283:  perl-Encode-2.51-7.el7.x86_64
+DEBUG util.py:283:  perl-libs-5.16.3-283.el7.x86_64
+DEBUG util.py:283:  perl-threads-1.87-4.el7.x86_64
+DEBUG util.py:283:  perl-Carp-1.26-244.el7.noarch
+DEBUG util.py:283:  perl-Exporter-5.68-3.el7.noarch
+DEBUG util.py:283:  perl-Time-Local-1.2300-2.el7.noarch
+DEBUG util.py:283:  perl-threads-shared-1.43-6.el7.x86_64
+DEBUG util.py:283:  perl-File-Path-2.09-2.el7.noarch
+DEBUG util.py:283:  perl-Scalar-List-Utils-1.27-248.el7.x86_64
+DEBUG util.py:283:  perl-Getopt-Long-2.40-2.el7.noarch
+DEBUG util.py:283:  perl-Thread-Queue-3.02-2.el7.noarch
+DEBUG util.py:283:  tar-1.26-29.el7.x86_64
+DEBUG util.py:283:  elfutils-libs-0.158-3.el7.x86_64
+DEBUG util.py:283:  dwz-0.11-3.el7.x86_64
+DEBUG util.py:283:  cyrus-sasl-lib-2.1.26-17.el7.x86_64
+DEBUG util.py:283:  unzip-6.0-13.el7.x86_64
+DEBUG util.py:283:  findutils-4.5.11-3.el7.x86_64
+DEBUG util.py:283:  libidn-1.28-3.el7.x86_64
+DEBUG util.py:283:  diffutils-3.3-4.el7.x86_64
+DEBUG util.py:283:  glib2-2.36.3-5.el7.x86_64
+DEBUG util.py:283:  shared-mime-info-1.1-7.el7.x86_64
+DEBUG util.py:283:  glibc-devel-2.17-55.el7.x86_64
+DEBUG util.py:283:  ncurses-5.9-13.20130511.el7.x86_64
+DEBUG util.py:283:  ustr-1.0.4-16.el7.x86_64
+DEBUG util.py:283:  libverto-0.2.5-4.el7.x86_64
+DEBUG util.py:283:  pth-2.0.7-22.el7.x86_64
+DEBUG util.py:283:  keyutils-libs-1.5.8-3.el7.x86_64
+DEBUG util.py:283:  krb5-libs-1.11.3-49.el7.x86_64
+DEBUG util.py:283:  openldap-2.4.39-3.el7.x86_64
+DEBUG util.py:283:  cracklib-2.9.0-11.el7.x86_64
+DEBUG util.py:283:  libmount-2.23.2-16.el7.x86_64
+DEBUG util.py:283:  systemd-libs-208-11.el7.x86_64
+DEBUG util.py:283:  libuser-0.60-5.el7.x86_64
+DEBUG util.py:283:  pam-1.1.8-9.el7.x86_64
+DEBUG util.py:283:  shadow-utils-4.1.5.1-13.el7.x86_64
+DEBUG util.py:283:  util-linux-2.23.2-16.el7.x86_64
+DEBUG util.py:283:  binutils-2.23.52.0.1-16.el7.x86_64
+DEBUG util.py:283:  python-libs-2.7.5-16.el7.x86_64
+DEBUG util.py:283:  libssh2-1.4.3-8.el7.x86_64
+DEBUG util.py:283:  curl-7.29.0-19.el7.x86_64
+DEBUG util.py:283:  rpm-4.11.1-16.el7.x86_64
+DEBUG util.py:283:  gnupg2-2.0.22-3.el7.x86_64
+DEBUG util.py:283:  rpm-build-4.11.1-16.el7.x86_64
+DEBUG util.py:283:  make-3.82-21.el7.x86_64
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:93:  remove tree: /var/lib/mock/el7-build-307-171/root/dev
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/dev/pts
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/dev/pts
+DEBUG util.py:66:  ensuring that dir exists: /var/lib/mock/el7-build-307-171/root/dev/shm
+DEBUG util.py:69:  creating dir: /var/lib/mock/el7-build-307-171/root/dev/shm
+DEBUG backend.py:500:  kernel version == 3.10.0-123.el7.x86_64
+DEBUG util.py:333:  Executing command: ['/bin/mount', '-n', '-t', 'proc', 'proc', '/var/lib/mock/el7-build-307-171/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/mount', '-n', '-t', 'sysfs', 'mock_chroot_sys', '/var/lib/mock/el7-build-307-171/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'mock_chroot_shmfs', '/var/lib/mock/el7-build-307-171/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'mock_chroot_devpts', '/var/lib/mock/el7-build-307-171/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['rpm', '-Uvh', '--nodeps', '/builddir/build/originals/zookeeper-3.4.5-17.el7.centos.src.rpm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:283:  Updating / installing...
+DEBUG util.py:283:  zookeeper-3.4.5-17.el7.centos         ########################################
+DEBUG util.py:283:  warning: user chango does not exist - using root
+DEBUG util.py:283:  warning: group chango does not exist - using root
+DEBUG util.py:283:  warning: user chango does not exist - using root
+DEBUG util.py:283:  warning: group chango does not exist - using root
+DEBUG util.py:283:  warning: user chango does not exist - using root
+DEBUG util.py:283:  warning: group chango does not exist - using root
+DEBUG util.py:283:  warning: user chango does not exist - using root
+DEBUG util.py:283:  warning: group chango does not exist - using root
+DEBUG util.py:283:  warning: user chango does not exist - using root
+DEBUG util.py:283:  warning: group chango does not exist - using root
+DEBUG util.py:283:  warning: user chango does not exist - using root
+DEBUG util.py:283:  warning: group chango does not exist - using root
+DEBUG util.py:283:  warning: user chango does not exist - using root
+DEBUG util.py:283:  warning: group chango does not exist - using root
+DEBUG util.py:283:  warning: user chango does not exist - using root
+DEBUG util.py:283:  warning: group chango does not exist - using root
+DEBUG util.py:283:  warning: user chango does not exist - using root
+DEBUG util.py:283:  warning: group chango does not exist - using root
+DEBUG util.py:283:  warning: user chango does not exist - using root
+DEBUG util.py:283:  warning: group chango does not exist - using root
+DEBUG util.py:283:  warning: user chango does not exist - using root
+DEBUG util.py:283:  warning: group chango does not exist - using root
+DEBUG util.py:283:  warning: user chango does not exist - using root
+DEBUG util.py:283:  warning: group chango does not exist - using root
+DEBUG util.py:373:  Child return code was: 0
+DEBUG backend.py:1000:  ['/usr/bin/yum-builddep', '--installroot', '/var/lib/mock/el7-build-307-171/root/', '/var/lib/mock/el7-build-307-171/root///builddir/build/SRPMS/zookeeper-3.4.5-17.el7.centos.src.rpm']
+DEBUG util.py:333:  Executing command: ['/usr/bin/yum-builddep', '--installroot', '/var/lib/mock/el7-build-307-171/root/', '/var/lib/mock/el7-build-307-171/root///builddir/build/SRPMS/zookeeper-3.4.5-17.el7.centos.src.rpm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'LC_MESSAGES': 'C', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'HOSTNAME': 'mock'}
+DEBUG util.py:283:  Getting requirements for zookeeper-3.4.5-17.el7.centos.src
+DEBUG util.py:283:   --> autoconf-2.69-11.el7.noarch
+DEBUG util.py:283:   --> automake-1.13.4-3.el7.noarch
+DEBUG util.py:283:   --> boost-devel-1.53.0-18.el7.x86_64
+DEBUG util.py:283:   --> cppunit-devel-1.12.1-11.el7.x86_64
+DEBUG util.py:283:   --> dos2unix-6.0.3-4.el7.x86_64
+DEBUG util.py:283:   --> 1:doxygen-1.8.5-3.el7.x86_64
+DEBUG util.py:283:   --> graphviz-2.30.1-18.el7.x86_64
+DEBUG util.py:283:   --> 1:java-1.7.0-openjdk-devel-1.7.0.51-2.4.5.5.el7.x86_64
+DEBUG util.py:283:   --> 1:java-1.7.0-openjdk-javadoc-1.7.0.51-2.4.5.5.el7.noarch
+DEBUG util.py:283:   --> javapackages-tools-3.4.1-5.el7.noarch
+DEBUG util.py:283:   --> libtool-2.4.2-20.el7.x86_64
+DEBUG util.py:283:   --> libxml2-devel-2.9.1-5.el7.x86_64
+DEBUG util.py:283:   --> log4cxx-devel-0.10.0-16.el7.x86_64
+DEBUG util.py:283:   --> python-devel-2.7.5-16.el7.x86_64
+DEBUG util.py:283:   --> ant-1.9.2-9.el7.noarch
+DEBUG util.py:283:   --> ant-junit-1.9.2-9.el7.noarch
+DEBUG util.py:283:   --> apache-ivy-2.3.0-4.el7.noarch
+DEBUG util.py:283:   --> checkstyle-5.6-5.el7.centos.noarch
+DEBUG util.py:283:   --> jline1-1.0-9.el7.centos.noarch
+DEBUG util.py:283:   --> jtoaster-1.0.5-1.el7.centos.noarch
+DEBUG util.py:283:   --> junit-4.11-8.el7.noarch
+DEBUG util.py:283:   --> log4j-1.2.17-15.el7.noarch
+DEBUG util.py:283:   --> mockito-1.9.0-12.el7.centos.noarch
+DEBUG util.py:283:   --> netty-3.6.5-1.el7.centos.noarch
+DEBUG util.py:283:   --> slf4j-1.7.4-3.el7.noarch
+DEBUG util.py:283:   --> xerces-j2-2.11.0-16.el7.noarch
+DEBUG util.py:283:   --> xml-commons-apis-1.4.01-16.el7.noarch
+DEBUG util.py:283:   --> systemd-208-11.el7.x86_64
+DEBUG util.py:283:  ================================================================================
+DEBUG util.py:283:   Package                       Arch     Version                   Repository
+DEBUG util.py:283:                                                                             Size
+DEBUG util.py:283:  ================================================================================
+DEBUG util.py:283:  Installing:
+DEBUG util.py:283:   ant                           noarch   1.9.2-9.el7               build   1.9 M
+DEBUG util.py:283:   ant-junit                     noarch   1.9.2-9.el7               build   141 k
+DEBUG util.py:283:   apache-ivy                    noarch   2.3.0-4.el7               build   1.1 M
+DEBUG util.py:283:   autoconf                      noarch   2.69-11.el7               build   701 k
+DEBUG util.py:283:   automake                      noarch   1.13.4-3.el7              build   679 k
+DEBUG util.py:283:   boost-devel                   x86_64   1.53.0-18.el7             build   7.0 M
+DEBUG util.py:283:   checkstyle                    noarch   5.6-5.el7.centos          build   579 k
+DEBUG util.py:283:   cppunit-devel                 x86_64   1.12.1-11.el7             build    63 k
+DEBUG util.py:283:   dos2unix                      x86_64   6.0.3-4.el7               build    58 k
+DEBUG util.py:283:   doxygen                       x86_64   1:1.8.5-3.el7             build   3.6 M
+DEBUG util.py:283:   graphviz                      x86_64   2.30.1-18.el7             build   1.3 M
+DEBUG util.py:283:   java-1.7.0-openjdk-devel      x86_64   1:1.7.0.51-2.4.5.5.el7    build   9.1 M
+DEBUG util.py:283:   java-1.7.0-openjdk-javadoc    noarch   1:1.7.0.51-2.4.5.5.el7    build    14 M
+DEBUG util.py:283:   javapackages-tools            noarch   3.4.1-5.el7               build    72 k
+DEBUG util.py:283:   jline1                        noarch   1.0-9.el7.centos          build    65 k
+DEBUG util.py:283:   jtoaster                      noarch   1.0.5-1.el7.centos        build    14 k
+DEBUG util.py:283:   junit                         noarch   4.11-8.el7                build   261 k
+DEBUG util.py:283:   libtool                       x86_64   2.4.2-20.el7              build   588 k
+DEBUG util.py:283:   libxml2-devel                 x86_64   2.9.1-5.el7               build   1.0 M
+DEBUG util.py:283:   log4cxx-devel                 x86_64   0.10.0-16.el7             build   805 k
+DEBUG util.py:283:   log4j                         noarch   1.2.17-15.el7             build   443 k
+DEBUG util.py:283:   mockito                       noarch   1.9.0-12.el7.centos       build   246 k
+DEBUG util.py:283:   netty                         noarch   3.6.5-1.el7.centos        build   1.1 M
+DEBUG util.py:283:   python-devel                  x86_64   2.7.5-16.el7              build   388 k
+DEBUG util.py:283:   slf4j                         noarch   1.7.4-3.el7               build   170 k
+DEBUG util.py:283:   systemd                       x86_64   208-11.el7                build   2.6 M
+DEBUG util.py:283:   xerces-j2                     noarch   2.11.0-16.el7             build   1.1 M
+DEBUG util.py:283:   xml-commons-apis              noarch   1.4.01-16.el7             build   227 k
+DEBUG util.py:283:  Installing for dependencies:
+DEBUG util.py:283:   acl                           x86_64   2.2.51-12.el7             build    81 k
+DEBUG util.py:283:   alsa-lib                      x86_64   1.0.27.2-3.el7            build   389 k
+DEBUG util.py:283:   antlr-tool                    noarch   2.7.7-25.el7.centos       build   356 k
+DEBUG util.py:283:   apache-commons-beanutils      noarch   1.8.3-14.el7              build   213 k
+DEBUG util.py:283:   apache-commons-cli            noarch   1.2-13.el7                build    50 k
+DEBUG util.py:283:   apache-commons-codec          noarch   1.8-11.el7.centos         build   221 k
+DEBUG util.py:283:   apache-commons-collections    noarch   3.2.1-21.el7              build   506 k
+DEBUG util.py:283:   apache-commons-lang           noarch   2.6-15.el7                build   276 k
+DEBUG util.py:283:   apache-commons-logging        noarch   1.1.2-7.el7               build    78 k
+DEBUG util.py:283:   apr                           x86_64   1.4.8-3.el7               build   103 k
+DEBUG util.py:283:   apr-devel                     x86_64   1.4.8-3.el7               build   188 k
+DEBUG util.py:283:   apr-util                      x86_64   1.5.2-6.el7               build    92 k
+DEBUG util.py:283:   atk                           x86_64   2.8.0-4.el7               build   233 k
+DEBUG util.py:283:   avahi                         x86_64   0.6.31-13.el7             build   260 k
+DEBUG util.py:283:   avahi-libs                    x86_64   0.6.31-13.el7             build    60 k
+DEBUG util.py:283:   avalon-framework              noarch   4.3-10.el7                build    88 k
+DEBUG util.py:283:   avalon-logkit                 noarch   2.1-14.el7                build    87 k
+DEBUG util.py:283:   boost                         x86_64   1.53.0-18.el7             build    32 k
+DEBUG util.py:283:   boost-atomic                  x86_64   1.53.0-18.el7             build    34 k
+DEBUG util.py:283:   boost-chrono                  x86_64   1.53.0-18.el7             build    42 k
+DEBUG util.py:283:   boost-context                 x86_64   1.53.0-18.el7             build    35 k
+DEBUG util.py:283:   boost-date-time               x86_64   1.53.0-18.el7             build    50 k
+DEBUG util.py:283:   boost-filesystem              x86_64   1.53.0-18.el7             build    66 k
+DEBUG util.py:283:   boost-graph                   x86_64   1.53.0-18.el7             build   134 k
+DEBUG util.py:283:   boost-iostreams               x86_64   1.53.0-18.el7             build    59 k
+DEBUG util.py:283:   boost-locale                  x86_64   1.53.0-18.el7             build   249 k
+DEBUG util.py:283:   boost-math                    x86_64   1.53.0-18.el7             build   331 k
+DEBUG util.py:283:   boost-program-options         x86_64   1.53.0-18.el7             build   154 k
+DEBUG util.py:283:   boost-python                  x86_64   1.53.0-18.el7             build   130 k
+DEBUG util.py:283:   boost-random                  x86_64   1.53.0-18.el7             build    37 k
+DEBUG util.py:283:   boost-regex                   x86_64   1.53.0-18.el7             build   294 k
+DEBUG util.py:283:   boost-serialization           x86_64   1.53.0-18.el7             build   168 k
+DEBUG util.py:283:   boost-signals                 x86_64   1.53.0-18.el7             build    59 k
+DEBUG util.py:283:   boost-system                  x86_64   1.53.0-18.el7             build    38 k
+DEBUG util.py:283:   boost-test                    x86_64   1.53.0-18.el7             build   221 k
+DEBUG util.py:283:   boost-thread                  x86_64   1.53.0-18.el7             build    56 k
+DEBUG util.py:283:   boost-timer                   x86_64   1.53.0-18.el7             build    41 k
+DEBUG util.py:283:   boost-wave                    x86_64   1.53.0-18.el7             build   210 k
+DEBUG util.py:283:   cairo                         x86_64   1.12.14-6.el7             build   697 k
+DEBUG util.py:283:   cal10n                        noarch   0.7.7-4.el7               build    36 k
+DEBUG util.py:283:   cglib                         noarch   2.2-18.el7                build   255 k
+DEBUG util.py:283:   cppunit                       x86_64   1.12.1-11.el7             build   152 k
+DEBUG util.py:283:   cryptsetup-libs               x86_64   1.6.3-2.el7               build   175 k
+DEBUG util.py:283:   cups-libs                     x86_64   1:1.6.3-14.el7            build   352 k
+DEBUG util.py:283:   dbus                          x86_64   1:1.6.12-8.el7            build   305 k
+DEBUG util.py:283:   device-mapper                 x86_64   7:1.02.84-14.el7          build   202 k
+DEBUG util.py:283:   device-mapper-libs            x86_64   7:1.02.84-14.el7          build   238 k
+DEBUG util.py:283:   easymock2                     noarch   2.5.2-12.el7              build    92 k
+DEBUG util.py:283:   fipscheck                     x86_64   1.4.1-5.el7               build    21 k
+DEBUG util.py:283:   fipscheck-lib                 x86_64   1.4.1-5.el7               build    11 k
+DEBUG util.py:283:   flac-libs                     x86_64   1.3.0-4.el7               build   169 k
+DEBUG util.py:283:   fontconfig                    x86_64   2.10.95-7.el7             build   228 k
+DEBUG util.py:283:   fontpackages-filesystem       noarch   1.44-8.el7                build   9.9 k
+DEBUG util.py:283:   freetype                      x86_64   2.4.11-9.el7              build   389 k
+DEBUG util.py:283:   gd                            x86_64   2.0.35-26.el7             build   146 k
+DEBUG util.py:283:   gdk-pixbuf2                   x86_64   2.28.2-4.el7              build   533 k
+DEBUG util.py:283:   geronimo-jms                  noarch   1.1.1-19.el7              build    31 k
+DEBUG util.py:283:   ghostscript                   x86_64   9.07-16.el7               build   4.3 M
+DEBUG util.py:283:   ghostscript-fonts             noarch   5.50-32.el7               build   324 k
+DEBUG util.py:283:   giflib                        x86_64   4.1.6-9.el7               build    40 k
+DEBUG util.py:283:   graphite2                     x86_64   1.2.2-5.el7               build    81 k
+DEBUG util.py:283:   gsm                           x86_64   1.0.13-11.el7             build    30 k
+DEBUG util.py:283:   gtk2                          x86_64   2.24.22-5.el7             build   3.4 M
+DEBUG util.py:283:   guava                         noarch   13.0-6.el7                build   1.6 M
+DEBUG util.py:283:   hamcrest                      noarch   1.3-6.el7                 build   124 k
+DEBUG util.py:283:   harfbuzz                      x86_64   0.9.20-3.el7              build   144 k
+DEBUG util.py:283:   hicolor-icon-theme            noarch   0.12-7.el7                build    42 k
+DEBUG util.py:283:   hostname                      x86_64   3.13-3.el7                build    17 k
+DEBUG util.py:283:   hwdata                        noarch   0.252-7.3.el7             build   1.9 M
+DEBUG util.py:283:   initscripts                   x86_64   9.49.17-1.el7             build   422 k
+DEBUG util.py:283:   iproute                       x86_64   3.10.0-13.el7             build   500 k
+DEBUG util.py:283:   iptables                      x86_64   1.4.21-13.el7             build   423 k
+DEBUG util.py:283:   iputils                       x86_64   20121221-6.el7            build   152 k
+DEBUG util.py:283:   jakarta-commons-httpclient    noarch   1:3.1-15.el7              build   241 k
+DEBUG util.py:283:   jakarta-oro                   noarch   2.0.8-16.el7              build    78 k
+DEBUG util.py:283:   jasper-libs                   x86_64   1.900.1-26.el7            build   147 k
+DEBUG util.py:283:   java-1.7.0-openjdk            x86_64   1:1.7.0.51-2.4.5.5.el7    build   209 k
+DEBUG util.py:283:   java-1.7.0-openjdk-headless   x86_64   1:1.7.0.51-2.4.5.5.el7    build    25 M
+DEBUG util.py:283:   javamail                      noarch   1.4.6-8.el7               build   758 k
+DEBUG util.py:283:   javassist                     noarch   3.16.1-10.el7             build   627 k
+DEBUG util.py:283:   jbigkit-libs                  x86_64   2.0-11.el7                build    46 k
+DEBUG util.py:283:   jline                         noarch   1.0-8.el7                 build    69 k
+DEBUG util.py:283:   jsch                          noarch   0.1.50-5.el7              build   239 k
+DEBUG util.py:283:   json-c                        x86_64   0.11-3.el7                build    29 k
+DEBUG util.py:283:   jzlib                         noarch   1.1.1-6.el7               build    72 k
+DEBUG util.py:283:   kmod                          x86_64   14-9.el7                  build    77 k
+DEBUG util.py:283:   kmod-libs                     x86_64   14-9.el7                  build    45 k
+DEBUG util.py:283:   lcms2                         x86_64   2.5-4.el7                 build   133 k
+DEBUG util.py:283:   libICE                        x86_64   1.0.8-7.el7               build    63 k
+DEBUG util.py:283:   libSM                         x86_64   1.2.1-7.el7               build    38 k
+DEBUG util.py:283:   libX11                        x86_64   1.6.0-2.1.el7             build   605 k
+DEBUG util.py:283:   libX11-common                 noarch   1.6.0-2.1.el7             build   181 k
+DEBUG util.py:283:   libXau                        x86_64   1.0.8-2.1.el7             build    29 k
+DEBUG util.py:283:   libXaw                        x86_64   1.0.11-6.1.el7            build   189 k
+DEBUG util.py:283:   libXcomposite                 x86_64   0.4.4-4.1.el7             build    22 k
+DEBUG util.py:283:   libXcursor                    x86_64   1.1.14-2.1.el7            build    30 k
+DEBUG util.py:283:   libXdamage                    x86_64   1.1.4-4.1.el7             build    20 k
+DEBUG util.py:283:   libXext                       x86_64   1.3.2-2.1.el7             build    38 k
+DEBUG util.py:283:   libXfixes                     x86_64   5.0.1-2.1.el7             build    18 k
+DEBUG util.py:283:   libXfont                      x86_64   1.4.7-1.1.el7             build   143 k
+DEBUG util.py:283:   libXft                        x86_64   2.3.1-5.1.el7             build    57 k
+DEBUG util.py:283:   libXi                         x86_64   1.7.2-2.1.el7             build    39 k
+DEBUG util.py:283:   libXinerama                   x86_64   1.1.3-2.1.el7             build    14 k
+DEBUG util.py:283:   libXmu                        x86_64   1.1.1-5.1.el7             build    70 k
+DEBUG util.py:283:   libXpm                        x86_64   3.5.10-5.1.el7            build    52 k
+DEBUG util.py:283:   libXrandr                     x86_64   1.4.1-2.1.el7             build    25 k
+DEBUG util.py:283:   libXrender                    x86_64   0.9.8-2.1.el7             build    25 k
+DEBUG util.py:283:   libXt                         x86_64   1.1.4-6.1.el7             build   173 k
+DEBUG util.py:283:   libXtst                       x86_64   1.2.2-2.1.el7             build    20 k
+DEBUG util.py:283:   libXxf86vm                    x86_64   1.1.3-2.1.el7             build    17 k
+DEBUG util.py:283:   libasyncns                    x86_64   0.8-7.el7                 build    26 k
+DEBUG util.py:283:   libcroco                      x86_64   0.6.8-5.el7               build   104 k
+DEBUG util.py:283:   libdaemon                     x86_64   0.14-7.el7                build    30 k
+DEBUG util.py:283:   libdrm                        x86_64   2.4.50-1.1.el7            build   121 k
+DEBUG util.py:283:   libfontenc                    x86_64   1.1.1-5.el7               build    29 k
+DEBUG util.py:283:   libicu                        x86_64   50.1.2-11.el7             build   6.9 M
+DEBUG util.py:283:   libjpeg-turbo                 x86_64   1.2.90-5.el7              build   134 k
+DEBUG util.py:283:   libmnl                        x86_64   1.0.3-7.el7               build    23 k
+DEBUG util.py:283:   libnetfilter_conntrack        x86_64   1.0.4-2.el7               build    53 k
+DEBUG util.py:283:   libnfnetlink                  x86_64   1.0.1-4.el7               build    26 k
+DEBUG util.py:283:   libogg                        x86_64   2:1.3.0-7.el7             build    24 k
+DEBUG util.py:283:   libpciaccess                  x86_64   0.13.1-4.1.el7            build    25 k
+DEBUG util.py:283:   libpng                        x86_64   2:1.5.13-5.el7            build   212 k
+DEBUG util.py:283:   librsvg2                      x86_64   2.39.0-1.el7              build   123 k
+DEBUG util.py:283:   libsndfile                    x86_64   1.0.25-9.el7              build   149 k
+DEBUG util.py:283:   libthai                       x86_64   0.1.14-9.el7              build   187 k
+DEBUG util.py:283:   libtiff                       x86_64   4.0.3-14.el7              build   167 k
+DEBUG util.py:283:   libtool-ltdl                  x86_64   2.4.2-20.el7              build    49 k
+DEBUG util.py:283:   libvorbis                     x86_64   1:1.3.3-8.el7             build   204 k
+DEBUG util.py:283:   libxcb                        x86_64   1.9-5.el7                 build   169 k
+DEBUG util.py:283:   libxslt                       x86_64   1.1.28-5.el7              build   242 k
+DEBUG util.py:283:   log4cxx                       x86_64   0.10.0-16.el7             build   452 k
+DEBUG util.py:283:   lua                           x86_64   5.2.2-5.el7.centos        build   195 k
+DEBUG util.py:283:   m4                            x86_64   1.4.16-9.el7              build   256 k
+DEBUG util.py:283:   mesa-libEGL                   x86_64   9.2.5-5.20131218.el7      build    69 k
+DEBUG util.py:283:   mesa-libGL                    x86_64   9.2.5-5.20131218.el7      build   142 k
+DEBUG util.py:283:   mesa-libgbm                   x86_64   9.2.5-5.20131218.el7      build    29 k
+DEBUG util.py:283:   mesa-libglapi                 x86_64   9.2.5-5.20131218.el7      build    34 k
+DEBUG util.py:283:   objectweb-asm                 noarch   3.3.1-9.el7               build   197 k
+DEBUG util.py:283:   objenesis                     noarch   1.2-18.el7                build    63 k
+DEBUG util.py:283:   pango                         x86_64   1.34.1-5.el7              build   283 k
+DEBUG util.py:283:   perl-Data-Dumper              x86_64   2.145-3.el7               build    47 k
+DEBUG util.py:283:   perl-Test-Harness             noarch   3.28-2.el7                build   302 k
+DEBUG util.py:283:   pixman                        x86_64   0.32.4-3.el7              build   254 k
+DEBUG util.py:283:   poppler-data                  noarch   0.4.6-3.el7               build   2.2 M
+DEBUG util.py:283:   procps-ng                     x86_64   3.3.9-6.el7               build   280 k
+DEBUG util.py:283:   pulseaudio-libs               x86_64   3.0-22.el7                build   555 k
+DEBUG util.py:283:   python                        x86_64   2.7.5-16.el7              build    86 k
+DEBUG util.py:283:   python-javapackages           noarch   3.4.1-5.el7               build    31 k
+DEBUG util.py:283:   python-lxml                   x86_64   3.2.1-4.el7               build   758 k
+DEBUG util.py:283:   qdox                          noarch   1.12.1-9.el7              build   170 k
+DEBUG util.py:283:   qrencode-libs                 x86_64   3.4.1-3.el7               build    50 k
+DEBUG util.py:283:   rhino                         noarch   1.7R4-4.el7               build   1.0 M
+DEBUG util.py:283:   systemd-sysv                  x86_64   208-11.el7                build    35 k
+DEBUG util.py:283:   sysvinit-tools                x86_64   2.88-14.dsf.el7           build    63 k
+DEBUG util.py:283:   tcp_wrappers-libs             x86_64   7.6-77.el7                build    66 k
+DEBUG util.py:283:   tomcat-servlet-3.0-api        noarch   7.0.42-4.el7              build   187 k
+DEBUG util.py:283:   ttmkfdir                      x86_64   3.0.9-41.el7              build    47 k
+DEBUG util.py:283:   tzdata-java                   noarch   2014b-1.el7               build   147 k
+DEBUG util.py:283:   urw-fonts                     noarch   2.4-16.el7                build   3.0 M
+DEBUG util.py:283:   xalan-j2                      noarch   2.7.1-23.el7              build   1.9 M
+DEBUG util.py:283:   xml-commons-resolver          noarch   1.2-15.el7                build   108 k
+DEBUG util.py:283:   xorg-x11-font-utils           x86_64   1:7.5-18.1.el7            build    87 k
+DEBUG util.py:283:   xorg-x11-fonts-Type1          noarch   7.5-9.el7                 build   521 k
+DEBUG util.py:283:   xz-devel                      x86_64   5.1.2-8alpha.el7          build    44 k
+DEBUG util.py:283:   zlib-devel                    x86_64   1.2.7-13.el7              build    49 k
+DEBUG util.py:283:  Transaction Summary
+DEBUG util.py:283:  ================================================================================
+DEBUG util.py:283:  Install  28 Packages (+166 Dependent packages)
+DEBUG util.py:283:  Total download size: 124 M
+DEBUG util.py:283:  Installed size: 663 M
+DEBUG util.py:283:  Installed:
+DEBUG util.py:283:    ant.noarch 0:1.9.2-9.el7                                                      
+DEBUG util.py:283:    ant-junit.noarch 0:1.9.2-9.el7                                                
+DEBUG util.py:283:    apache-ivy.noarch 0:2.3.0-4.el7                                               
+DEBUG util.py:283:    autoconf.noarch 0:2.69-11.el7                                                 
+DEBUG util.py:283:    automake.noarch 0:1.13.4-3.el7                                                
+DEBUG util.py:283:    boost-devel.x86_64 0:1.53.0-18.el7                                            
+DEBUG util.py:283:    checkstyle.noarch 0:5.6-5.el7.centos                                          
+DEBUG util.py:283:    cppunit-devel.x86_64 0:1.12.1-11.el7                                          
+DEBUG util.py:283:    dos2unix.x86_64 0:6.0.3-4.el7                                                 
+DEBUG util.py:283:    doxygen.x86_64 1:1.8.5-3.el7                                                  
+DEBUG util.py:283:    graphviz.x86_64 0:2.30.1-18.el7                                               
+DEBUG util.py:283:    java-1.7.0-openjdk-devel.x86_64 1:1.7.0.51-2.4.5.5.el7                        
+DEBUG util.py:283:    java-1.7.0-openjdk-javadoc.noarch 1:1.7.0.51-2.4.5.5.el7                      
+DEBUG util.py:283:    javapackages-tools.noarch 0:3.4.1-5.el7                                       
+DEBUG util.py:283:    jline1.noarch 0:1.0-9.el7.centos                                              
+DEBUG util.py:283:    jtoaster.noarch 0:1.0.5-1.el7.centos                                          
+DEBUG util.py:283:    junit.noarch 0:4.11-8.el7                                                     
+DEBUG util.py:283:    libtool.x86_64 0:2.4.2-20.el7                                                 
+DEBUG util.py:283:    libxml2-devel.x86_64 0:2.9.1-5.el7                                            
+DEBUG util.py:283:    log4cxx-devel.x86_64 0:0.10.0-16.el7                                          
+DEBUG util.py:283:    log4j.noarch 0:1.2.17-15.el7                                                  
+DEBUG util.py:283:    mockito.noarch 0:1.9.0-12.el7.centos                                          
+DEBUG util.py:283:    netty.noarch 0:3.6.5-1.el7.centos                                             
+DEBUG util.py:283:    python-devel.x86_64 0:2.7.5-16.el7                                            
+DEBUG util.py:283:    slf4j.noarch 0:1.7.4-3.el7                                                    
+DEBUG util.py:283:    systemd.x86_64 0:208-11.el7                                                   
+DEBUG util.py:283:    xerces-j2.noarch 0:2.11.0-16.el7                                              
+DEBUG util.py:283:    xml-commons-apis.noarch 0:1.4.01-16.el7                                       
+DEBUG util.py:283:  Dependency Installed:
+DEBUG util.py:283:    acl.x86_64 0:2.2.51-12.el7                                                    
+DEBUG util.py:283:    alsa-lib.x86_64 0:1.0.27.2-3.el7                                              
+DEBUG util.py:283:    antlr-tool.noarch 0:2.7.7-25.el7.centos                                       
+DEBUG util.py:283:    apache-commons-beanutils.noarch 0:1.8.3-14.el7                                
+DEBUG util.py:283:    apache-commons-cli.noarch 0:1.2-13.el7                                        
+DEBUG util.py:283:    apache-commons-codec.noarch 0:1.8-11.el7.centos                               
+DEBUG util.py:283:    apache-commons-collections.noarch 0:3.2.1-21.el7                              
+DEBUG util.py:283:    apache-commons-lang.noarch 0:2.6-15.el7                                       
+DEBUG util.py:283:    apache-commons-logging.noarch 0:1.1.2-7.el7                                   
+DEBUG util.py:283:    apr.x86_64 0:1.4.8-3.el7                                                      
+DEBUG util.py:283:    apr-devel.x86_64 0:1.4.8-3.el7                                                
+DEBUG util.py:283:    apr-util.x86_64 0:1.5.2-6.el7                                                 
+DEBUG util.py:283:    atk.x86_64 0:2.8.0-4.el7                                                      
+DEBUG util.py:283:    avahi.x86_64 0:0.6.31-13.el7                                                  
+DEBUG util.py:283:    avahi-libs.x86_64 0:0.6.31-13.el7                                             
+DEBUG util.py:283:    avalon-framework.noarch 0:4.3-10.el7                                          
+DEBUG util.py:283:    avalon-logkit.noarch 0:2.1-14.el7                                             
+DEBUG util.py:283:    boost.x86_64 0:1.53.0-18.el7                                                  
+DEBUG util.py:283:    boost-atomic.x86_64 0:1.53.0-18.el7                                           
+DEBUG util.py:283:    boost-chrono.x86_64 0:1.53.0-18.el7                                           
+DEBUG util.py:283:    boost-context.x86_64 0:1.53.0-18.el7                                          
+DEBUG util.py:283:    boost-date-time.x86_64 0:1.53.0-18.el7                                        
+DEBUG util.py:283:    boost-filesystem.x86_64 0:1.53.0-18.el7                                       
+DEBUG util.py:283:    boost-graph.x86_64 0:1.53.0-18.el7                                            
+DEBUG util.py:283:    boost-iostreams.x86_64 0:1.53.0-18.el7                                        
+DEBUG util.py:283:    boost-locale.x86_64 0:1.53.0-18.el7                                           
+DEBUG util.py:283:    boost-math.x86_64 0:1.53.0-18.el7                                             
+DEBUG util.py:283:    boost-program-options.x86_64 0:1.53.0-18.el7                                  
+DEBUG util.py:283:    boost-python.x86_64 0:1.53.0-18.el7                                           
+DEBUG util.py:283:    boost-random.x86_64 0:1.53.0-18.el7                                           
+DEBUG util.py:283:    boost-regex.x86_64 0:1.53.0-18.el7                                            
+DEBUG util.py:283:    boost-serialization.x86_64 0:1.53.0-18.el7                                    
+DEBUG util.py:283:    boost-signals.x86_64 0:1.53.0-18.el7                                          
+DEBUG util.py:283:    boost-system.x86_64 0:1.53.0-18.el7                                           
+DEBUG util.py:283:    boost-test.x86_64 0:1.53.0-18.el7                                             
+DEBUG util.py:283:    boost-thread.x86_64 0:1.53.0-18.el7                                           
+DEBUG util.py:283:    boost-timer.x86_64 0:1.53.0-18.el7                                            
+DEBUG util.py:283:    boost-wave.x86_64 0:1.53.0-18.el7                                             
+DEBUG util.py:283:    cairo.x86_64 0:1.12.14-6.el7                                                  
+DEBUG util.py:283:    cal10n.noarch 0:0.7.7-4.el7                                                   
+DEBUG util.py:283:    cglib.noarch 0:2.2-18.el7                                                     
+DEBUG util.py:283:    cppunit.x86_64 0:1.12.1-11.el7                                                
+DEBUG util.py:283:    cryptsetup-libs.x86_64 0:1.6.3-2.el7                                          
+DEBUG util.py:283:    cups-libs.x86_64 1:1.6.3-14.el7                                               
+DEBUG util.py:283:    dbus.x86_64 1:1.6.12-8.el7                                                    
+DEBUG util.py:283:    device-mapper.x86_64 7:1.02.84-14.el7                                         
+DEBUG util.py:283:    device-mapper-libs.x86_64 7:1.02.84-14.el7                                    
+DEBUG util.py:283:    easymock2.noarch 0:2.5.2-12.el7                                               
+DEBUG util.py:283:    fipscheck.x86_64 0:1.4.1-5.el7                                                
+DEBUG util.py:283:    fipscheck-lib.x86_64 0:1.4.1-5.el7                                            
+DEBUG util.py:283:    flac-libs.x86_64 0:1.3.0-4.el7                                                
+DEBUG util.py:283:    fontconfig.x86_64 0:2.10.95-7.el7                                             
+DEBUG util.py:283:    fontpackages-filesystem.noarch 0:1.44-8.el7                                   
+DEBUG util.py:283:    freetype.x86_64 0:2.4.11-9.el7                                                
+DEBUG util.py:283:    gd.x86_64 0:2.0.35-26.el7                                                     
+DEBUG util.py:283:    gdk-pixbuf2.x86_64 0:2.28.2-4.el7                                             
+DEBUG util.py:283:    geronimo-jms.noarch 0:1.1.1-19.el7                                            
+DEBUG util.py:283:    ghostscript.x86_64 0:9.07-16.el7                                              
+DEBUG util.py:283:    ghostscript-fonts.noarch 0:5.50-32.el7                                        
+DEBUG util.py:283:    giflib.x86_64 0:4.1.6-9.el7                                                   
+DEBUG util.py:283:    graphite2.x86_64 0:1.2.2-5.el7                                                
+DEBUG util.py:283:    gsm.x86_64 0:1.0.13-11.el7                                                    
+DEBUG util.py:283:    gtk2.x86_64 0:2.24.22-5.el7                                                   
+DEBUG util.py:283:    guava.noarch 0:13.0-6.el7                                                     
+DEBUG util.py:283:    hamcrest.noarch 0:1.3-6.el7                                                   
+DEBUG util.py:283:    harfbuzz.x86_64 0:0.9.20-3.el7                                                
+DEBUG util.py:283:    hicolor-icon-theme.noarch 0:0.12-7.el7                                        
+DEBUG util.py:283:    hostname.x86_64 0:3.13-3.el7                                                  
+DEBUG util.py:283:    hwdata.noarch 0:0.252-7.3.el7                                                 
+DEBUG util.py:283:    initscripts.x86_64 0:9.49.17-1.el7                                            
+DEBUG util.py:283:    iproute.x86_64 0:3.10.0-13.el7                                                
+DEBUG util.py:283:    iptables.x86_64 0:1.4.21-13.el7                                               
+DEBUG util.py:283:    iputils.x86_64 0:20121221-6.el7                                               
+DEBUG util.py:283:    jakarta-commons-httpclient.noarch 1:3.1-15.el7                                
+DEBUG util.py:283:    jakarta-oro.noarch 0:2.0.8-16.el7                                             
+DEBUG util.py:283:    jasper-libs.x86_64 0:1.900.1-26.el7                                           
+DEBUG util.py:283:    java-1.7.0-openjdk.x86_64 1:1.7.0.51-2.4.5.5.el7                              
+DEBUG util.py:283:    java-1.7.0-openjdk-headless.x86_64 1:1.7.0.51-2.4.5.5.el7                     
+DEBUG util.py:283:    javamail.noarch 0:1.4.6-8.el7                                                 
+DEBUG util.py:283:    javassist.noarch 0:3.16.1-10.el7                                              
+DEBUG util.py:283:    jbigkit-libs.x86_64 0:2.0-11.el7                                              
+DEBUG util.py:283:    jline.noarch 0:1.0-8.el7                                                      
+DEBUG util.py:283:    jsch.noarch 0:0.1.50-5.el7                                                    
+DEBUG util.py:283:    json-c.x86_64 0:0.11-3.el7                                                    
+DEBUG util.py:283:    jzlib.noarch 0:1.1.1-6.el7                                                    
+DEBUG util.py:283:    kmod.x86_64 0:14-9.el7                                                        
+DEBUG util.py:283:    kmod-libs.x86_64 0:14-9.el7                                                   
+DEBUG util.py:283:    lcms2.x86_64 0:2.5-4.el7                                                      
+DEBUG util.py:283:    libICE.x86_64 0:1.0.8-7.el7                                                   
+DEBUG util.py:283:    libSM.x86_64 0:1.2.1-7.el7                                                    
+DEBUG util.py:283:    libX11.x86_64 0:1.6.0-2.1.el7                                                 
+DEBUG util.py:283:    libX11-common.noarch 0:1.6.0-2.1.el7                                          
+DEBUG util.py:283:    libXau.x86_64 0:1.0.8-2.1.el7                                                 
+DEBUG util.py:283:    libXaw.x86_64 0:1.0.11-6.1.el7                                                
+DEBUG util.py:283:    libXcomposite.x86_64 0:0.4.4-4.1.el7                                          
+DEBUG util.py:283:    libXcursor.x86_64 0:1.1.14-2.1.el7                                            
+DEBUG util.py:283:    libXdamage.x86_64 0:1.1.4-4.1.el7                                             
+DEBUG util.py:283:    libXext.x86_64 0:1.3.2-2.1.el7                                                
+DEBUG util.py:283:    libXfixes.x86_64 0:5.0.1-2.1.el7                                              
+DEBUG util.py:283:    libXfont.x86_64 0:1.4.7-1.1.el7                                               
+DEBUG util.py:283:    libXft.x86_64 0:2.3.1-5.1.el7                                                 
+DEBUG util.py:283:    libXi.x86_64 0:1.7.2-2.1.el7                                                  
+DEBUG util.py:283:    libXinerama.x86_64 0:1.1.3-2.1.el7                                            
+DEBUG util.py:283:    libXmu.x86_64 0:1.1.1-5.1.el7                                                 
+DEBUG util.py:283:    libXpm.x86_64 0:3.5.10-5.1.el7                                                
+DEBUG util.py:283:    libXrandr.x86_64 0:1.4.1-2.1.el7                                              
+DEBUG util.py:283:    libXrender.x86_64 0:0.9.8-2.1.el7                                             
+DEBUG util.py:283:    libXt.x86_64 0:1.1.4-6.1.el7                                                  
+DEBUG util.py:283:    libXtst.x86_64 0:1.2.2-2.1.el7                                                
+DEBUG util.py:283:    libXxf86vm.x86_64 0:1.1.3-2.1.el7                                             
+DEBUG util.py:283:    libasyncns.x86_64 0:0.8-7.el7                                                 
+DEBUG util.py:283:    libcroco.x86_64 0:0.6.8-5.el7                                                 
+DEBUG util.py:283:    libdaemon.x86_64 0:0.14-7.el7                                                 
+DEBUG util.py:283:    libdrm.x86_64 0:2.4.50-1.1.el7                                                
+DEBUG util.py:283:    libfontenc.x86_64 0:1.1.1-5.el7                                               
+DEBUG util.py:283:    libicu.x86_64 0:50.1.2-11.el7                                                 
+DEBUG util.py:283:    libjpeg-turbo.x86_64 0:1.2.90-5.el7                                           
+DEBUG util.py:283:    libmnl.x86_64 0:1.0.3-7.el7                                                   
+DEBUG util.py:283:    libnetfilter_conntrack.x86_64 0:1.0.4-2.el7                                   
+DEBUG util.py:283:    libnfnetlink.x86_64 0:1.0.1-4.el7                                             
+DEBUG util.py:283:    libogg.x86_64 2:1.3.0-7.el7                                                   
+DEBUG util.py:283:    libpciaccess.x86_64 0:0.13.1-4.1.el7                                          
+DEBUG util.py:283:    libpng.x86_64 2:1.5.13-5.el7                                                  
+DEBUG util.py:283:    librsvg2.x86_64 0:2.39.0-1.el7                                                
+DEBUG util.py:283:    libsndfile.x86_64 0:1.0.25-9.el7                                              
+DEBUG util.py:283:    libthai.x86_64 0:0.1.14-9.el7                                                 
+DEBUG util.py:283:    libtiff.x86_64 0:4.0.3-14.el7                                                 
+DEBUG util.py:283:    libtool-ltdl.x86_64 0:2.4.2-20.el7                                            
+DEBUG util.py:283:    libvorbis.x86_64 1:1.3.3-8.el7                                                
+DEBUG util.py:283:    libxcb.x86_64 0:1.9-5.el7                                                     
+DEBUG util.py:283:    libxslt.x86_64 0:1.1.28-5.el7                                                 
+DEBUG util.py:283:    log4cxx.x86_64 0:0.10.0-16.el7                                                
+DEBUG util.py:283:    lua.x86_64 0:5.2.2-5.el7.centos                                               
+DEBUG util.py:283:    m4.x86_64 0:1.4.16-9.el7                                                      
+DEBUG util.py:283:    mesa-libEGL.x86_64 0:9.2.5-5.20131218.el7                                     
+DEBUG util.py:283:    mesa-libGL.x86_64 0:9.2.5-5.20131218.el7                                      
+DEBUG util.py:283:    mesa-libgbm.x86_64 0:9.2.5-5.20131218.el7                                     
+DEBUG util.py:283:    mesa-libglapi.x86_64 0:9.2.5-5.20131218.el7                                   
+DEBUG util.py:283:    objectweb-asm.noarch 0:3.3.1-9.el7                                            
+DEBUG util.py:283:    objenesis.noarch 0:1.2-18.el7                                                 
+DEBUG util.py:283:    pango.x86_64 0:1.34.1-5.el7                                                   
+DEBUG util.py:283:    perl-Data-Dumper.x86_64 0:2.145-3.el7                                         
+DEBUG util.py:283:    perl-Test-Harness.noarch 0:3.28-2.el7                                         
+DEBUG util.py:283:    pixman.x86_64 0:0.32.4-3.el7                                                  
+DEBUG util.py:283:    poppler-data.noarch 0:0.4.6-3.el7                                             
+DEBUG util.py:283:    procps-ng.x86_64 0:3.3.9-6.el7                                                
+DEBUG util.py:283:    pulseaudio-libs.x86_64 0:3.0-22.el7                                           
+DEBUG util.py:283:    python.x86_64 0:2.7.5-16.el7                                                  
+DEBUG util.py:283:    python-javapackages.noarch 0:3.4.1-5.el7                                      
+DEBUG util.py:283:    python-lxml.x86_64 0:3.2.1-4.el7                                              
+DEBUG util.py:283:    qdox.noarch 0:1.12.1-9.el7                                                    
+DEBUG util.py:283:    qrencode-libs.x86_64 0:3.4.1-3.el7                                            
+DEBUG util.py:283:    rhino.noarch 0:1.7R4-4.el7                                                    
+DEBUG util.py:283:    systemd-sysv.x86_64 0:208-11.el7                                              
+DEBUG util.py:283:    sysvinit-tools.x86_64 0:2.88-14.dsf.el7                                       
+DEBUG util.py:283:    tcp_wrappers-libs.x86_64 0:7.6-77.el7                                         
+DEBUG util.py:283:    tomcat-servlet-3.0-api.noarch 0:7.0.42-4.el7                                  
+DEBUG util.py:283:    ttmkfdir.x86_64 0:3.0.9-41.el7                                                
+DEBUG util.py:283:    tzdata-java.noarch 0:2014b-1.el7                                              
+DEBUG util.py:283:    urw-fonts.noarch 0:2.4-16.el7                                                 
+DEBUG util.py:283:    xalan-j2.noarch 0:2.7.1-23.el7                                                
+DEBUG util.py:283:    xml-commons-resolver.noarch 0:1.2-15.el7                                      
+DEBUG util.py:283:    xorg-x11-font-utils.x86_64 1:7.5-18.1.el7                                     
+DEBUG util.py:283:    xorg-x11-fonts-Type1.noarch 0:7.5-9.el7                                       
+DEBUG util.py:283:    xz-devel.x86_64 0:5.1.2-8alpha.el7                                            
+DEBUG util.py:283:    zlib-devel.x86_64 0:1.2.7-13.el7                                              
+DEBUG util.py:373:  Child return code was: 0
+DEBUG backend.py:772:  Copying packages to result dir
+DEBUG util.py:333:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/el7-build-307-171/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/el7-build-307-171/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/el7-build-307-171/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:333:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/el7-build-307-171/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+DEBUG util.py:373:  Child return code was: 0
+DEBUG util.py:121:  kill orphans
+DEBUG util.py:121:  kill orphans

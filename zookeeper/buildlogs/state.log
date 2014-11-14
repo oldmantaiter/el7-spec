@@ -1,0 +1,24 @@
+2014-08-13 01:27:19,225 - Mock Version: 1.1.41
+2014-08-13 01:27:19,236 - Start: device setup
+2014-08-13 01:27:19,239 - Finish: device setup
+2014-08-13 01:27:19,239 - Start: yum update
+2014-08-13 01:29:06,371 - Finish: yum update
+2014-08-13 01:29:06,649 - Finish: lock buildroot
+2014-08-13 01:29:06,650 - Finish: chroot init
+2014-08-13 01:29:06,721 - Finish: run
+2014-08-13 01:29:10,328 - Mock Version: 1.1.41
+2014-08-13 01:29:10,339 - Start: device setup
+2014-08-13 01:29:10,342 - Finish: device setup
+2014-08-13 01:29:10,342 - Start: yum update
+2014-08-13 01:29:10,352 - Finish: yum update
+2014-08-13 01:29:10,887 - Finish: lock buildroot
+2014-08-13 01:29:10,887 - Finish: chroot init
+2014-08-13 01:29:10,958 - Start: build phase for zookeeper-3.4.5-17.el7.centos.src.rpm
+2014-08-13 01:29:10,959 - Start: device setup
+2014-08-13 01:29:10,969 - Finish: device setup
+2014-08-13 01:29:10,980 - Start: build setup for zookeeper-3.4.5-17.el7.centos.src.rpm
+2014-08-13 01:32:13,060 - Finish: build setup for zookeeper-3.4.5-17.el7.centos.src.rpm
+2014-08-13 01:32:13,060 - Start: rpmbuild -bb zookeeper-3.4.5-17.el7.centos.src.rpm
+2014-08-13 01:33:10,699 - Finish: rpmbuild -bb zookeeper-3.4.5-17.el7.centos.src.rpm
+2014-08-13 01:33:10,714 - Finish: build phase for zookeeper-3.4.5-17.el7.centos.src.rpm
+2014-08-13 01:33:10,714 - Finish: run

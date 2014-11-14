@@ -1,0 +1,24 @@
+2014-08-08 20:18:13,219 - Mock Version: 1.1.41
+2014-08-08 20:18:13,259 - Start: device setup
+2014-08-08 20:18:13,261 - Finish: device setup
+2014-08-08 20:18:13,262 - Start: yum update
+2014-08-08 20:22:22,162 - Finish: yum update
+2014-08-08 20:22:26,560 - Finish: lock buildroot
+2014-08-08 20:22:26,560 - Finish: chroot init
+2014-08-08 20:22:26,633 - Finish: run
+2014-08-08 20:22:31,627 - Mock Version: 1.1.41
+2014-08-08 20:22:34,228 - Start: device setup
+2014-08-08 20:22:34,231 - Finish: device setup
+2014-08-08 20:22:34,231 - Start: yum update
+2014-08-08 20:22:34,242 - Finish: yum update
+2014-08-08 20:22:36,003 - Finish: lock buildroot
+2014-08-08 20:22:36,003 - Finish: chroot init
+2014-08-08 20:22:36,074 - Start: build phase for maven-injection-plugin-1.0.2-8.el7.centos.src.rpm
+2014-08-08 20:22:36,074 - Start: device setup
+2014-08-08 20:22:36,077 - Finish: device setup
+2014-08-08 20:22:36,088 - Start: build setup for maven-injection-plugin-1.0.2-8.el7.centos.src.rpm
+2014-08-08 20:33:55,602 - Finish: build setup for maven-injection-plugin-1.0.2-8.el7.centos.src.rpm
+2014-08-08 20:33:55,602 - Start: rpmbuild -bb maven-injection-plugin-1.0.2-8.el7.centos.src.rpm
+2014-08-08 20:34:02,039 - Finish: rpmbuild -bb maven-injection-plugin-1.0.2-8.el7.centos.src.rpm
+2014-08-08 20:34:02,056 - Finish: build phase for maven-injection-plugin-1.0.2-8.el7.centos.src.rpm
+2014-08-08 20:34:02,057 - Finish: run

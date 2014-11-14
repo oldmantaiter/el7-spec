@@ -1,0 +1,24 @@
+2014-08-08 18:45:59,120 - Mock Version: 1.1.41
+2014-08-08 18:45:59,706 - Start: device setup
+2014-08-08 18:45:59,709 - Finish: device setup
+2014-08-08 18:45:59,709 - Start: yum update
+2014-08-08 18:48:47,887 - Finish: yum update
+2014-08-08 18:48:48,673 - Finish: lock buildroot
+2014-08-08 18:48:48,673 - Finish: chroot init
+2014-08-08 18:48:48,745 - Finish: run
+2014-08-08 18:48:52,988 - Mock Version: 1.1.41
+2014-08-08 18:48:52,997 - Start: device setup
+2014-08-08 18:48:53,000 - Finish: device setup
+2014-08-08 18:48:53,000 - Start: yum update
+2014-08-08 18:48:53,011 - Finish: yum update
+2014-08-08 18:48:54,338 - Finish: lock buildroot
+2014-08-08 18:48:54,338 - Finish: chroot init
+2014-08-08 18:48:54,409 - Start: build phase for jtoaster-1.0.5-1.el7.centos.src.rpm
+2014-08-08 18:48:54,409 - Start: device setup
+2014-08-08 18:48:54,484 - Finish: device setup
+2014-08-08 18:48:54,496 - Start: build setup for jtoaster-1.0.5-1.el7.centos.src.rpm
+2014-08-08 18:51:13,807 - Finish: build setup for jtoaster-1.0.5-1.el7.centos.src.rpm
+2014-08-08 18:51:13,807 - Start: rpmbuild -bb jtoaster-1.0.5-1.el7.centos.src.rpm
+2014-08-08 18:51:17,062 - Finish: rpmbuild -bb jtoaster-1.0.5-1.el7.centos.src.rpm
+2014-08-08 18:51:17,079 - Finish: build phase for jtoaster-1.0.5-1.el7.centos.src.rpm
+2014-08-08 18:51:17,080 - Finish: run

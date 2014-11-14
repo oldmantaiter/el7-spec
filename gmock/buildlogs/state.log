@@ -1,0 +1,24 @@
+2014-08-10 14:00:33,711 - Mock Version: 1.1.41
+2014-08-10 14:00:33,722 - Start: device setup
+2014-08-10 14:00:33,725 - Finish: device setup
+2014-08-10 14:00:33,725 - Start: yum update
+2014-08-10 14:02:14,580 - Finish: yum update
+2014-08-10 14:02:14,891 - Finish: lock buildroot
+2014-08-10 14:02:14,891 - Finish: chroot init
+2014-08-10 14:02:14,963 - Finish: run
+2014-08-10 14:02:18,533 - Mock Version: 1.1.41
+2014-08-10 14:02:18,543 - Start: device setup
+2014-08-10 14:02:18,546 - Finish: device setup
+2014-08-10 14:02:18,546 - Start: yum update
+2014-08-10 14:02:18,557 - Finish: yum update
+2014-08-10 14:02:19,220 - Finish: lock buildroot
+2014-08-10 14:02:19,220 - Finish: chroot init
+2014-08-10 14:02:19,292 - Start: build phase for gmock-1.6.0-2.el7.centos.src.rpm
+2014-08-10 14:02:19,292 - Start: device setup
+2014-08-10 14:02:19,308 - Finish: device setup
+2014-08-10 14:02:19,319 - Start: build setup for gmock-1.6.0-2.el7.centos.src.rpm
+2014-08-10 14:02:27,555 - Finish: build setup for gmock-1.6.0-2.el7.centos.src.rpm
+2014-08-10 14:02:27,555 - Start: rpmbuild -bb gmock-1.6.0-2.el7.centos.src.rpm
+2014-08-10 14:03:25,969 - Finish: rpmbuild -bb gmock-1.6.0-2.el7.centos.src.rpm
+2014-08-10 14:03:25,984 - Finish: build phase for gmock-1.6.0-2.el7.centos.src.rpm
+2014-08-10 14:03:25,985 - Finish: run

@@ -1,0 +1,1373 @@
+Mock Version: 1.1.41
+Mock Version: 1.1.41
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bs --target x86_64 --nodeps builddir/build/SPECS/zookeeper.spec'], False, '/var/lib/mock/el7-build-307-171/root/', None, 86400, True, False, 996, 135, None, False, {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0x27e8e10>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bs --target x86_64 --nodeps builddir/build/SPECS/zookeeper.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+sh: /usr/bin/python: No such file or directory
+sh: /usr/bin/python: No such file or directory
+sh: /usr/bin/python: No such file or directory
+sh: /usr/bin/python: No such file or directory
+warning: Could not canonicalize hostname: syseng01.internal.chango.com
+Building target platforms: x86_64
+Building for target x86_64
+Wrote: /builddir/build/SRPMS/zookeeper-3.4.5-17.el7.centos.src.rpm
+Child return code was: 0
+LEAVE do --> 
+
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bb --target x86_64 --nodeps  builddir/build/SPECS/zookeeper.spec'], False, '/var/lib/mock/el7-build-307-171/root/', None, 86400, True, False, 996, 135, None, False, {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0x27e8e10>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bb --target x86_64 --nodeps  builddir/build/SPECS/zookeeper.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.eAFPJL
++ umask 022
++ cd /builddir/build/BUILD
++ cd /builddir/build/BUILD
++ rm -rf zookeeper-3.4.5
++ /usr/bin/gzip -dc /builddir/build/SOURCES/zookeeper-3.4.5.tar.gz
++ /usr/bin/tar -xf -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd zookeeper-3.4.5
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ find -name '*.jar' -delete
++ find -name '*.class' -delete
++ find -name '*.cmd' -delete
++ find -name '*.so*' -delete
++ find -name '*.dll' -delete
++ echo 'Patch #0 (zookeeper-3.4.4-build.patch):'
+Patch #0 (zookeeper-3.4.4-build.patch):
++ /usr/bin/cat /builddir/build/SOURCES/zookeeper-3.4.4-build.patch
++ /usr/bin/patch -p1 --fuzz=0
+patching file build.xml
+patching file ivysettings.xml
+patching file ivy.xml
++ echo 'Patch #1 (ZOOKEEPER-1557.patch):'
+Patch #1 (ZOOKEEPER-1557.patch):
++ /usr/bin/cat /builddir/build/SOURCES/ZOOKEEPER-1557.patch
++ /usr/bin/patch -p0 --fuzz=0
+patching file src/java/test/org/apache/zookeeper/test/SaslAuthFailNotifyTest.java
+patching file src/java/test/org/apache/zookeeper/test/SaslAuthFailTest.java
++ . /usr/share/java-utils/pom_editor.sh
++ pom_remove_dep org.vafer:jdeb dist-maven/zookeeper-3.4.5.pom
++ set +x
++ . /usr/share/java-utils/pom_editor.sh
++ pom_remove_dep jdiff:jdiff dist-maven/zookeeper-3.4.5.pom
++ set +x
++ . /usr/share/java-utils/pom_editor.sh
++ pom_remove_dep xerces:xerces dist-maven/zookeeper-3.4.5.pom
++ set +x
++ . /usr/share/java-utils/pom_editor.sh
++ pom_remove_dep org.apache.rat:apache-rat-tasks dist-maven/zookeeper-3.4.5.pom
++ set +x
++ . /usr/share/java-utils/pom_editor.sh
++ pom_remove_dep commons-collections:commons-collections dist-maven/zookeeper-3.4.5.pom
++ set +x
++ . /usr/share/java-utils/pom_editor.sh
++ pom_remove_dep commons-lang:commons-lang dist-maven/zookeeper-3.4.5.pom
++ set +x
++ echo 'Patch #2 (zookeeper-3.4.5-zktreeutil-gcc.patch):'
+Patch #2 (zookeeper-3.4.5-zktreeutil-gcc.patch):
++ /usr/bin/cat /builddir/build/SOURCES/zookeeper-3.4.5-zktreeutil-gcc.patch
++ /usr/bin/patch -p0 --fuzz=0
+patching file src/contrib/zktreeutil/src/ZkAdaptor.h
++ echo 'Patch #3 (zookeeper-3.4.5-disable-cygwin-detection.patch):'
+Patch #3 (zookeeper-3.4.5-disable-cygwin-detection.patch):
++ /usr/bin/cat /builddir/build/SOURCES/zookeeper-3.4.5-disable-cygwin-detection.patch
++ /usr/bin/patch -p0 --fuzz=0
+patching file bin/zkServer.sh
++ echo 'Patch #4 (zookeeper-3.4.5-build-contrib.patch):'
+Patch #4 (zookeeper-3.4.5-build-contrib.patch):
++ /usr/bin/cat /builddir/build/SOURCES/zookeeper-3.4.5-build-contrib.patch
++ /usr/bin/patch -p1 --fuzz=0
+patching file src/contrib/build-contrib.xml
+patching file src/contrib/zooinspector/build.xml
++ echo 'Patch #5 (zookeeper-3.4.5-add-PIE-and-RELRO.patch):'
+Patch #5 (zookeeper-3.4.5-add-PIE-and-RELRO.patch):
++ /usr/bin/cat /builddir/build/SOURCES/zookeeper-3.4.5-add-PIE-and-RELRO.patch
++ /usr/bin/patch -p1 --fuzz=0
+patching file contrib/zktreeutil/src/Makefile.am
+patching file recipes/lock/src/c/Makefile.am
+patching file recipes/queue/src/c/Makefile.am
+patching file src/c/Makefile.am
+patching file src/contrib/zktreeutil/src/Makefile.am
+Patch #7 (zookeeper-3.4.5-log4j.patch):
++ echo 'Patch #7 (zookeeper-3.4.5-log4j.patch):'
++ /usr/bin/cat /builddir/build/SOURCES/zookeeper-3.4.5-log4j.patch
++ /usr/bin/patch -p1 --fuzz=0
+patching file conf/log4j.properties
++ echo 'Patch #8 (mt_adaptor.c.patch):'
+Patch #8 (mt_adaptor.c.patch):
++ /usr/bin/cat /builddir/build/SOURCES/mt_adaptor.c.patch
++ /usr/bin/patch -p0 --fuzz=0
+(Stripping trailing CRs from patch; use --binary to disable.)
+patching file src/c/src/mt_adaptor.c
+Hunk #1 succeeded at 483 (offset -1 lines).
++ sed -i 's|<version>0.9.94</version>|<version>1.0</version>|' dist-maven/zookeeper-3.4.5.pom
++ sed -i 's|<version>3.2.2.Final</version>|<version>3.6.6.Final</version>|' dist-maven/zookeeper-3.4.5.pom
++ sed -i 's|org.jboss.netty|io.netty|' dist-maven/zookeeper-3.4.5.pom
++ sed -i 's|<packaging>pom</packaging>|<packaging>jar</packaging>|' dist-maven/zookeeper-3.4.5.pom
++ sed -i 's|<groupId>checkstyle</groupId>|<groupId>com.puppycrawl.tools</groupId>|' dist-maven/zookeeper-3.4.5.pom
++ sed -i 's|<artifactId>mockito-all</artifactId>|<artifactId>mockito-core</artifactId>|' dist-maven/zookeeper-3.4.5.pom
++ cp -p /builddir/build/SOURCES/zookeeper-ZooInspector-template.pom dist-maven/zookeeper-3.4.5-ZooInspector.pom
++ sed -i 's|@version@|3.4.5|' dist-maven/zookeeper-3.4.5-ZooInspector.pom
++ iconv -f iso8859-1 -t utf-8 src/c/ChangeLog
++ mv -f src/c/ChangeLog.conv src/c/ChangeLog
++ sed -i 's/\r//' src/c/ChangeLog
++ sed -i 's|<exec executable="hostname" outputproperty="host.name"/>|<!--exec executable="hostname" outputproperty="host.name"/-->|' build.xml
++ sed -i 's|<attribute name="Built-On" value="${host.name}" />|<attribute name="Built-On" value="${user.name}" />|' build.xml
++ sed -i 's@^dataDir=.*$@dataDir=/var/lib/zookeeper/data\ndataLogDir=/var/lib/zookeeper/log@' conf/zoo_sample.cfg
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.xaj3bd
++ umask 022
++ cd /builddir/build/BUILD
++ cd zookeeper-3.4.5
++ JAVA_HOME=/usr/lib/jvm/java
++ ant -Dtarget.jdk=1.5 -Djavadoc.link.java=/usr/share/javadoc/java -Dant.build.javac.source=1.5 -Dant.build.javac.target=1.5 build-generated jar test-jar javadoc javadoc-dev
+Buildfile: /builddir/build/BUILD/zookeeper-3.4.5/build.xml
+init:
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/classes
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/package/lib
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/test/lib
+jute:
+    [javac] Compiling 39 source files to /builddir/build/BUILD/zookeeper-3.4.5/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.5
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 warning
+compile_jute_uptodate:
+compile_jute:
+ver-gen:
+    [javac] Compiling 1 source file to /builddir/build/BUILD/zookeeper-3.4.5/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.5
+    [javac] 1 warning
+svn-revision:
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/.revision
+     [exec] /builddir/build/BUILD/zookeeper-3.4.5/src/lastRevision.sh: line 19: svn: command not found
+version-info:
+     [java] Unknown REVISION number, using -1
+build-generated:
+    [javac] Compiling 56 source files to /builddir/build/BUILD/zookeeper-3.4.5/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.5
+    [javac] 1 warning
+init:
+ivy-download:
+ivy-taskdef:
+ivy-init:
+ivy-retrieve:
+[ivy:retrieve] impossible to define new type: class not found: org.apache.ivy.plugins.signer.bouncycastle.OpenPGPSignatureGenerator in [] nor Ivy classloader
+[ivy:retrieve] :: Apache Ivy 2.3.0-local-20140610071407 - 20140610071407 :: http://ant.apache.org/ivy/ ::
+[ivy:retrieve] :: loading settings :: file = /builddir/build/BUILD/zookeeper-3.4.5/ivysettings.xml
+[ivy:retrieve] :: resolving dependencies :: org.apache.zookeeper#zookeeper;3.4.5
+[ivy:retrieve] 	confs: [default]
+[ivy:retrieve] 	found org.slf4j#slf4j/api; in maven2
+[ivy:retrieve] 	found org.slf4j#slf4j/log4j12; in maven2
+[ivy:retrieve] 	found log4j#log4j; in maven2
+[ivy:retrieve] downloading file:/usr/share/java/slf4j/api.jar ...
+[ivy:retrieve] .. (25kB)
+[ivy:retrieve] 	[SUCCESSFUL ] org.slf4j#slf4j/api;!slf4j/api.jar (3ms)
+[ivy:retrieve] downloading file:/usr/share/java/slf4j/log4j12.jar ...
+[ivy:retrieve] .. (8kB)
+[ivy:retrieve] 	[SUCCESSFUL ] org.slf4j#slf4j/log4j12;!slf4j/log4j12.jar (2ms)
+[ivy:retrieve] downloading file:/usr/share/java/log4j.jar ...
+[ivy:retrieve] ......... (463kB)
+[ivy:retrieve] 	[SUCCESSFUL ] log4j#log4j;!log4j.jar (2ms)
+[ivy:retrieve] :: resolution report :: resolve 69ms :: artifacts dl 10ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   3   |   0   |   0   ||   3   |   3   |
+	---------------------------------------------------------------------
+[ivy:retrieve] :: retrieving :: org.apache.zookeeper#zookeeper
+[ivy:retrieve] 	confs: [default]
+[ivy:retrieve] 	0 artifacts copied, 3 already retrieved (0kB/5ms)
+compile:
+    [javac] Compiling 150 source files to /builddir/build/BUILD/zookeeper-3.4.5/build/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.5
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/JLineZNodeCompletor.java:33: warning: [rawtypes] found raw type: List
+    [javac]     public int complete(String buffer, int cursor, List candidates) {
+    [javac]                                                    ^
+    [javac]   missing type arguments for generic class List<E>
+    [javac]   where E is a type-variable:
+    [javac]     E extends Object declared in interface List
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/Shell.java:276: warning: [serial] serializable class ExitCodeException has no definition of serialVersionUID
+    [javac]   public static class ExitCodeException extends IOException {
+    [javac]                 ^
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/ZooKeeperMain.java:305: warning: [rawtypes] found raw type: Class
+    [javac]                 Class consoleC = Class.forName("jline.ConsoleReader");
+    [javac]                 ^
+    [javac]   missing type arguments for generic class Class<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/ZooKeeperMain.java:306: warning: [rawtypes] found raw type: Class
+    [javac]                 Class completorC =
+    [javac]                 ^
+    [javac]   missing type arguments for generic class Class<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:62: warning: [rawtypes] found raw type: Enumeration
+    [javac]         Enumeration enumer = r.getCurrentLoggers();
+    [javac]         ^
+    [javac]   missing type arguments for generic class Enumeration<E>
+    [javac]   where E is a type-variable:
+    [javac]     E extends Object declared in interface Enumeration
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/ZooKeeperServer.java:502: warning: [rawtypes] found raw type: ArrayList
+    [javac]                     acl == null ? new ArrayList<ACL>() : new ArrayList(acl));
+    [javac]                                                              ^
+    [javac]   missing type arguments for generic class ArrayList<E>
+    [javac]   where E is a type-variable:
+    [javac]     E extends Object declared in class ArrayList
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/quorum/QuorumPeer.java:576: warning: [deprecation] LeaderElection in org.apache.zookeeper.server.quorum has been deprecated
+    [javac]             le = new LeaderElection(this);
+    [javac]                      ^
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/quorum/QuorumPeer.java:579: warning: [deprecation] AuthFastLeaderElection in org.apache.zookeeper.server.quorum has been deprecated
+    [javac]             le = new AuthFastLeaderElection(this);
+    [javac]                      ^
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/quorum/QuorumPeer.java:582: warning: [deprecation] AuthFastLeaderElection in org.apache.zookeeper.server.quorum has been deprecated
+    [javac]             le = new AuthFastLeaderElection(this, true);
+    [javac]                      ^
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/quorum/QuorumPeer.java:603: warning: [deprecation] LeaderElection in org.apache.zookeeper.server.quorum has been deprecated
+    [javac]             electionAlg = new LeaderElection(this);
+    [javac]                               ^
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/util/KerberosUtil.java:39: warning: [rawtypes] found raw type: Class
+    [javac]     getInstanceMethod = classRef.getMethod("getInstance", new Class[0]);
+    [javac]                                                               ^
+    [javac]   missing type arguments for generic class Class<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/util/KerberosUtil.java:42: warning: [rawtypes] found raw type: Class
+    [javac]          new Class[0]);
+    [javac]              ^
+    [javac]   missing type arguments for generic class Class<T>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in class Class
+    [javac] 13 warnings
+jar:
+      [jar] Building jar: /builddir/build/BUILD/zookeeper-3.4.5/build/zookeeper-3.4.5.jar
+init:
+ivy-download:
+ivy-taskdef:
+ivy-init:
+ivy-retrieve-test:
+[ivy:retrieve] impossible to define new type: class not found: org.apache.ivy.plugins.signer.bouncycastle.OpenPGPSignatureGenerator in [] nor Ivy classloader
+[ivy:retrieve] :: loading settings :: file = /builddir/build/BUILD/zookeeper-3.4.5/ivysettings.xml
+[ivy:retrieve] :: resolving dependencies :: org.apache.zookeeper#zookeeper;3.4.5
+[ivy:retrieve] 	confs: [test]
+[ivy:retrieve] 	found junit#junit; in maven2
+[ivy:retrieve] 	found org.mockito#mockito; in maven2
+[ivy:retrieve] 	found checkstyle#checkstyle; in maven2
+[ivy:retrieve] downloading file:/usr/share/java/junit.jar ...
+[ivy:retrieve] ...... (283kB)
+[ivy:retrieve] 	[SUCCESSFUL ] junit#junit;!junit.jar (2ms)
+[ivy:retrieve] downloading file:/usr/share/java/mockito.jar ...
+[ivy:retrieve] ...... (287kB)
+[ivy:retrieve] 	[SUCCESSFUL ] org.mockito#mockito;!mockito.jar (2ms)
+[ivy:retrieve] downloading file:/usr/share/java/checkstyle.jar ...
+[ivy:retrieve] ........... (634kB)
+[ivy:retrieve] 	[SUCCESSFUL ] checkstyle#checkstyle;!checkstyle.jar (3ms)
+[ivy:retrieve] :: resolution report :: resolve 29ms :: artifacts dl 7ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|       test       |   3   |   3   |   0   |   0   ||   3   |   3   |
+	---------------------------------------------------------------------
+[ivy:retrieve] :: retrieving :: org.apache.zookeeper#zookeeper
+[ivy:retrieve] 	confs: [test]
+[ivy:retrieve] 	3 artifacts copied, 0 already retrieved (1205kB/5ms)
+ivy-retrieve:
+[ivy:retrieve] :: resolving dependencies :: org.apache.zookeeper#zookeeper;3.4.5
+[ivy:retrieve] 	confs: [default]
+[ivy:retrieve] 	found org.slf4j#slf4j/api; in maven2
+[ivy:retrieve] 	found org.slf4j#slf4j/log4j12; in maven2
+[ivy:retrieve] 	found log4j#log4j; in maven2
+[ivy:retrieve] :: resolution report :: resolve 39ms :: artifacts dl 2ms
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   0   |   0   |   0   ||   3   |   0   |
+	---------------------------------------------------------------------
+[ivy:retrieve] :: retrieving :: org.apache.zookeeper#zookeeper
+[ivy:retrieve] 	confs: [default]
+[ivy:retrieve] 	0 artifacts copied, 3 already retrieved (0kB/2ms)
+compile:
+compile-test:
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/test/classes
+    [javac] Compiling 118 source files to /builddir/build/BUILD/zookeeper-3.4.5/build/test/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.5
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Note: /builddir/build/BUILD/zookeeper-3.4.5/src/java/test/org/apache/zookeeper/test/LoadFromLogTest.java uses unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 warning
+    [javac] Compiling 11 source files to /builddir/build/BUILD/zookeeper-3.4.5/build/test/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.5
+    [javac] 1 warning
+test-jar:
+      [jar] Building jar: /builddir/build/BUILD/zookeeper-3.4.5/build/zookeeper-3.4.5-test.jar
+init:
+ivy-download:
+ivy-taskdef:
+ivy-init:
+ivy-retrieve:
+[ivy:retrieve] impossible to define new type: class not found: org.apache.ivy.plugins.signer.bouncycastle.OpenPGPSignatureGenerator in [] nor Ivy classloader
+[ivy:retrieve] :: loading settings :: file = /builddir/build/BUILD/zookeeper-3.4.5/ivysettings.xml
+[ivy:retrieve] :: retrieving :: org.apache.zookeeper#zookeeper
+[ivy:retrieve] 	confs: [default]
+[ivy:retrieve] 	0 artifacts copied, 3 already retrieved (0kB/2ms)
+compile:
+jar:
+javadoc:
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/docs/api
+  [javadoc] Generating Javadoc
+  [javadoc] Javadoc execution
+  [javadoc] warning: [options] bootstrap class path not set in conjunction with -source 1.5
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/AsyncCallback.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/CreateMode.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/KeeperException.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/ServerAdminClient.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/WatchedEvent.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/Watcher.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/ZooDefs.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/ZooKeeper.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/ZooKeeperMain.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/client/FourLetterWordMain.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/LogFormatter.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/PurgeTxnLog.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/SnapshotFormatter.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/ZooKeeperServerMain.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/quorum/QuorumPeerMain.java...
+  [javadoc] Loading source file /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/upgrade/UpgradeMain.java...
+  [javadoc] Loading source files for package org.apache.zookeeper.data...
+  [javadoc] Constructing Javadoc information...
+  [javadoc] Standard Doclet version 1.7.0_51
+  [javadoc] Building tree for all the packages and classes...
+  [javadoc] Building index for all the packages and classes...
+  [javadoc] Building index for all classes...
+  [javadoc] Generating /builddir/build/BUILD/zookeeper-3.4.5/build/docs/api/help-doc.html...
+  [javadoc] 1 warning
+init:
+ivy-download:
+ivy-taskdef:
+ivy-init:
+ivy-retrieve:
+[ivy:retrieve] impossible to define new type: class not found: org.apache.ivy.plugins.signer.bouncycastle.OpenPGPSignatureGenerator in [] nor Ivy classloader
+[ivy:retrieve] :: loading settings :: file = /builddir/build/BUILD/zookeeper-3.4.5/ivysettings.xml
+[ivy:retrieve] :: retrieving :: org.apache.zookeeper#zookeeper
+[ivy:retrieve] 	confs: [default]
+[ivy:retrieve] 	0 artifacts copied, 3 already retrieved (0kB/2ms)
+compile:
+jar:
+javadoc-dev:
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/docs/dev-api
+  [javadoc] Generating Javadoc
+  [javadoc] Javadoc execution
+  [javadoc] warning: [options] bootstrap class path not set in conjunction with -source 1.5
+  [javadoc] Loading source files for package org.apache.zookeeper...
+  [javadoc] Loading source files for package org.apache.zookeeper.client...
+  [javadoc] Loading source files for package org.apache.zookeeper.common...
+  [javadoc] Loading source files for package org.apache.zookeeper.jmx...
+  [javadoc] Loading source files for package org.apache.zookeeper.server...
+  [javadoc] Loading source files for package org.apache.zookeeper.server.auth...
+  [javadoc] Loading source files for package org.apache.zookeeper.server.persistence...
+  [javadoc] Loading source files for package org.apache.zookeeper.server.quorum...
+  [javadoc] Loading source files for package org.apache.zookeeper.server.quorum.flexible...
+  [javadoc] Loading source files for package org.apache.zookeeper.server.upgrade...
+  [javadoc] Loading source files for package org.apache.zookeeper.server.util...
+  [javadoc] Loading source files for package org.apache.zookeeper.version.util...
+  [javadoc] Loading source files for package org.apache.zookeeper.data...
+  [javadoc] Loading source files for package org.apache.zookeeper.proto...
+  [javadoc] Loading source files for package org.apache.zookeeper.txn...
+  [javadoc] Loading source files for package org.apache.zookeeper.version...
+  [javadoc] Constructing Javadoc information...
+  [javadoc] Standard Doclet version 1.7.0_51
+  [javadoc] Building tree for all the packages and classes...
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/ZKUtil.java:44: warning - Tag @link: can't find delete(String, int) in org.apache.zookeeper.ZKUtil
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "58" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "47" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "47" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "47" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "47" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "47" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "47" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "63" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "47" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "47" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "47" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "47" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see:illegal character: "45" in "http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/jmx/ManagedUtil.java:42: warning - Tag @see: reference not found: http://logging.apache.org/log4j/1.2/apidocs/index.html?org/apache/log4j/jmx/package-summary.html
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/ServerCnxn.java:388: warning - Tag @see: missing '#': "dumpConnectionInfo(PrintWriter, boolean) for brief stats"
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/PrepRequestProcessor.java:681: warning - @return tag has no arguments.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/ServerCnxn.java:406: warning - @return tag cannot be used in method with void return type.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/ServerConfig.java:54: warning - @return tag cannot be used in method with void return type.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/ServerConfig.java:77: warning - @return tag cannot be used in method with void return type.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/WatchManager.java:150: warning - @return tag cannot be used in method with void return type.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/ZKDatabase.java:369: warning - @return tag has no arguments.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/ZooKeeperServer.java:152: warning - @param argument "dataDir" is not a parameter name.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/auth/KerberosName.java:357: warning - @param argument "conf" is not a parameter name.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/persistence/FileSnap.java:184: warning - @param argument "the" is not a parameter name.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/persistence/FileTxnLog.java:248: warning - @return tag has no arguments.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/persistence/FileTxnLog.java:572: warning - @param argument "ia" is not a parameter name.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/persistence/FileTxnLog.java:572: warning - @param argument "is" is not a parameter name.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/persistence/FileTxnSnapLog.java:303: warning - @return tag has no arguments.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/persistence/Util.java:139: warning - Tag @link: reference not found: makeLogName
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/persistence/Util.java:139: warning - Tag @link: reference not found: makeSnapshotName
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/quorum/FastLeaderElection.java:557: warning - @param argument "id" is not a parameter name.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/quorum/FastLeaderElection.java:557: warning - @param argument "zxid" is not a parameter name.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/quorum/Learner.java:72: warning - @return tag has no arguments.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/quorum/Learner.java:105: warning - @return tag has no arguments.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/quorum/Leader.java:717: warning - @return tag has no arguments.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/quorum/Leader.java:703: warning - @param argument "zxid" is not a parameter name.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/quorum/Leader.java:801: warning - @param argument "f" is not a parameter name.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/upgrade/UpgradeSnapShotV1.java:108: warning - @return tag has no arguments.
+  [javadoc] /builddir/build/BUILD/zookeeper-3.4.5/src/java/main/org/apache/zookeeper/server/upgrade/UpgradeSnapShotV1.java:228: warning - @return tag has no arguments.
+  [javadoc] Building index for all the packages and classes...
+  [javadoc] Building index for all classes...
+  [javadoc] Generating /builddir/build/BUILD/zookeeper-3.4.5/build/docs/dev-api/help-doc.html...
+  [javadoc] 41 warnings
+BUILD SUCCESSFUL
+Total time: 17 seconds
++ cd src/contrib
++ JAVA_HOME=/usr/lib/jvm/java
++ ant -Dversion=3.4.5 -Dcontribfilesetincludes=zooinspector/build.xml -Dant.build.javac.source=1.5 -Dant.build.javac.target=1.5 -Dtarget.jdk=1.5 -DlastRevision=-1 -Divy.jar.exists=true -Divy.initialized=true -Ddest.dir=../../build/zookeeper
+Buildfile: /builddir/build/BUILD/zookeeper-3.4.5/src/contrib/build.xml
+compile:
+setjarname:
+checkMainIsAvailable:
+checkMainCompiled:
+check-contrib:
+zookeeperbuildcontrib.init:
+     [echo] contrib: ZooInspector
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/classes
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/test
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/test/lib
+init-contrib:
+init:
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/licences
+     [copy] Copying 2 files to /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/licences
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/icons
+     [copy] Copying 13 files to /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/icons
+    [mkdir] Created dir: /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/config
+     [copy] Copying 2 files to /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/config
+     [copy] Copying 1 file to /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/lib
+     [copy] Copying 1 file to /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/lib
+     [copy] Copying 4 files to /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector
+ivy-download:
+ivy-init:
+ivy-retrieve:
+zookeeperbuildcontrib.compile:
+     [echo] contrib: ZooInspector
+    [javac] /builddir/build/BUILD/zookeeper-3.4.5/src/contrib/build-contrib.xml:118: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 24 source files to /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.5
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 1 warning
+compile:
+jar:
+     [echo] contrib: ZooInspector
+      [jar] Building jar: /builddir/build/BUILD/zookeeper-3.4.5/build/contrib/ZooInspector/zookeeper-ZooInspector-3.4.5.jar
+BUILD SUCCESSFUL
+Total time: 1 second
++ pushd src/c
+~/build/BUILD/zookeeper-3.4.5/src/c ~/build/BUILD/zookeeper-3.4.5
++ rm -rf autom4te.cache
++ autoreconf -fis
+libtoolize: putting auxiliary files in `.'.
+libtoolize: linking file `./ltmain.sh'
+libtoolize: Consider adding `AC_CONFIG_MACRO_DIR([m4])' to configure.ac and
+libtoolize: rerunning libtoolize, to keep the correct libtool macros in-tree.
+libtoolize: Consider adding `-I m4' to ACLOCAL_AMFLAGS in Makefile.am.
+Makefile.am:70: warning: wildcard ${srcdir}/tests/*.cc: non-POSIX variable name
+Makefile.am:70: (probably a GNU make extension)
+Makefile.am:70: warning: wildcard ${srcdir}/tests/*.h: non-POSIX variable name
+Makefile.am:70: (probably a GNU make extension)
+Makefile.am:81: warning: shell cat ${srcdir}/tests/wrappers.opt: non-POSIX variable name
+Makefile.am:81: (probably a GNU make extension)
+Makefile.am:94: warning: shell cat ${srcdir}/tests/wrappers-mt.opt: non-POSIX variable name
+Makefile.am:94: (probably a GNU make extension)
+/usr/share/automake-1.13/am/ltlibrary.am: warning: 'libhashtable.la': linking libtool libraries using a non-POSIX
+/usr/share/automake-1.13/am/ltlibrary.am: archiver requires 'AM_PROG_AR' in 'configure.ac'
+Makefile.am:16:   while processing Libtool library 'libhashtable.la'
+/usr/share/automake-1.13/am/ltlibrary.am: warning: 'libzkmt.la': linking libtool libraries using a non-POSIX
+/usr/share/automake-1.13/am/ltlibrary.am: archiver requires 'AM_PROG_AR' in 'configure.ac'
+Makefile.am:37:   while processing Libtool library 'libzkmt.la'
+/usr/share/automake-1.13/am/ltlibrary.am: warning: 'libzkst.la': linking libtool libraries using a non-POSIX
+/usr/share/automake-1.13/am/ltlibrary.am: archiver requires 'AM_PROG_AR' in 'configure.ac'
+Makefile.am:16:   while processing Libtool library 'libzkst.la'
+/usr/share/automake-1.13/am/ltlibrary.am: warning: 'libzookeeper_mt.la': linking libtool libraries using a non-POSIX
+/usr/share/automake-1.13/am/ltlibrary.am: archiver requires 'AM_PROG_AR' in 'configure.ac'
+Makefile.am:42:   while processing Libtool library 'libzookeeper_mt.la'
+/usr/share/automake-1.13/am/ltlibrary.am: warning: 'libzookeeper_st.la': linking libtool libraries using a non-POSIX
+/usr/share/automake-1.13/am/ltlibrary.am: archiver requires 'AM_PROG_AR' in 'configure.ac'
+Makefile.am:30:   while processing Libtool library 'libzookeeper_st.la'
++ CFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic'
++ export CFLAGS
++ CXXFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic'
++ export CXXFLAGS
++ FFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -I/usr/lib64/gfortran/modules'
++ export FFLAGS
++ FCFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -I/usr/lib64/gfortran/modules'
++ export FCFLAGS
++ LDFLAGS='-Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld'
++ export LDFLAGS
+++ find . -name config.guess -o -name config.sub
++ for i in '$(find . -name config.guess -o -name config.sub)'
+++ basename ./config.guess
++ '[' -f /usr/lib/rpm/redhat/config.guess ']'
++ /usr/bin/rm -f ./config.guess
+++ basename ./config.guess
++ /usr/bin/cp -fv /usr/lib/rpm/redhat/config.guess ./config.guess
+'/usr/lib/rpm/redhat/config.guess' -> './config.guess'
++ for i in '$(find . -name config.guess -o -name config.sub)'
+++ basename ./config.sub
++ '[' -f /usr/lib/rpm/redhat/config.sub ']'
++ /usr/bin/rm -f ./config.sub
+++ basename ./config.sub
++ /usr/bin/cp -fv /usr/lib/rpm/redhat/config.sub ./config.sub
+'/usr/lib/rpm/redhat/config.sub' -> './config.sub'
++ ./configure --build=x86_64-koji-linux-gnu --host=x86_64-koji-linux-gnu --program-prefix= --disable-dependency-tracking --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/libexec --localstatedir=/var --sharedstatedir=/var/lib --mandir=/usr/share/man --infodir=/usr/share/info --disable-static --disable-rpath --with-syncapi
+configure: WARNING: unrecognized options: --disable-rpath
+checking for x86_64-koji-linux-gnu-doxygen... no
+checking for doxygen... /usr/bin/doxygen
+checking for x86_64-koji-linux-gnu-perl... no
+checking for perl... /usr/bin/perl
+checking for x86_64-koji-linux-gnu-dot... no
+checking for dot... /usr/bin/dot
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for cppunit-config... /usr/bin/cppunit-config
+checking for Cppunit - version >= 1.10.2... 1.12.1
+checking for generated/zookeeper.jute.c... yes
+checking for generated/zookeeper.jute.h... yes
+checking for x86_64-koji-linux-gnu-gcc... no
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... none
+checking whether gcc and cc understand -c and -o together... yes
+checking for x86_64-koji-linux-gnu-g++... no
+checking for x86_64-koji-linux-gnu-c++... no
+checking for x86_64-koji-linux-gnu-gpp... no
+checking for x86_64-koji-linux-gnu-aCC... no
+checking for x86_64-koji-linux-gnu-CC... no
+checking for x86_64-koji-linux-gnu-cxx... no
+checking for x86_64-koji-linux-gnu-cc++... no
+checking for x86_64-koji-linux-gnu-cl.exe... no
+checking for x86_64-koji-linux-gnu-FCC... no
+checking for x86_64-koji-linux-gnu-KCC... no
+checking for x86_64-koji-linux-gnu-RCC... no
+checking for x86_64-koji-linux-gnu-xlC_r... no
+checking for x86_64-koji-linux-gnu-xlC... no
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... none
+checking whether ln -s works... yes
+checking build system type... x86_64-koji-linux-gnu
+checking host system type... x86_64-koji-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-koji-linux-gnu file names to x86_64-koji-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-koji-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for x86_64-koji-linux-gnu-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-koji-linux-gnu-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-koji-linux-gnu-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-koji-linux-gnu-strip... no
+checking for strip... strip
+checking for x86_64-koji-linux-gnu-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for x86_64-koji-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... no
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... no
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for pthread_mutex_lock in -lpthread... yes
+configure: building with SyncAPI support
+checking for ANSI C header files... (cached) yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking sys/utsname.h usability... yes
+checking sys/utsname.h presence... yes
+checking for sys/utsname.h... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking whether time.h and sys/time.h may both be included... yes
+checking for nfds_t... yes
+checking whether to enable ipv6... yes
+checking for getcwd... yes
+checking for gethostbyname... yes
+checking for gethostname... yes
+checking for getlogin... yes
+checking for getpwuid_r... yes
+checking for gettimeofday... yes
+checking for getuid... yes
+checking for memmove... yes
+checking for memset... yes
+checking for poll... yes
+checking for socket... yes
+checking for strchr... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strtol... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --disable-rpath
++ sed -i 's|^hardcode_libdir_flag_spec=.*|hardcode_libdir_flag_spec=""|g' libtool
++ sed -i 's|^runpath_var=LD_RUN_PATH|runpath_var=DIE_RPATH_DIE|g' libtool
++ /usr/bin/make -j16
+/usr/bin/make  all-am
+make[1]: Entering directory `/builddir/build/BUILD/zookeeper-3.4.5/src/c'
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o zookeeper.lo `test -f 'src/zookeeper.c' || echo './'`src/zookeeper.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o recordio.lo `test -f 'src/recordio.c' || echo './'`src/recordio.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o zookeeper.jute.lo `test -f 'generated/zookeeper.jute.c' || echo './'`generated/zookeeper.jute.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o zk_log.lo `test -f 'src/zk_log.c' || echo './'`src/zk_log.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o zk_hashtable.lo `test -f 'src/zk_hashtable.c' || echo './'`src/zk_hashtable.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o st_adaptor.lo `test -f 'src/st_adaptor.c' || echo './'`src/st_adaptor.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o hashtable_itr.lo `test -f 'src/hashtable/hashtable_itr.c' || echo './'`src/hashtable/hashtable_itr.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o hashtable.lo `test -f 'src/hashtable/hashtable.c' || echo './'`src/hashtable/hashtable.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o libzkmt_la-zookeeper.lo `test -f 'src/zookeeper.c' || echo './'`src/zookeeper.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o libzkmt_la-recordio.lo `test -f 'src/recordio.c' || echo './'`src/recordio.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o libzkmt_la-zookeeper.jute.lo `test -f 'generated/zookeeper.jute.c' || echo './'`generated/zookeeper.jute.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o libzkmt_la-zk_log.lo `test -f 'src/zk_log.c' || echo './'`src/zk_log.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o libzkmt_la-zk_hashtable.lo `test -f 'src/zk_hashtable.c' || echo './'`src/zk_hashtable.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o libzkmt_la-mt_adaptor.lo `test -f 'src/mt_adaptor.c' || echo './'`src/mt_adaptor.c
+gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o cli.o `test -f 'src/cli.c' || echo './'`src/cli.c
+gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o cli_mt-cli.o `test -f 'src/cli.c' || echo './'`src/cli.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -Wall -Werror -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c src/zookeeper.c  -fPIC -DPIC -o .libs/zookeeper.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c src/recordio.c  -fPIC -DPIC -o .libs/libzkmt_la-recordio.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -Wall -Werror -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c src/hashtable/hashtable.c  -fPIC -DPIC -o .libs/hashtable.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -Wall -Werror -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c src/hashtable/hashtable_itr.c  -fPIC -DPIC -o .libs/hashtable_itr.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c src/mt_adaptor.c  -fPIC -DPIC -o .libs/libzkmt_la-mt_adaptor.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -Wall -Werror -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c src/st_adaptor.c  -fPIC -DPIC -o .libs/st_adaptor.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -Wall -Werror -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c src/recordio.c  -fPIC -DPIC -o .libs/recordio.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c src/zookeeper.c  -fPIC -DPIC -o .libs/libzkmt_la-zookeeper.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -Wall -Werror -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c src/zk_hashtable.c  -fPIC -DPIC -o .libs/zk_hashtable.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -Wall -Werror -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c src/zk_log.c  -fPIC -DPIC -o .libs/zk_log.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c src/zk_hashtable.c  -fPIC -DPIC -o .libs/libzkmt_la-zk_hashtable.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -Wall -Werror -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c generated/zookeeper.jute.c  -fPIC -DPIC -o .libs/zookeeper.jute.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c src/zk_log.c  -fPIC -DPIC -o .libs/libzkmt_la-zk_log.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./include -I./tests -I./generated -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -c generated/zookeeper.jute.c  -fPIC -DPIC -o .libs/libzkmt_la-zookeeper.jute.o
+src/mt_adaptor.c: In function 'do_io':
+src/mt_adaptor.c:376:13: warning: variable 'rc' set but not used [-Wunused-but-set-variable]
+         int rc;
+             ^
+gcc -DHAVE_CONFIG_H -I.  -I./include -I./tests -I./generated -fPIE  -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o load_gen-load_gen.o `test -f 'src/load_gen.c' || echo './'`src/load_gen.c
+/bin/sh ./libtool  --tag=CC   --mode=link gcc -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic  -Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -o libhashtable.la  hashtable_itr.lo hashtable.lo  
+src/load_gen.c:34:12: warning: 'shutdownThisThing' defined but not used [-Wunused-variable]
+ static int shutdownThisThing=0;
+            ^
+src/load_gen.c: In function 'doCreateNodes':
+src/load_gen.c:109:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/load_gen.c: In function 'doWrites':
+src/load_gen.c:134:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/load_gen.c: In function 'doReads':
+src/load_gen.c:162:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/load_gen.c: In function 'doDeletes':
+src/load_gen.c:179:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+libtool: link: ar cru .libs/libhashtable.a .libs/hashtable_itr.o .libs/hashtable.o 
+libtool: link: ranlib .libs/libhashtable.a
+libtool: link: ( cd ".libs" && rm -f "libhashtable.la" && ln -s "../libhashtable.la" "libhashtable.la" )
+/bin/sh ./libtool  --tag=CC   --mode=link gcc -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic  -Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -o libzkst.la  zookeeper.lo recordio.lo zookeeper.jute.lo zk_log.lo zk_hashtable.lo st_adaptor.lo -lm 
+/bin/sh ./libtool  --tag=CC   --mode=link gcc -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic  -Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -o libzkmt.la  libzkmt_la-zookeeper.lo libzkmt_la-recordio.lo libzkmt_la-zookeeper.jute.lo libzkmt_la-zk_log.lo libzkmt_la-zk_hashtable.lo libzkmt_la-mt_adaptor.lo -lm 
+libtool: link: ar cru .libs/libzkst.a .libs/zookeeper.o .libs/recordio.o .libs/zookeeper.jute.o .libs/zk_log.o .libs/zk_hashtable.o .libs/st_adaptor.o 
+libtool: link: ranlib .libs/libzkst.a
+libtool: link: ( cd ".libs" && rm -f "libzkst.la" && ln -s "../libzkst.la" "libzkst.la" )
+/bin/sh ./libtool  --tag=CC   --mode=link gcc -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -no-undefined -version-info 2 -pie -Wl,-z,relro -Wl,-z,now -export-symbols-regex '(zoo_|zookeeper_|zhandle|Z|format_log_message|log_message|logLevel|deallocate_|zerror|is_unrecoverable)' -Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -o libzookeeper_st.la -rpath /usr/lib64  libzkst.la libhashtable.la 
+libtool: link: ar cru .libs/libzkmt.a .libs/libzkmt_la-zookeeper.o .libs/libzkmt_la-recordio.o .libs/libzkmt_la-zookeeper.jute.o .libs/libzkmt_la-zk_log.o .libs/libzkmt_la-zk_hashtable.o .libs/libzkmt_la-mt_adaptor.o 
+libtool: link: ranlib .libs/libzkmt.a
+libtool: link: ( cd ".libs" && rm -f "libzkmt.la" && ln -s "../libzkmt.la" "libzkmt.la" )
+/bin/sh ./libtool  --tag=CC   --mode=link gcc -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -no-undefined -version-info 2 -pie -Wl,-z,relro -Wl,-z,now -export-symbols-regex '(zoo_|zookeeper_|zhandle|Z|format_log_message|log_message|logLevel|deallocate_|zerror|is_unrecoverable)' -Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -o libzookeeper_mt.la -rpath /usr/lib64  libzkmt.la libhashtable.la -lpthread 
+libtool: link: /usr/bin/nm -B   ./.libs/libzkst.a ./.libs/libhashtable.a | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' | /usr/bin/sed 's/.* //' | sort | uniq > .libs/libzookeeper_st.exp
+libtool: link: /usr/bin/grep -E -e "(zoo_|zookeeper_|zhandle|Z|format_log_message|log_message|logLevel|deallocate_|zerror|is_unrecoverable)" ".libs/libzookeeper_st.exp" > ".libs/libzookeeper_st.expT"
+libtool: link: mv -f ".libs/libzookeeper_st.expT" ".libs/libzookeeper_st.exp"
+libtool: link: echo "{ global:" > .libs/libzookeeper_st.ver
+libtool: link:  cat .libs/libzookeeper_st.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libzookeeper_st.ver
+libtool: link:  echo "local: *; };" >> .libs/libzookeeper_st.ver
+libtool: link:  gcc -shared  -fPIC -DPIC  -Wl,--whole-archive ./.libs/libzkst.a ./.libs/libhashtable.a -Wl,--no-whole-archive  -lm  -O2 -m64 -mtune=generic -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,-z -Wl,relro   -Wl,-soname -Wl,libzookeeper_st.so.2 -Wl,-version-script -Wl,.libs/libzookeeper_st.ver -o .libs/libzookeeper_st.so.2.0.0
+libtool: link: /usr/bin/nm -B   ./.libs/libzkmt.a ./.libs/libhashtable.a | sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' | /usr/bin/sed 's/.* //' | sort | uniq > .libs/libzookeeper_mt.exp
+libtool: link: /usr/bin/grep -E -e "(zoo_|zookeeper_|zhandle|Z|format_log_message|log_message|logLevel|deallocate_|zerror|is_unrecoverable)" ".libs/libzookeeper_mt.exp" > ".libs/libzookeeper_mt.expT"
+libtool: link: mv -f ".libs/libzookeeper_mt.expT" ".libs/libzookeeper_mt.exp"
+libtool: link: echo "{ global:" > .libs/libzookeeper_mt.ver
+libtool: link:  cat .libs/libzookeeper_mt.exp | sed -e "s/\(.*\)/\1;/" >> .libs/libzookeeper_mt.ver
+libtool: link:  echo "local: *; };" >> .libs/libzookeeper_mt.ver
+libtool: link:  gcc -shared  -fPIC -DPIC  -Wl,--whole-archive ./.libs/libzkmt.a ./.libs/libhashtable.a -Wl,--no-whole-archive  -lm -lpthread  -O2 -m64 -mtune=generic -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,-z -Wl,relro   -Wl,-soname -Wl,libzookeeper_mt.so.2 -Wl,-version-script -Wl,.libs/libzookeeper_mt.ver -o .libs/libzookeeper_mt.so.2.0.0
+libtool: link: (cd ".libs" && rm -f "libzookeeper_st.so.2" && ln -s "libzookeeper_st.so.2.0.0" "libzookeeper_st.so.2")
+libtool: link: (cd ".libs" && rm -f "libzookeeper_st.so" && ln -s "libzookeeper_st.so.2.0.0" "libzookeeper_st.so")
+libtool: link: ( cd ".libs" && rm -f "libzookeeper_st.la" && ln -s "../libzookeeper_st.la" "libzookeeper_st.la" )
+/bin/sh ./libtool  --tag=CC   --mode=link gcc -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic  -Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -o cli_st cli.o libzookeeper_st.la 
+libtool: link: (cd ".libs" && rm -f "libzookeeper_mt.so.2" && ln -s "libzookeeper_mt.so.2.0.0" "libzookeeper_mt.so.2")
+libtool: link: (cd ".libs" && rm -f "libzookeeper_mt.so" && ln -s "libzookeeper_mt.so.2.0.0" "libzookeeper_mt.so")
+libtool: link: ( cd ".libs" && rm -f "libzookeeper_mt.la" && ln -s "../libzookeeper_mt.la" "libzookeeper_mt.la" )
+/bin/sh ./libtool  --tag=CC   --mode=link gcc -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic  -Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -o cli_mt cli_mt-cli.o libzookeeper_mt.la 
+/bin/sh ./libtool  --tag=CC   --mode=link gcc -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic  -Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -o load_gen load_gen-load_gen.o libzookeeper_mt.la 
+libtool: link: gcc -Wall -Werror -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -Wl,-z -Wl,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -o .libs/cli_st cli.o  ./.libs/libzookeeper_st.so -lm
+libtool: link: gcc -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -Wl,-z -Wl,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -o .libs/load_gen load_gen-load_gen.o  ./.libs/libzookeeper_mt.so -lm -lpthread
+libtool: link: gcc -DTHREADED -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -m64 -mtune=generic -Wl,-z -Wl,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -o .libs/cli_mt cli_mt-cli.o  ./.libs/libzookeeper_mt.so -lm -lpthread
+make[1]: Leaving directory `/builddir/build/BUILD/zookeeper-3.4.5/src/c'
++ make doxygen-doc
+rm -rf docs
+SRCDIR='.' PROJECT='zookeeper' DOCDIR='docs' VERSION='3.4.5' PERL_PATH='/usr/bin/perl' HAVE_DOT='YES' DOT_PATH='/usr/bin' GENERATE_MAN='NO' GENERATE_RTF='NO' GENERATE_XML='NO' GENERATE_HTMLHELP='NO' GENERATE_CHI='NO' GENERATE_HTML='YES' GENERATE_LATEX='NO' /usr/bin/doxygen ./c-doc.Doxyfile
+Warning: Tag `USE_WINDOWS_ENCODING' at line 64 of file ./c-doc.Doxyfile has become obsolete.
+To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+Warning: Tag `DETAILS_AT_TOP' at line 156 of file ./c-doc.Doxyfile has become obsolete.
+To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+Warning: Tag `SHOW_DIRECTORIES' at line 390 of file ./c-doc.Doxyfile has become obsolete.
+To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+Warning: Tag `HTML_ALIGN_MEMBERS' at line 674 of file ./c-doc.Doxyfile has become obsolete.
+To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+Warning: Tag `MAX_DOT_GRAPH_WIDTH' at line 1196 of file ./c-doc.Doxyfile has become obsolete.
+To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+Warning: Tag `MAX_DOT_GRAPH_HEIGHT' at line 1204 of file ./c-doc.Doxyfile has become obsolete.
+To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:657: warning: End of list marker found without any preceding list items
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:657: warning: End of list marker found without any preceding list items
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:657: warning: End of list marker found without any preceding list items
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:1137: warning: argument 'return' of command @param is not found in the argument list of zerror(int c)
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:1137: warning: The following parameters of zerror(int c) are not documented:
+  parameter 'c'
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:1118: warning: argument 'completion' of command @param is not found in the argument list of zoo_amulti(zhandle_t *zh, int count, const zoo_op_t *ops, zoo_op_result_t *results, void_completion_t, const void *data)
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:1093: warning: argument 'buffer' of command @param is not found in the argument list of zoo_aset_acl(zhandle_t *zh, const char *path, int version, struct ACL_vector *acl, void_completion_t, const void *data)
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:1093: warning: argument 'buflen' of command @param is not found in the argument list of zoo_aset_acl(zhandle_t *zh, const char *path, int version, struct ACL_vector *acl, void_completion_t, const void *data)
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:1093: warning: argument 'completion' of command @param is not found in the argument list of zoo_aset_acl(zhandle_t *zh, const char *path, int version, struct ACL_vector *acl, void_completion_t, const void *data)
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:1093: warning: The following parameters of zoo_aset_acl(zhandle_t *zh, const char *path, int version, struct ACL_vector *acl, void_completion_t, const void *data) are not documented:
+  parameter 'version'
+  parameter 'acl'
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:824: warning: unable to resolve reference to `zoo_axists' for \ref command
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:1275: warning: argument 'the' of command @param is not found in the argument list of zoo_exists(zhandle_t *zh, const char *path, int watch, struct Stat *stat)
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:1275: warning: The following parameters of zoo_exists(zhandle_t *zh, const char *path, int watch, struct Stat *stat) are not documented:
+  parameter 'stat'
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:349: warning: The following parameters of zoo_set_op_init(zoo_op_t *op, const char *path, const char *buffer, int buflen, int version, struct Stat *stat) are not documented:
+  parameter 'stat'
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:731: warning: unable to resolve reference to `State' for \ref command
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:1295: warning: argument 'the' of command @param is not found in the argument list of zoo_wexists(zhandle_t *zh, const char *path, watcher_fn watcher, void *watcherCtx, struct Stat *stat)
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:1295: warning: The following parameters of zoo_wexists(zhandle_t *zh, const char *path, watcher_fn watcher, void *watcherCtx, struct Stat *stat) are not documented:
+  parameter 'stat'
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:422: warning: The following parameters of zookeeper_init(const char *host, watcher_fn fn, int recv_timeout, const clientid_t *clientid, void *context, int flags) are not documented:
+  parameter 'recv_timeout'
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:256: warning: Member client_id (variable) of class clientid_t is not documented.
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:257: warning: Member passwd[16] (variable) of class clientid_t is not documented.
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:270: warning: Member type (variable) of class zoo_op is not documented.
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:386: warning: Member err (variable) of class zoo_op_result is not documented.
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:387: warning: Member value (variable) of class zoo_op_result is not documented.
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:388: warning: Member valuelen (variable) of class zoo_op_result is not documented.
+/builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h:389: warning: Member stat (variable) of class zoo_op_result is not documented.
+Notice: Output directory `docs' does not exist. I have created it for you.
+Searching for include files...
+Searching for example files...
+Searching for images...
+Searching for dot files...
+Searching for msc files...
+Searching for files to exclude
+Searching for files to process...
+Reading and parsing tag files
+Parsing files
+Preprocessing /builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h...
+Parsing file /builddir/build/BUILD/zookeeper-3.4.5/src/c/include/zookeeper.h...
+Building group list...
+Building directory list...
+Building namespace list...
+Building file list...
+Building class list...
+Associating documentation with classes...
+Computing nesting relations for classes...
+Building example list...
+Searching for enumerations...
+Searching for documented typedefs...
+Searching for members imported via using declarations...
+Searching for included using directives...
+Searching for documented variables...
+Building interface member list...
+Building member list...
+Searching for friends...
+Searching for documented defines...
+Computing class inheritance relations...
+Computing class usage relations...
+Flushing cached template relations that have become invalid...
+Creating members for template instances...
+Computing class relations...
+Add enum values to enums...
+Searching for member function documentation...
+Building page list...
+Search for main page...
+Computing page relations...
+Determining the scope of groups...
+Sorting lists...
+Freeing entry tree
+Determining which enums are documented
+Computing member relations...
+Building full member lists recursively...
+Adding members to member groups.
+Computing member references...
+Inheriting documentation...
+Generating disk names...
+Adding source references...
+Adding xrefitems...
+Sorting member lists...
+Computing dependencies between directories...
+Generating citations page...
+Counting data structures...
+Resolving user defined references...
+Finding anchors and sections in the documentation...
+Transferring function references...
+Combining using relations...
+Adding members to index pages...
+Generating style sheet...
+Generating example documentation...
+Generating file sources...
+Generating code for file include/zookeeper.h...
+Generating file documentation...
+Generating docs for file include/zookeeper.h...
+Generating page documentation...
+Generating group documentation...
+Generating class documentation...
+Generating docs for compound clientid_t...
+Generating docs for compound zoo_op...
+Generating docs for compound zoo_op_result...
+Generating namespace index...
+Generating graph info page...
+Generating directory documentation...
+Generating dependency graph for directory include
+Generating index page...
+Generating page index...
+Generating module index...
+Generating namespace index...
+Generating namespace member index...
+Generating annotated compound index...
+Generating alphabetical compound index...
+Generating hierarchical class index...
+Generating graphical class hierarchy...
+Generating member index...
+Generating file index...
+Generating file member index...
+Generating example index...
+finalizing index lists...
+Running dot...
+Generating dot graphs using 5 parallel threads...
+Running dot for graph 1/3
+Running dot for graph 2/3
+Running dot for graph 3/3
+Patching output file 1/2
+Patching output file 2/2
+lookup cache used 152/65536 hits=1000 misses=152
+finished...
+~/build/BUILD/zookeeper-3.4.5
+~/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil ~/build/BUILD/zookeeper-3.4.5
++ popd
++ pushd src/contrib/zktreeutil
++ rm -rf autom4te.cache
++ autoreconf -if
+configure.ac:7: installing './install-sh'
+configure.ac:7: installing './missing'
+src/Makefile.am: installing './depcomp'
++ CFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic'
++ export CFLAGS
++ CXXFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic'
++ export CXXFLAGS
++ FFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -I/usr/lib64/gfortran/modules'
++ export FFLAGS
++ FCFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -I/usr/lib64/gfortran/modules'
++ export FCFLAGS
++ LDFLAGS='-Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld'
++ export LDFLAGS
+++ find . -name config.guess -o -name config.sub
++ ./configure --build=x86_64-koji-linux-gnu --host=x86_64-koji-linux-gnu --program-prefix= --disable-dependency-tracking --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/libexec --localstatedir=/var --sharedstatedir=/var/lib --mandir=/usr/share/man --infodir=/usr/share/info
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for x86_64-koji-linux-gnu-g++... no
+checking for x86_64-koji-linux-gnu-c++... no
+checking for x86_64-koji-linux-gnu-gpp... no
+checking for x86_64-koji-linux-gnu-aCC... no
+checking for x86_64-koji-linux-gnu-CC... no
+checking for x86_64-koji-linux-gnu-cxx... no
+checking for x86_64-koji-linux-gnu-cc++... no
+checking for x86_64-koji-linux-gnu-cl.exe... no
+checking for x86_64-koji-linux-gnu-FCC... no
+checking for x86_64-koji-linux-gnu-KCC... no
+checking for x86_64-koji-linux-gnu-RCC... no
+checking for x86_64-koji-linux-gnu-xlC_r... no
+checking for x86_64-koji-linux-gnu-xlC... no
+checking for g++... g++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... none
+checking for xml2-config... /usr/bin/xml2-config
+checking for libxml - version >= 2.7.3... yes (version 2.9.1)
+checking for main in -lzookeeper_mt... yes
+checking for main in -llog4cxx... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking how to run the C++ preprocessor... g++ -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking for unistd.h... (cached) yes
+checking boost/shared_ptr.hpp usability... yes
+checking boost/shared_ptr.hpp presence... yes
+checking for boost/shared_ptr.hpp... yes
+checking boost/algorithm/string.hpp usability... yes
+checking boost/algorithm/string.hpp presence... yes
+checking for boost/algorithm/string.hpp... yes
+checking boost/algorithm/string/split.hpp usability... yes
+checking boost/algorithm/string/split.hpp presence... yes
+checking for boost/algorithm/string/split.hpp... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... no
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for size_t... yes
+checking for working volatile... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
++ /usr/bin/make -j16
+/usr/bin/make  all-recursive
+make[1]: Entering directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil'
+Making all in src
+make[2]: Entering directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/src'
+g++ -DHAVE_CONFIG_H -I. -I..    -I/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/../../c/include -I/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/../../c/generated -I../include -I/usr/local/include -I/usr/include -I/usr/include/libxml2 -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o ZkAdaptor.o ZkAdaptor.cc
+g++ -DHAVE_CONFIG_H -I. -I..    -I/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/../../c/include -I/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/../../c/generated -I../include -I/usr/local/include -I/usr/include -I/usr/include/libxml2 -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o ZkTreeUtil.o ZkTreeUtil.cc
+g++ -DHAVE_CONFIG_H -I. -I..    -I/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/../../c/include -I/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/../../c/generated -I../include -I/usr/local/include -I/usr/include -I/usr/include/libxml2 -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic -c -o ZkTreeUtilMain.o ZkTreeUtilMain.cc
+ZkTreeUtilMain.cc:48:30: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+ static char *short_options = "IEUFDfx:p:d:hz:";
+                              ^
+g++ -I/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/../../c/include -I/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/../../c/generated -I../include -I/usr/local/include -I/usr/include -I/usr/include/libxml2 -fPIE -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1  -m64 -mtune=generic  -Wl,-z,relro -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -o zktreeutil ZkAdaptor.o ZkTreeUtil.o ZkTreeUtilMain.o -L/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/../../c/.libs -lzookeeper_mt -lxml2 -lz -lm -ldl -L/usr/local/lib -llog4cxx 
+make[2]: Leaving directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/src'
+make[2]: Entering directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil'
+make[2]: Leaving directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil'
+make[1]: Leaving directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil'
++ popd
+~/build/BUILD/zookeeper-3.4.5
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.25iWf2
++ umask 022
++ cd /builddir/build/BUILD
++ '[' /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64 '!=' / ']'
++ rm -rf /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64
+++ dirname /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64
++ cd zookeeper-3.4.5
++ mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper
++ install -pm 644 build/zookeeper-3.4.5.jar /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper/zookeeper.jar
++ install -pm 644 build/zookeeper-3.4.5-test.jar /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper/zookeeper-tests.jar
++ install -pm 644 build/contrib/ZooInspector/zookeeper-ZooInspector-3.4.5.jar /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper/zookeeper-ZooInspector.jar
++ mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/maven-poms
++ install -pm 644 dist-maven/zookeeper-3.4.5.pom /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/maven-poms/JPP.zookeeper-zookeeper.pom
++ set -e
++ _pompart=JPP.zookeeper-zookeeper.pom
++ _jarpart=zookeeper/zookeeper.jar
++ _filelist=.mfiles
++ install -dm 755 /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/maven-fragments
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib/java/zookeeper/zookeeper.jar ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f '/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64%{_javajnidir}/zookeeper/zookeeper.jar' ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper/zookeeper.jar ']'
++ _jpath=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper/zookeeper.jar
++ python -m /usr/share/java-utils/maven_depmap -p /usr -n '' /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/maven-fragments/zookeeper /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/maven-poms/JPP.zookeeper-zookeeper.pom /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper/zookeeper.jar
++ sed -i s:/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64:: .mfiles
++ sort -u -o .mfiles .mfiles
++ set -e
++ _pompart=org.apache.zookeeper:zookeeper::tests:3.4.5
++ _jarpart=zookeeper/zookeeper-tests.jar
++ _filelist=.mfiles
++ install -dm 755 /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/maven-fragments
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib/java/zookeeper/zookeeper-tests.jar ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f '/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64%{_javajnidir}/zookeeper/zookeeper-tests.jar' ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper/zookeeper-tests.jar ']'
++ _jpath=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper/zookeeper-tests.jar
++ python -m /usr/share/java-utils/maven_depmap -p /usr -n '' /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/maven-fragments/zookeeper /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/maven-poms/org.apache.zookeeper:zookeeper::tests:3.4.5 /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper/zookeeper-tests.jar
++ sed -i s:/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64:: .mfiles
++ sort -u -o .mfiles .mfiles
++ install -pm 644 dist-maven/zookeeper-3.4.5-ZooInspector.pom /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/maven-poms/JPP.zookeeper-zookeeper-ZooInspector.pom
++ set -e
++ _pompart=JPP.zookeeper-zookeeper-ZooInspector.pom
++ _jarpart=zookeeper/zookeeper-ZooInspector.jar
++ _filelist=.mfiles
++ install -dm 755 /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/maven-fragments
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib/java/zookeeper/zookeeper-ZooInspector.jar ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f '/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64%{_javajnidir}/zookeeper/zookeeper-ZooInspector.jar' ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper/zookeeper-ZooInspector.jar ']'
++ _jpath=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper/zookeeper-ZooInspector.jar
++ python -m /usr/share/java-utils/maven_depmap -p /usr -n '' /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/maven-fragments/zookeeper /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/maven-poms/JPP.zookeeper-zookeeper-ZooInspector.pom /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/java/zookeeper/zookeeper-ZooInspector.jar
++ sed -i s:/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64:: .mfiles
++ sort -u -o .mfiles .mfiles
++ mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/javadoc/zookeeper/dev
++ cp -pr build/docs/api/allclasses-frame.html build/docs/api/allclasses-noframe.html build/docs/api/constant-values.html build/docs/api/deprecated-list.html build/docs/api/help-doc.html build/docs/api/index-all.html build/docs/api/index.html build/docs/api/org build/docs/api/overview-frame.html build/docs/api/overview-summary.html build/docs/api/overview-tree.html build/docs/api/package-list build/docs/api/resources build/docs/api/serialized-form.html build/docs/api/stylesheet.css /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/javadoc/zookeeper/
++ cp -pr build/docs/dev-api/allclasses-frame.html build/docs/dev-api/allclasses-noframe.html build/docs/dev-api/constant-values.html build/docs/dev-api/deprecated-list.html build/docs/dev-api/help-doc.html build/docs/dev-api/index-all.html build/docs/dev-api/index.html build/docs/dev-api/org build/docs/dev-api/overview-frame.html build/docs/dev-api/overview-summary.html build/docs/dev-api/overview-tree.html build/docs/dev-api/package-list build/docs/dev-api/resources build/docs/dev-api/serialized-form.html build/docs/dev-api/stylesheet.css /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/javadoc/zookeeper/dev/
++ pushd src/c
+~/build/BUILD/zookeeper-3.4.5/src/c ~/build/BUILD/zookeeper-3.4.5
++ /usr/bin/make install DESTDIR=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64
+make[1]: Entering directory `/builddir/build/BUILD/zookeeper-3.4.5/src/c'
+ /usr/bin/mkdir -p '/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64'
+ /bin/sh ./libtool   --mode=install /usr/bin/install -c   libzookeeper_st.la libzookeeper_mt.la '/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64'
+libtool: install: /usr/bin/install -c .libs/libzookeeper_st.so.2.0.0 /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/libzookeeper_st.so.2.0.0
+libtool: install: (cd /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64 && { ln -s -f libzookeeper_st.so.2.0.0 libzookeeper_st.so.2 || { rm -f libzookeeper_st.so.2 && ln -s libzookeeper_st.so.2.0.0 libzookeeper_st.so.2; }; })
+libtool: install: (cd /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64 && { ln -s -f libzookeeper_st.so.2.0.0 libzookeeper_st.so || { rm -f libzookeeper_st.so && ln -s libzookeeper_st.so.2.0.0 libzookeeper_st.so; }; })
+libtool: install: /usr/bin/install -c .libs/libzookeeper_st.lai /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/libzookeeper_st.la
+libtool: install: /usr/bin/install -c .libs/libzookeeper_mt.so.2.0.0 /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/libzookeeper_mt.so.2.0.0
+libtool: install: (cd /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64 && { ln -s -f libzookeeper_mt.so.2.0.0 libzookeeper_mt.so.2 || { rm -f libzookeeper_mt.so.2 && ln -s libzookeeper_mt.so.2.0.0 libzookeeper_mt.so.2; }; })
+libtool: install: (cd /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64 && { ln -s -f libzookeeper_mt.so.2.0.0 libzookeeper_mt.so || { rm -f libzookeeper_mt.so && ln -s libzookeeper_mt.so.2.0.0 libzookeeper_mt.so; }; })
+libtool: install: /usr/bin/install -c .libs/libzookeeper_mt.lai /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/libzookeeper_mt.la
+libtool: install: warning: remember to run `libtool --finish /usr/lib64'
+ /usr/bin/mkdir -p '/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/bin'
+  /bin/sh ./libtool   --mode=install /usr/bin/install -c cli_st cli_mt load_gen '/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/bin'
+libtool: install: warning: `libzookeeper_st.la' has not been installed in `/usr/lib64'
+libtool: install: /usr/bin/install -c .libs/cli_st /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/bin/cli_st
+libtool: install: warning: `libzookeeper_mt.la' has not been installed in `/usr/lib64'
+libtool: install: /usr/bin/install -c .libs/cli_mt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/bin/cli_mt
+libtool: install: warning: `libzookeeper_mt.la' has not been installed in `/usr/lib64'
+libtool: install: /usr/bin/install -c .libs/load_gen /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/bin/load_gen
+ /usr/bin/mkdir -p '/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/include/zookeeper'
+ /usr/bin/install -c -m 644 include/zookeeper.h include/zookeeper_version.h include/zookeeper_log.h include/proto.h include/recordio.h generated/zookeeper.jute.h '/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/include/zookeeper'
+make[1]: Leaving directory `/builddir/build/BUILD/zookeeper-3.4.5/src/c'
++ rm -f docs/html/dir_d44c64559bbebec7f509842c48db8b23_dep.map docs/html/zookeeper_8h__incl.map
++ popd
+~/build/BUILD/zookeeper-3.4.5
+~/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil ~/build/BUILD/zookeeper-3.4.5
++ pushd src/contrib/zktreeutil
++ /usr/bin/make install DESTDIR=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64
+Making install in src
+make[1]: Entering directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/src'
+make[2]: Entering directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/src'
+ /usr/bin/mkdir -p '/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/bin'
+  /usr/bin/install -c zktreeutil '/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/bin'
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/src'
+make[1]: Leaving directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil/src'
+make[1]: Entering directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil'
+make[2]: Entering directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil'
+make[1]: Leaving directory `/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zktreeutil'
++ popd
+~/build/BUILD/zookeeper-3.4.5
+~/build/BUILD/zookeeper-3.4.5/src/contrib/zkpython ~/build/BUILD/zookeeper-3.4.5
++ pushd src/contrib/zkpython
++ /usr/bin/python src/python/setup.py build --build-base=/builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zkpython/build install --root=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64
+running build
+running build_ext
+building 'zookeeper' extension
+creating /builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zkpython/build
+creating /builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zkpython/build/temp.linux-x86_64-2.7
+creating /builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zkpython/build/temp.linux-x86_64-2.7/src
+creating /builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zkpython/build/temp.linux-x86_64-2.7/src/c
+gcc -pthread -fno-strict-aliasing -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -DNDEBUG -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -D_GNU_SOURCE -fPIC -fwrapv -fPIC -I../../..//src/c/include -I../../..//build/c -I../../..//src/c/generated -I/usr/include/python2.7 -c src/c/zookeeper.c -o /builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zkpython/build/temp.linux-x86_64-2.7/src/c/zookeeper.o
+creating /builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zkpython/build/lib.linux-x86_64-2.7
+gcc -pthread -shared -Wl,-z,relro /builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zkpython/build/temp.linux-x86_64-2.7/src/c/zookeeper.o -L../../..//src/c/.libs/ -L../../..//build/c/.libs/ -L../../..//build/test/test-cppunit/.libs -L/usr/local/lib -L/usr/lib64 -lzookeeper_mt -lpython2.7 -o /builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zkpython/build/lib.linux-x86_64-2.7/zookeeper.so
+running install
+running install_lib
+creating /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/python2.7
+creating /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/python2.7/site-packages
+copying /builddir/build/BUILD/zookeeper-3.4.5/src/contrib/zkpython/build/lib.linux-x86_64-2.7/zookeeper.so -> /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/python2.7/site-packages
+running install_egg_info
+Writing /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/python2.7/site-packages/ZooKeeper-0.4-py2.7.egg-info
++ chmod 0755 /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/python2.7/site-packages/zookeeper.so
++ popd
+~/build/BUILD/zookeeper-3.4.5
++ find /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64 -name '*.la' -exec rm -f '{}' ';'
++ mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib/systemd/system
++ mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/etc/zookeeper
++ mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/var/log/zookeeper
++ mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/var/lib/zookeeper
++ mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/var/lib/zookeeper/data
++ mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/var/lib/zookeeper/log
++ install -p -m 0644 /builddir/build/SOURCES/zookeeper.service /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib/systemd/system
++ install -p -m 0640 conf/log4j.properties /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/etc/zookeeper
++ install -p -m 0640 conf/zoo_sample.cfg /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/etc/zookeeper
++ touch /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/etc/zookeeper/zoo.cfg
++ touch /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/var/lib/zookeeper/data/myid
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 /builddir/build/BUILD/zookeeper-3.4.5
+extracting debug info from /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/libzookeeper_st.so.2.0.0
+extracting debug info from /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/libzookeeper_mt.so.2.0.0
+extracting debug info from /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/python2.7/site-packages/zookeeper.so
+extracting debug info from /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/bin/cli_st
+extracting debug info from /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/bin/cli_mt
+extracting debug info from /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/bin/load_gen
+extracting debug info from /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/bin/zktreeutil
+/usr/lib/rpm/sepdebugcrcfix: Updated 7 CRC32s, 0 CRC32s did match.
+symlinked /usr/lib/debug/usr/lib64/libzookeeper_st.so.2.0.0.debug to /usr/lib/debug/usr/lib64/libzookeeper_st.so.2.debug
+symlinked /usr/lib/debug/usr/lib64/libzookeeper_st.so.2.0.0.debug to /usr/lib/debug/usr/lib64/libzookeeper_st.so.debug
+symlinked /usr/lib/debug/usr/lib64/libzookeeper_mt.so.2.0.0.debug to /usr/lib/debug/usr/lib64/libzookeeper_mt.so.2.debug
+symlinked /usr/lib/debug/usr/lib64/libzookeeper_mt.so.2.0.0.debug to /usr/lib/debug/usr/lib64/libzookeeper_mt.so.debug
+1031 blocks
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
+Bytecompiling .py files below /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/lib64/python2.7/ using /usr/bin/python2.7
++ /usr/lib/rpm/redhat/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-java-repack-jars
+Processing files: zookeeper-3.4.5-17.el7.centos.x86_64
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.Rx6n15
++ umask 022
++ cd /builddir/build/BUILD
++ cd zookeeper-3.4.5
++ DOCDIR=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-3.4.5
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-3.4.5
++ cp -pr src/c/ChangeLog /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-3.4.5
++ cp -pr src/c/LICENSE /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-3.4.5
++ cp -pr src/c/NOTICE.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-3.4.5
++ cp -pr src/c/README /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-3.4.5
++ cp -pr src/contrib/zktreeutil/README.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-3.4.5
++ exit 0
+Provides: zookeeper = 3.4.5-17.el7.centos zookeeper(x86-64) = 3.4.5-17.el7.centos
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: libc.so.6()(64bit) libc.so.6(GLIBC_2.14)(64bit) libc.so.6(GLIBC_2.15)(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.3.4)(64bit) libc.so.6(GLIBC_2.4)(64bit) libdl.so.2()(64bit) libgcc_s.so.1()(64bit) libgcc_s.so.1(GCC_3.0)(64bit) liblog4cxx.so.10()(64bit) libm.so.6()(64bit) libpthread.so.0()(64bit) libpthread.so.0(GLIBC_2.2.5)(64bit) libpthread.so.0(GLIBC_2.3.2)(64bit) libstdc++.so.6()(64bit) libstdc++.so.6(CXXABI_1.3)(64bit) libstdc++.so.6(GLIBCXX_3.4)(64bit) libstdc++.so.6(GLIBCXX_3.4.11)(64bit) libstdc++.so.6(GLIBCXX_3.4.9)(64bit) libxml2.so.2()(64bit) libxml2.so.2(LIBXML2_2.4.30)(64bit) libxml2.so.2(LIBXML2_2.6.0)(64bit) libz.so.1()(64bit) libzookeeper_mt.so.2()(64bit) libzookeeper_st.so.2()(64bit) rtld(GNU_HASH)
+Processing files: zookeeper-lib-3.4.5-17.el7.centos.x86_64
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.cNDCZ9
++ umask 022
++ cd /builddir/build/BUILD
++ cd zookeeper-3.4.5
++ DOCDIR=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-3.4.5
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-3.4.5
++ cp -pr src/c/LICENSE /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-3.4.5
++ cp -pr src/c/NOTICE.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-3.4.5
++ exit 0
+Provides: libzookeeper_mt.so.2()(64bit) libzookeeper_st.so.2()(64bit) zookeeper-lib = 3.4.5-17.el7.centos zookeeper-lib(x86-64) = 3.4.5-17.el7.centos
+Requires(interp): /sbin/ldconfig /sbin/ldconfig
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires(post): /sbin/ldconfig
+Requires(postun): /sbin/ldconfig
+Requires: libc.so.6()(64bit) libc.so.6(GLIBC_2.14)(64bit) libc.so.6(GLIBC_2.16)(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.3)(64bit) libc.so.6(GLIBC_2.3.4)(64bit) libc.so.6(GLIBC_2.4)(64bit) libm.so.6()(64bit) libm.so.6(GLIBC_2.2.5)(64bit) libpthread.so.0()(64bit) libpthread.so.0(GLIBC_2.2.5)(64bit) libpthread.so.0(GLIBC_2.3.2)(64bit) rtld(GNU_HASH)
+Processing files: zookeeper-lib-devel-3.4.5-17.el7.centos.x86_64
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.iZAr4d
++ umask 022
++ cd /builddir/build/BUILD
++ cd zookeeper-3.4.5
++ DOCDIR=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-devel-3.4.5
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-devel-3.4.5
++ cp -pr src/c/LICENSE /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-devel-3.4.5
++ cp -pr src/c/NOTICE.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-devel-3.4.5
++ exit 0
+Provides: zookeeper-lib-devel = 3.4.5-17.el7.centos zookeeper-lib-devel(x86-64) = 3.4.5-17.el7.centos
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: libzookeeper_mt.so.2()(64bit) libzookeeper_st.so.2()(64bit)
+Processing files: zookeeper-lib-doc-3.4.5-17.el7.centos.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.alWAwi
++ umask 022
++ cd /builddir/build/BUILD
++ cd zookeeper-3.4.5
++ DOCDIR=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-doc-3.4.5
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-doc-3.4.5
++ cp -pr src/c/LICENSE /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-doc-3.4.5
++ cp -pr src/c/NOTICE.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-doc-3.4.5
++ cp -pr src/c/docs/html/annotated.html src/c/docs/html/bc_s.png src/c/docs/html/bdwn.png src/c/docs/html/classes.html src/c/docs/html/closed.png src/c/docs/html/dir_d44c64559bbebec7f509842c48db8b23.html src/c/docs/html/dir_d44c64559bbebec7f509842c48db8b23_dep.md5 src/c/docs/html/dir_d44c64559bbebec7f509842c48db8b23_dep.png src/c/docs/html/doxygen.css src/c/docs/html/doxygen.png src/c/docs/html/dynsections.js src/c/docs/html/files.html src/c/docs/html/ftv2blank.png src/c/docs/html/ftv2cl.png src/c/docs/html/ftv2doc.png src/c/docs/html/ftv2folderclosed.png src/c/docs/html/ftv2folderopen.png src/c/docs/html/ftv2lastnode.png src/c/docs/html/ftv2link.png src/c/docs/html/ftv2mlastnode.png src/c/docs/html/ftv2mnode.png src/c/docs/html/ftv2mo.png src/c/docs/html/ftv2node.png src/c/docs/html/ftv2ns.png src/c/docs/html/ftv2plastnode.png src/c/docs/html/ftv2pnode.png src/c/docs/html/ftv2splitbar.png src/c/docs/html/ftv2vertline.png src/c/docs/html/globals.html src/c/docs/html/globals_enum.html src/c/docs/html/globals_eval.html src/c/docs/html/globals_func.html src/c/docs/html/globals_type.html src/c/docs/html/globals_vars.html src/c/docs/html/graph_legend.html src/c/docs/html/graph_legend.md5 src/c/docs/html/graph_legend.png src/c/docs/html/index.html src/c/docs/html/jquery.js src/c/docs/html/nav_f.png src/c/docs/html/nav_g.png src/c/docs/html/nav_h.png src/c/docs/html/open.png src/c/docs/html/structclientid__t.html src/c/docs/html/structzoo__op.html src/c/docs/html/structzoo__op__result.html src/c/docs/html/sync_off.png src/c/docs/html/sync_on.png src/c/docs/html/tab_a.png src/c/docs/html/tab_b.png src/c/docs/html/tab_h.png src/c/docs/html/tab_s.png src/c/docs/html/tabs.css src/c/docs/html/zookeeper_8h.html src/c/docs/html/zookeeper_8h__incl.md5 src/c/docs/html/zookeeper_8h__incl.png src/c/docs/html/zookeeper_8h_source.html /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-lib-doc-3.4.5
++ exit 0
+Provides: zookeeper-lib-doc = 3.4.5-17.el7.centos
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Processing files: zookeeper-java-3.4.5-17.el7.centos.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.TYCXco
++ umask 022
++ cd /builddir/build/BUILD
++ cd zookeeper-3.4.5
++ DOCDIR=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-java-3.4.5
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-java-3.4.5
++ cp -pr CHANGES.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-java-3.4.5
++ cp -pr LICENSE.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-java-3.4.5
++ cp -pr NOTICE.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-java-3.4.5
++ cp -pr README.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-java-3.4.5
++ exit 0
+Provides: mvn(org.apache.zookeeper:zookeeper) = 3.4.5 mvn(org.apache.zookeeper:zookeeper-ZooInspector) = 3.4.5 mvn(org.apache.zookeeper:zookeeper::tests:) = 3.4.5 osgi(org.apache.hadoop.zookeeper) = 3.4.5 zookeeper-java = 3.4.5-17.el7.centos
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: jpackage-utils
+Processing files: zookeeper-javadoc-3.4.5-17.el7.centos.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.osMg0u
++ umask 022
++ cd /builddir/build/BUILD
++ cd zookeeper-3.4.5
++ DOCDIR=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-javadoc-3.4.5
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-javadoc-3.4.5
++ cp -pr LICENSE.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-javadoc-3.4.5
++ cp -pr NOTICE.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/zookeeper-javadoc-3.4.5
++ exit 0
+Provides: zookeeper-javadoc = 3.4.5-17.el7.centos
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: jpackage-utils
+Processing files: python-ZooKeeper-3.4.5-17.el7.centos.x86_64
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.bwEWJX
++ umask 022
++ cd /builddir/build/BUILD
++ cd zookeeper-3.4.5
++ DOCDIR=/builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/python-ZooKeeper-3.4.5
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/python-ZooKeeper-3.4.5
++ cp -pr LICENSE.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/python-ZooKeeper-3.4.5
++ cp -pr NOTICE.txt /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/python-ZooKeeper-3.4.5
++ cp -pr src/contrib/zkpython/README /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64/usr/share/doc/python-ZooKeeper-3.4.5
++ exit 0
+Provides: python-ZooKeeper = 3.4.5-17.el7.centos python-ZooKeeper(x86-64) = 3.4.5-17.el7.centos zkpython(x86-64) = 3.4.5-17.el7.centos
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: libc.so.6()(64bit) libc.so.6(GLIBC_2.14)(64bit) libc.so.6(GLIBC_2.2.5)(64bit) libc.so.6(GLIBC_2.3.4)(64bit) libc.so.6(GLIBC_2.4)(64bit) libgcc_s.so.1()(64bit) libgcc_s.so.1(GCC_3.0)(64bit) libgcc_s.so.1(GCC_3.3.1)(64bit) libpthread.so.0()(64bit) libpython2.7.so.1.0()(64bit) libzookeeper_mt.so.2()(64bit) python(abi) = 2.7 rtld(GNU_HASH)
+Processing files: zookeeper-server-3.4.5-17.el7.centos.noarch
+Provides: config(zookeeper-server) = 3.4.5-17.el7.centos zookeeper-server = 3.4.5-17.el7.centos
+Requires(interp): /bin/sh /bin/sh /bin/sh /bin/sh
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires(pre): /bin/sh shadow-utils
+Requires(post): /bin/sh systemd
+Requires(preun): /bin/sh systemd
+Requires(postun): /bin/sh systemd
+Processing files: zookeeper-debuginfo-3.4.5-17.el7.centos.x86_64
+Provides: zookeeper-debuginfo = 3.4.5-17.el7.centos zookeeper-debuginfo(x86-64) = 3.4.5-17.el7.centos
+Requires(rpmlib): rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1 rpmlib(CompressedFileNames) <= 3.0.4-1
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64
+Wrote: /builddir/build/RPMS/zookeeper-3.4.5-17.el7.centos.x86_64.rpm
+Wrote: /builddir/build/RPMS/zookeeper-lib-3.4.5-17.el7.centos.x86_64.rpm
+Wrote: /builddir/build/RPMS/zookeeper-lib-devel-3.4.5-17.el7.centos.x86_64.rpm
+Wrote: /builddir/build/RPMS/zookeeper-lib-doc-3.4.5-17.el7.centos.noarch.rpm
+Wrote: /builddir/build/RPMS/zookeeper-java-3.4.5-17.el7.centos.noarch.rpm
+Wrote: /builddir/build/RPMS/zookeeper-javadoc-3.4.5-17.el7.centos.noarch.rpm
+Wrote: /builddir/build/RPMS/python-ZooKeeper-3.4.5-17.el7.centos.x86_64.rpm
+Wrote: /builddir/build/RPMS/zookeeper-server-3.4.5-17.el7.centos.noarch.rpm
+Wrote: /builddir/build/RPMS/zookeeper-debuginfo-3.4.5-17.el7.centos.x86_64.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.b8C6VR
++ umask 022
++ cd /builddir/build/BUILD
++ cd zookeeper-3.4.5
++ /usr/bin/rm -rf /builddir/build/BUILDROOT/zookeeper-3.4.5-17.el7.centos.x86_64
++ exit 0
+Child return code was: 0
+LEAVE do --> 
+

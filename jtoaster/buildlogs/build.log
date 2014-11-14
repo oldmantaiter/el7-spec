@@ -1,0 +1,146 @@
+Mock Version: 1.1.41
+Mock Version: 1.1.41
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bs --target noarch --nodeps builddir/build/SPECS/jtoaster.spec'], False, '/var/lib/mock/el7-build-135-82/root/', None, 86400, True, False, 996, 135, None, False, {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0x166be10>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bs --target noarch --nodeps builddir/build/SPECS/jtoaster.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+warning: Could not canonicalize hostname: syseng01.internal.chango.com
+Building target platforms: noarch
+Building for target noarch
+Wrote: /builddir/build/SRPMS/jtoaster-1.0.5-1.el7.centos.src.rpm
+Child return code was: 0
+LEAVE do --> 
+
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bb --target noarch --nodeps  builddir/build/SPECS/jtoaster.spec'], False, '/var/lib/mock/el7-build-135-82/root/', None, 86400, True, False, 996, 135, None, False, {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0x166be10>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bb --target noarch --nodeps  builddir/build/SPECS/jtoaster.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+Building target platforms: noarch
+Building for target noarch
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.F8WVVN
++ umask 022
++ cd /builddir/build/BUILD
++ cd /builddir/build/BUILD
++ rm -rf jtoaster-1.0.5
++ /usr/bin/mkdir -p jtoaster-1.0.5
++ cd jtoaster-1.0.5
++ /usr/bin/unzip -qq /builddir/build/SOURCES/jtoaster-1.0.5.jar
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ find . -name '*.class' -delete
++ cp -p /builddir/build/SOURCES/jtoaster-template.pom jtoaster.pom
++ sed -i 's|@version@|1.0.5|' jtoaster.pom
++ mkdir -p src/com/nitido/utils/toaster docs
++ mv './ com/nitido/utils/toaster/Toaster.java' src/com/nitido/utils/toaster/
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.lGmXlt
++ umask 022
++ cd /builddir/build/BUILD
++ cd jtoaster-1.0.5
+++ find src -type f -name '*.java'
++ /usr/lib/jvm/java/bin/javac -encoding UTF-8 src/com/nitido/utils/toaster/Toaster.java
++ cd src
+++ find . -name '*.class'
++ /usr/lib/jvm/java/bin/jar cvf ../jtoaster.jar './com/nitido/utils/toaster/Toaster$SingleToaster$1.class' './com/nitido/utils/toaster/Toaster$SingleToaster.class' './com/nitido/utils/toaster/Toaster$Animation.class' ./com/nitido/utils/toaster/Toaster.class
+added manifest
+adding: com/nitido/utils/toaster/Toaster$SingleToaster$1.class(in = 983) (out= 531)(deflated 45%)
+adding: com/nitido/utils/toaster/Toaster$SingleToaster.class(in = 2946) (out= 1434)(deflated 51%)
+adding: com/nitido/utils/toaster/Toaster$Animation.class(in = 2442) (out= 1292)(deflated 47%)
+adding: com/nitido/utils/toaster/Toaster.class(in = 4570) (out= 1802)(deflated 60%)
+++ find src -type f -name '*.java'
++ /usr/lib/jvm/java/bin/javadoc -d docs -encoding UTF-8 src/com/nitido/utils/toaster/Toaster.java
+Loading source file src/com/nitido/utils/toaster/Toaster.java...
+Constructing Javadoc information...
+Standard Doclet version 1.7.0_51
+Building tree for all the packages and classes...
+Generating docs/com/nitido/utils/toaster/Toaster.html...
+Generating docs/com/nitido/utils/toaster/package-frame.html...
+Generating docs/com/nitido/utils/toaster/package-summary.html...
+Generating docs/com/nitido/utils/toaster/package-tree.html...
+Generating docs/constant-values.html...
+Building index for all the packages and classes...
+Generating docs/overview-tree.html...
+Generating docs/index-all.html...
+Generating docs/deprecated-list.html...
+Building index for all classes...
+Generating docs/allclasses-frame.html...
+Generating docs/allclasses-noframe.html...
+Generating docs/index.html...
+Generating docs/help-doc.html...
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.GkDDOd
++ umask 022
++ cd /builddir/build/BUILD
++ '[' /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch '!=' / ']'
++ rm -rf /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch
+++ dirname /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch
++ cd jtoaster-1.0.5
++ mkdir -p /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/java
++ install -m 644 jtoaster.jar /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/java/jtoaster.jar
++ mkdir -p /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/maven-poms
++ install -pm 644 jtoaster.pom /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/maven-poms/JPP-jtoaster.pom
++ set -e
++ _pompart=JPP-jtoaster.pom
++ _jarpart=jtoaster.jar
++ _filelist=.mfiles
++ install -dm 755 /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/maven-fragments
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/lib/java/jtoaster.jar ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f '/builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch%{_javajnidir}/jtoaster.jar' ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/java/jtoaster.jar ']'
++ _jpath=/builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/java/jtoaster.jar
++ python -m /usr/share/java-utils/maven_depmap -p /usr -n '' /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/maven-fragments/jtoaster /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/maven-poms/JPP-jtoaster.pom /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/java/jtoaster.jar
++ sed -i s:/builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch:: .mfiles
++ sort -u -o .mfiles .mfiles
++ mkdir -p /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/javadoc/jtoaster
++ cp -pr docs/allclasses-frame.html docs/allclasses-noframe.html docs/com docs/constant-values.html docs/deprecated-list.html docs/help-doc.html docs/index-all.html docs/index.html docs/overview-tree.html docs/package-list docs/resources docs/stylesheet.css /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/javadoc/jtoaster/
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 50000000 /builddir/build/BUILD/jtoaster-1.0.5
+/usr/lib/rpm/sepdebugcrcfix: Updated 0 CRC32s, 0 CRC32s did match.
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
++ /usr/lib/rpm/redhat/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-java-repack-jars
+Processing files: jtoaster-1.0.5-1.el7.centos.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.I1Yfz2
++ umask 022
++ cd /builddir/build/BUILD
++ cd jtoaster-1.0.5
++ DOCDIR=/builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/doc/jtoaster-1.0.5
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/doc/jtoaster-1.0.5
++ cp -pr README /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/doc/jtoaster-1.0.5
++ cp -pr apache2.0_license.txt /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/doc/jtoaster-1.0.5
++ cp -pr com /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/doc/jtoaster-1.0.5
++ exit 0
+Provides: jtoaster = 1.0.5-1.el7.centos mvn(com.nitido:jtoaster) = 1.0.5
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: jpackage-utils
+Processing files: jtoaster-javadoc-1.0.5-1.el7.centos.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.iH5rPR
++ umask 022
++ cd /builddir/build/BUILD
++ cd jtoaster-1.0.5
++ DOCDIR=/builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/doc/jtoaster-javadoc-1.0.5
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/doc/jtoaster-javadoc-1.0.5
++ cp -pr apache2.0_license.txt /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch/usr/share/doc/jtoaster-javadoc-1.0.5
++ exit 0
+Provides: jtoaster-javadoc = 1.0.5-1.el7.centos
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: jpackage-utils
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch
+warning: Could not canonicalize hostname: syseng01.internal.chango.com
+Wrote: /builddir/build/RPMS/jtoaster-1.0.5-1.el7.centos.noarch.rpm
+Wrote: /builddir/build/RPMS/jtoaster-javadoc-1.0.5-1.el7.centos.noarch.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.DvOKan
++ umask 022
++ cd /builddir/build/BUILD
++ cd jtoaster-1.0.5
++ /usr/bin/rm -rf /builddir/build/BUILDROOT/jtoaster-1.0.5-1.el7.centos.noarch
++ exit 0
+Child return code was: 0
+LEAVE do --> 
+

@@ -1,0 +1,2 @@
+srpm_url: https://kojipkgs.fedoraproject.org//packages/netty/3.6.5/1.fc20/src/netty-3.6.5-1.fc20.src.rpm
+package_url: http://koji.fedoraproject.org/koji/buildinfo?buildID=410641

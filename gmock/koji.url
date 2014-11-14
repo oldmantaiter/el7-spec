@@ -1,0 +1,2 @@
+srpm_url: https://kojipkgs.fedoraproject.org//packages/gmock/1.6.0/2.fc20/src/gmock-1.6.0-2.fc20.src.rpm
+package_url: http://koji.fedoraproject.org/koji/buildinfo?buildID=454625

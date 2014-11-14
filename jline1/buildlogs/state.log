@@ -1,0 +1,24 @@
+2014-08-08 18:49:18,873 - Mock Version: 1.1.41
+2014-08-08 18:49:18,884 - Start: device setup
+2014-08-08 18:49:18,886 - Finish: device setup
+2014-08-08 18:49:18,887 - Start: yum update
+2014-08-08 18:53:46,020 - Finish: yum update
+2014-08-08 18:53:46,948 - Finish: lock buildroot
+2014-08-08 18:53:46,948 - Finish: chroot init
+2014-08-08 18:53:47,021 - Finish: run
+2014-08-08 18:53:59,154 - Mock Version: 1.1.41
+2014-08-08 18:54:02,626 - Start: device setup
+2014-08-08 18:54:02,630 - Finish: device setup
+2014-08-08 18:54:02,630 - Start: yum update
+2014-08-08 18:54:02,640 - Finish: yum update
+2014-08-08 18:54:08,276 - Finish: lock buildroot
+2014-08-08 18:54:08,276 - Finish: chroot init
+2014-08-08 18:54:08,349 - Start: build phase for jline1-1.0-9.el7.centos.src.rpm
+2014-08-08 18:54:08,349 - Start: device setup
+2014-08-08 18:54:08,353 - Finish: device setup
+2014-08-08 18:54:08,363 - Start: build setup for jline1-1.0-9.el7.centos.src.rpm
+2014-08-08 19:01:03,934 - Finish: build setup for jline1-1.0-9.el7.centos.src.rpm
+2014-08-08 19:01:03,934 - Start: rpmbuild -bb jline1-1.0-9.el7.centos.src.rpm
+2014-08-08 19:01:12,036 - Finish: rpmbuild -bb jline1-1.0-9.el7.centos.src.rpm
+2014-08-08 19:01:12,050 - Finish: build phase for jline1-1.0-9.el7.centos.src.rpm
+2014-08-08 19:01:12,051 - Finish: run

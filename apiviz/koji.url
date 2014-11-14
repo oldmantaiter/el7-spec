@@ -1,0 +1,2 @@
+srpm_url: https://kojipkgs.fedoraproject.org//packages/apiviz/1.3.2/4.fc19/src/apiviz-1.3.2-4.fc19.src.rpm
+package_url: koji.fedoraproject.org/koji/buildinfo?buildID=384681

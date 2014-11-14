@@ -1,0 +1,334 @@
+Mock Version: 1.1.41
+Mock Version: 1.1.41
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bs --target noarch --nodeps builddir/build/SPECS/apiviz.spec'], False, '/var/lib/mock/el7-build-150-89/root/', None, 86400, True, False, 996, 135, None, False, {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0x22d5e10>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bs --target noarch --nodeps builddir/build/SPECS/apiviz.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+warning: bogus date in %changelog: Tue Mar 12 2012 Marek Goldmann <mgoldman@redhat.com> 1.3.1-6
+warning: Could not canonicalize hostname: syseng01.internal.chango.com
+Building target platforms: noarch
+Building for target noarch
+Wrote: /builddir/build/SRPMS/apiviz-1.3.2-4.el7.centos.src.rpm
+Child return code was: 0
+LEAVE do --> 
+
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bb --target noarch --nodeps  builddir/build/SPECS/apiviz.spec'], False, '/var/lib/mock/el7-build-150-89/root/', None, 86400, True, False, 996, 135, None, False, {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0x22d5e10>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bb --target noarch --nodeps  builddir/build/SPECS/apiviz.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+warning: bogus date in %changelog: Tue Mar 12 2012 Marek Goldmann <mgoldman@redhat.com> 1.3.1-6
+Building target platforms: noarch
+Building for target noarch
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.ieDoiM
++ umask 022
++ cd /builddir/build/BUILD
++ cd /builddir/build/BUILD
++ rm -rf apiviz-1.3.2.GA
++ /usr/bin/gzip -dc /builddir/build/SOURCES/apiviz-1.3.2.GA-dist.tar.gz
++ /usr/bin/tar -xf -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd apiviz-1.3.2.GA
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ echo 'Patch #0 (apiviz-pom.patch):'
+Patch #0 (apiviz-pom.patch):
++ /usr/bin/cat /builddir/build/SOURCES/apiviz-pom.patch
++ /usr/bin/patch -p1 --fuzz=0
+patching file pom.xml
+Hunk #1 succeeded at 172 (offset -20 lines).
++ find -name '*.class' -exec rm -f '{}' ';'
++ find -name '*.jar' -exec rm -f '{}' ';'
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.RlWHpm
++ umask 022
++ cd /builddir/build/BUILD
++ cd apiviz-1.3.2.GA
++ mvn-rpmbuild install javadoc:aggregate
+***************************************************************
+* WARNING!  mvn-rpmbuild is deprecated and it will be removed *
+* in future.  Users should migrate to using %mvn_build macro  *
+* or call XMvn directly if greater flexibility is required.   *
+***************************************************************
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.jboss.apiviz:apiviz:jar:1.3.2.GA
+[WARNING] The expression ${version} is deprecated. Please use ${project.version} instead.
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building APIviz 1.3.2.GA
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-java-version) @ apiviz ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven-version) @ apiviz ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ apiviz ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ apiviz ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 12 source files to /builddir/build/BUILD/apiviz-1.3.2.GA/target/classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.5
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ apiviz ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /builddir/build/BUILD/apiviz-1.3.2.GA/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ apiviz ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 30 source files to /builddir/build/BUILD/apiviz-1.3.2.GA/target/test-classes
+[WARNING] bootstrap class path not set in conjunction with -source 1.5
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.15:test (default-test) @ apiviz ---
+[INFO] Surefire report directory: /builddir/build/BUILD/apiviz-1.3.2.GA/target/surefire-reports
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running org.jboss.apiviz.APIVizTest
+Provided by Standard doclet:
+-d <directory>                    Destination directory for output files
+-use                              Create class and package usage pages
+-version                          Include @version paragraphs
+-author                           Include @author paragraphs
+-docfilessubdirs                  Recursively copy doc-file subdirectories
+-splitindex                       Split index into one file per letter
+-windowtitle <text>               Browser window title for the documenation
+-doctitle <html-code>             Include title for the overview page
+-header <html-code>               Include header text for each page
+-footer <html-code>               Include footer text for each page
+-top    <html-code>               Include top text for each page
+-bottom <html-code>               Include bottom text for each page
+-link <url>                       Create links to javadoc output at <url>
+-linkoffline <url> <url2>         Link to docs at <url> using package list at <url2>
+-excludedocfilessubdir <name1>:.. Exclude any doc-files subdirectories with given name.
+-group <name> <p1>:<p2>..         Group specified packages together in overview page
+-nocomment                        Supress description and tags, generate only declarations.
+-nodeprecated                     Do not include @deprecated information
+-noqualifier <name1>:<name2>:...  Exclude the list of qualifiers from the output.
+-nosince                          Do not include @since information
+-notimestamp                      Do not include hidden time stamp
+-nodeprecatedlist                 Do not generate deprecated list
+-notree                           Do not generate class hierarchy
+-noindex                          Do not generate index
+-nohelp                           Do not generate help link
+-nonavbar                         Do not generate navigation bar
+-serialwarn                       Generate warning about @serial tag
+-tag <name>:<locations>:<header>  Specify single argument custom tags
+-taglet                           The fully qualified name of Taglet to register
+-tagletpath                       The path to Taglets
+-Xdocrootparent <url>             Replaces all appearances of @docRoot followed by /.. in doc comments with <url>
+-charset <charset>                Charset for cross-platform viewing of generated documentation.
+-helpfile <file>                  Include file that help link links to
+-linksource                       Generate source in HTML
+-sourcetab <tab length>           Specify the number of spaces each tab takes up in the source
+-keywords                         Include HTML meta tags with package, class and member info
+-stylesheetfile <path>            File to change style of the generated documentation
+-docencoding <name>               Output encoding name
+Provided by APIviz doclet:
+-sourceclasspath <pathlist>     Specify where to find source class files
+-nopackagediagram               Do not generate the package diagram in the overview summary
+-category                       <category>[:<fillcolor>[:<linecolor>]] 
+                                    Color for items marked with @apiviz.category
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 sec - in org.jboss.apiviz.APIVizTest
+Running org.jboss.apiviz.GraphvizTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in org.jboss.apiviz.GraphvizTest
+Results :
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ apiviz ---
+[INFO] Building jar: /builddir/build/BUILD/apiviz-1.3.2.GA/target/apiviz-1.3.2.GA.jar
+[INFO] 
+[INFO] --- maven-source-plugin:2.2.1:jar-no-fork (attach-sources) @ apiviz ---
+[INFO] Building jar: /builddir/build/BUILD/apiviz-1.3.2.GA/target/apiviz-1.3.2.GA-sources.jar
+[INFO] 
+[INFO] >>> maven-source-plugin:2.2.1:jar (attach-source) @ apiviz >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-java-version) @ apiviz ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven-version) @ apiviz ---
+[INFO] 
+[INFO] <<< maven-source-plugin:2.2.1:jar (attach-source) @ apiviz <<<
+[INFO] 
+[INFO] --- maven-source-plugin:2.2.1:jar (attach-source) @ apiviz ---
+[INFO] Building jar: /builddir/build/BUILD/apiviz-1.3.2.GA/target/apiviz-1.3.2.GA-sources.jar
+[WARNING] Artifact org.jboss.apiviz:apiviz:java-source:sources:1.3.2.GA already attached to project, ignoring duplicate
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.7:run (add-license) @ apiviz ---
+[WARNING] Parameter tasks is deprecated, use target instead
+[INFO] Executing tasks
+main:
+     [move] Moving 1 file to /builddir/build/BUILD/apiviz-1.3.2.GA/target
+      [zip] Building zip: /builddir/build/BUILD/apiviz-1.3.2.GA/target/apiviz-1.3.2.GA.jar
+   [delete] Deleting: /builddir/build/BUILD/apiviz-1.3.2.GA/target/apiviz-1.3.2.GA.orig.jar
+     [move] Moving 1 file to /builddir/build/BUILD/apiviz-1.3.2.GA/target
+      [zip] Building zip: /builddir/build/BUILD/apiviz-1.3.2.GA/target/apiviz-1.3.2.GA-sources.jar
+   [delete] Deleting: /builddir/build/BUILD/apiviz-1.3.2.GA/target/apiviz-1.3.2.GA-sources.orig.jar
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.4:attached (attach-distribution) @ apiviz ---
+[INFO] Reading assembly descriptor: /builddir/build/BUILD/apiviz-1.3.2.GA/src/assembly/default.xml
+[INFO] Building tar: /builddir/build/BUILD/apiviz-1.3.2.GA/target/apiviz-1.3.2.GA-dist.tar.gz
+[INFO] Building zip: /builddir/build/BUILD/apiviz-1.3.2.GA/target/apiviz-1.3.2.GA-dist.zip
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ apiviz ---
+[INFO] Installing /builddir/build/BUILD/apiviz-1.3.2.GA/target/apiviz-1.3.2.GA.jar to /builddir/build/BUILD/apiviz-1.3.2.GA/.m2/org/jboss/apiviz/apiviz/1.3.2.GA/apiviz-1.3.2.GA.jar
+[INFO] Installing /builddir/build/BUILD/apiviz-1.3.2.GA/pom.xml to /builddir/build/BUILD/apiviz-1.3.2.GA/.m2/org/jboss/apiviz/apiviz/1.3.2.GA/apiviz-1.3.2.GA.pom
+[INFO] Installing /builddir/build/BUILD/apiviz-1.3.2.GA/target/apiviz-1.3.2.GA-sources.jar to /builddir/build/BUILD/apiviz-1.3.2.GA/.m2/org/jboss/apiviz/apiviz/1.3.2.GA/apiviz-1.3.2.GA-sources.jar
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building APIviz 1.3.2.GA
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-javadoc-plugin:2.9:aggregate (default-cli) @ apiviz >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-java-version) @ apiviz ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.2:enforce (enforce-maven-version) @ apiviz ---
+[INFO] 
+[INFO] <<< maven-javadoc-plugin:2.9:aggregate (default-cli) @ apiviz <<<
+[INFO] 
+[INFO] --- maven-javadoc-plugin:2.9:aggregate (default-cli) @ apiviz ---
+[INFO] 
+Loading source files for package net.gleamynode.apiviz...
+Loading source files for package org.jboss.apiviz...
+Constructing Javadoc information...
+Standard Doclet version 1.7.0_51
+Building tree for all the packages and classes...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/net/gleamynode/apiviz/APIviz.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/APIviz.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/APIvizRootDoc.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/ClassDocGraph.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/ClassDocGraph.CategoryOptions.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/Color.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/ColorCombination.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/Constant.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/Edge.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/Edge.MockClassDoc.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/EdgeType.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/FileUtil.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/Graphviz.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/overview-frame.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/net/gleamynode/apiviz/package-frame.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/net/gleamynode/apiviz/package-summary.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/net/gleamynode/apiviz/package-tree.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/package-frame.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/package-summary.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/package-tree.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/constant-values.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/net/gleamynode/apiviz/class-use/APIviz.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/class-use/FileUtil.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/class-use/APIvizRootDoc.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/class-use/Color.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/class-use/ColorCombination.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/class-use/ClassDocGraph.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/class-use/ClassDocGraph.CategoryOptions.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/class-use/APIviz.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/class-use/Constant.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/class-use/Graphviz.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/class-use/EdgeType.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/class-use/Edge.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/class-use/Edge.MockClassDoc.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/net/gleamynode/apiviz/package-use.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/org/jboss/apiviz/package-use.html...
+Building index for all the packages and classes...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/overview-tree.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/index-all.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/deprecated-list.html...
+Building index for all classes...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/allclasses-frame.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/allclasses-noframe.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/index.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/overview-summary.html...
+Generating /builddir/build/BUILD/apiviz-1.3.2.GA/target/site/apidocs/help-doc.html...
+1 warning
+[WARNING] Javadoc Warnings
+[WARNING] /builddir/build/BUILD/apiviz-1.3.2.GA/src/main/java/org/jboss/apiviz/ClassDocGraph.java:861: warning - @return tag has no arguments.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 9.788s
+[INFO] Finished at: Fri Aug 08 20:37:52 UTC 2014
+[INFO] Final Memory: 24M/910M
+[INFO] ------------------------------------------------------------------------
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.3MBgjx
++ umask 022
++ cd /builddir/build/BUILD
++ '[' /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch '!=' / ']'
++ rm -rf /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch
+++ dirname /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch
++ cd apiviz-1.3.2.GA
++ install -d -m 755 /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/java
++ cp -p target/apiviz-1.3.2.GA.jar /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/java/apiviz.jar
++ install -d -m 755 /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/javadoc/apiviz
++ cp -rp target/site/apidocs/allclasses-frame.html target/site/apidocs/allclasses-noframe.html target/site/apidocs/constant-values.html target/site/apidocs/deprecated-list.html target/site/apidocs/help-doc.html target/site/apidocs/index-all.html target/site/apidocs/index.html target/site/apidocs/net target/site/apidocs/org target/site/apidocs/overview-frame.html target/site/apidocs/overview-summary.html target/site/apidocs/overview-tree.html target/site/apidocs/package-list target/site/apidocs/resources target/site/apidocs/stylesheet.css /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/javadoc/apiviz
++ install -d -m 755 /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/maven-poms
++ install -pm 644 pom.xml /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/maven-poms/JPP-apiviz.pom
++ set -e
++ _pompart=JPP-apiviz.pom
++ _jarpart=apiviz.jar
++ _filelist=.mfiles
++ install -dm 755 /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/maven-fragments
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/lib/java/apiviz.jar ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f '/builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch%{_javajnidir}/apiviz.jar' ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/java/apiviz.jar ']'
++ _jpath=/builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/java/apiviz.jar
++ python -m /usr/share/java-utils/maven_depmap -a net.gleamynode.apiviz:apiviz -p /usr -n '' /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/maven-fragments/apiviz /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/maven-poms/JPP-apiviz.pom /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/java/apiviz.jar
++ sed -i s:/builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch:: .mfiles
++ sort -u -o .mfiles .mfiles
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 50000000 /builddir/build/BUILD/apiviz-1.3.2.GA
+/usr/lib/rpm/sepdebugcrcfix: Updated 0 CRC32s, 0 CRC32s did match.
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
++ /usr/lib/rpm/redhat/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-java-repack-jars
+Processing files: apiviz-1.3.2-4.el7.centos.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.xUUYoL
++ umask 022
++ cd /builddir/build/BUILD
++ cd apiviz-1.3.2.GA
++ DOCDIR=/builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/doc/apiviz-1.3.2
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/doc/apiviz-1.3.2
++ cp -pr COPYRIGHT.txt /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/doc/apiviz-1.3.2
++ cp -pr LICENSE.jdepend.txt /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/doc/apiviz-1.3.2
++ cp -pr LICENSE.txt /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/doc/apiviz-1.3.2
++ cp -pr NOTICE.txt /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/doc/apiviz-1.3.2
++ exit 0
+Provides: apiviz = 1.3.2-4.el7.centos mvn(net.gleamynode.apiviz:apiviz) = 1.3.2.GA mvn(org.jboss.apiviz:apiviz) = 1.3.2.GA
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: jpackage-utils
+Processing files: apiviz-javadoc-1.3.2-4.el7.centos.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.UsUZ1Z
++ umask 022
++ cd /builddir/build/BUILD
++ cd apiviz-1.3.2.GA
++ DOCDIR=/builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/doc/apiviz-javadoc-1.3.2
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/doc/apiviz-javadoc-1.3.2
++ cp -pr LICENSE.txt /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch/usr/share/doc/apiviz-javadoc-1.3.2
++ exit 0
+Provides: apiviz-javadoc = 1.3.2-4.el7.centos
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: jpackage-utils
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch
+Wrote: /builddir/build/RPMS/apiviz-1.3.2-4.el7.centos.noarch.rpm
+Wrote: /builddir/build/RPMS/apiviz-javadoc-1.3.2-4.el7.centos.noarch.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.SMCLFM
++ umask 022
++ cd /builddir/build/BUILD
++ cd apiviz-1.3.2.GA
++ /usr/bin/rm -rf /builddir/build/BUILDROOT/apiviz-1.3.2-4.el7.centos.noarch
++ exit 0
+Child return code was: 0
+LEAVE do --> 
+

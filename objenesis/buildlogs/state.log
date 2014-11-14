@@ -1,0 +1,24 @@
+2014-08-09 22:35:28,782 - Mock Version: 1.1.41
+2014-08-09 22:35:28,793 - Start: device setup
+2014-08-09 22:35:28,796 - Finish: device setup
+2014-08-09 22:35:28,796 - Start: yum update
+2014-08-09 22:37:21,451 - Finish: yum update
+2014-08-09 22:37:21,642 - Finish: lock buildroot
+2014-08-09 22:37:21,642 - Finish: chroot init
+2014-08-09 22:37:21,713 - Finish: run
+2014-08-09 22:37:24,605 - Mock Version: 1.1.41
+2014-08-09 22:37:24,614 - Start: device setup
+2014-08-09 22:37:24,617 - Finish: device setup
+2014-08-09 22:37:24,617 - Start: yum update
+2014-08-09 22:37:24,626 - Finish: yum update
+2014-08-09 22:37:25,487 - Finish: lock buildroot
+2014-08-09 22:37:25,487 - Finish: chroot init
+2014-08-09 22:37:25,558 - Start: build phase for objenesis-1.2-13.el7.centos.src.rpm
+2014-08-09 22:37:25,558 - Start: device setup
+2014-08-09 22:37:25,568 - Finish: device setup
+2014-08-09 22:37:25,579 - Start: build setup for objenesis-1.2-13.el7.centos.src.rpm
+2014-08-09 22:41:06,958 - Finish: build setup for objenesis-1.2-13.el7.centos.src.rpm
+2014-08-09 22:41:06,958 - Start: rpmbuild -bb objenesis-1.2-13.el7.centos.src.rpm
+2014-08-09 22:41:19,335 - Finish: rpmbuild -bb objenesis-1.2-13.el7.centos.src.rpm
+2014-08-09 22:41:19,350 - Finish: build phase for objenesis-1.2-13.el7.centos.src.rpm
+2014-08-09 22:41:19,350 - Finish: run

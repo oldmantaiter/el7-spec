@@ -1,0 +1,2 @@
+srpm_url: https://kojipkgs.fedoraproject.org//packages/checkstyle/5.6/5.fc19/src/checkstyle-5.6-5.fc19.src.rpm
+package_url: http://koji.fedoraproject.org/koji/buildinfo?buildID=385167

@@ -1,0 +1,2 @@
+srpm_url: https://kojipkgs.fedoraproject.org//packages/mesos/0.18.2/4.453b973.fc21/src/mesos-0.18.2-4.453b973.fc21.src.rpm
+package_url: http://koji.fedoraproject.org/koji/buildinfo?buildID=519635

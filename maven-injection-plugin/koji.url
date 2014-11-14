@@ -1,0 +1,2 @@
+srpm_url: https://kojipkgs.fedoraproject.org//packages/maven-injection-plugin/1.0.2/8.fc19/src/maven-injection-plugin-1.0.2-8.fc19.src.rpm
+package_url: http://koji.fedoraproject.org/koji/buildinfo?buildID=389538

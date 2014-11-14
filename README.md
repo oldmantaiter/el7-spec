@@ -1,3 +1,3 @@
 A place for packaging work with el7
 
-Each directory will contain the SRPM/SPEC and build logs for latest build.
+Each directory has the build logs, SPEC, and fedora koji links.

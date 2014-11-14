@@ -1,0 +1,24 @@
+2014-08-10 12:37:27,374 - Mock Version: 1.1.41
+2014-08-10 12:37:27,384 - Start: device setup
+2014-08-10 12:37:27,387 - Finish: device setup
+2014-08-10 12:37:27,387 - Start: yum update
+2014-08-10 12:39:03,823 - Finish: yum update
+2014-08-10 12:39:04,105 - Finish: lock buildroot
+2014-08-10 12:39:04,105 - Finish: chroot init
+2014-08-10 12:39:04,178 - Finish: run
+2014-08-10 12:39:07,171 - Mock Version: 1.1.41
+2014-08-10 12:39:07,181 - Start: device setup
+2014-08-10 12:39:07,185 - Finish: device setup
+2014-08-10 12:39:07,185 - Start: yum update
+2014-08-10 12:39:07,195 - Finish: yum update
+2014-08-10 12:39:07,715 - Finish: lock buildroot
+2014-08-10 12:39:07,715 - Finish: chroot init
+2014-08-10 12:39:07,790 - Start: build phase for checkstyle-5.6-5.el7.centos.src.rpm
+2014-08-10 12:39:07,790 - Start: device setup
+2014-08-10 12:39:07,796 - Finish: device setup
+2014-08-10 12:39:07,808 - Start: build setup for checkstyle-5.6-5.el7.centos.src.rpm
+2014-08-10 12:42:22,905 - Finish: build setup for checkstyle-5.6-5.el7.centos.src.rpm
+2014-08-10 12:42:22,905 - Start: rpmbuild -bb checkstyle-5.6-5.el7.centos.src.rpm
+2014-08-10 12:42:54,387 - Finish: rpmbuild -bb checkstyle-5.6-5.el7.centos.src.rpm
+2014-08-10 12:42:54,402 - Finish: build phase for checkstyle-5.6-5.el7.centos.src.rpm
+2014-08-10 12:42:54,402 - Finish: run

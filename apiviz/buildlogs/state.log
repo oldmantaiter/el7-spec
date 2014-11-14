@@ -1,0 +1,24 @@
+2014-08-08 20:21:36,029 - Mock Version: 1.1.41
+2014-08-08 20:21:36,041 - Start: device setup
+2014-08-08 20:21:36,043 - Finish: device setup
+2014-08-08 20:21:36,044 - Start: yum update
+2014-08-08 20:25:47,921 - Finish: yum update
+2014-08-08 20:25:48,686 - Finish: lock buildroot
+2014-08-08 20:25:48,686 - Finish: chroot init
+2014-08-08 20:25:48,759 - Finish: run
+2014-08-08 20:25:58,369 - Mock Version: 1.1.41
+2014-08-08 20:26:00,083 - Start: device setup
+2014-08-08 20:26:00,086 - Finish: device setup
+2014-08-08 20:26:00,086 - Start: yum update
+2014-08-08 20:26:00,097 - Finish: yum update
+2014-08-08 20:26:01,657 - Finish: lock buildroot
+2014-08-08 20:26:01,657 - Finish: chroot init
+2014-08-08 20:26:01,728 - Start: build phase for apiviz-1.3.2-4.el7.centos.src.rpm
+2014-08-08 20:26:01,728 - Start: device setup
+2014-08-08 20:26:01,732 - Finish: device setup
+2014-08-08 20:26:01,743 - Start: build setup for apiviz-1.3.2-4.el7.centos.src.rpm
+2014-08-08 20:37:41,992 - Finish: build setup for apiviz-1.3.2-4.el7.centos.src.rpm
+2014-08-08 20:37:41,992 - Start: rpmbuild -bb apiviz-1.3.2-4.el7.centos.src.rpm
+2014-08-08 20:37:54,726 - Finish: rpmbuild -bb apiviz-1.3.2-4.el7.centos.src.rpm
+2014-08-08 20:37:54,741 - Finish: build phase for apiviz-1.3.2-4.el7.centos.src.rpm
+2014-08-08 20:37:54,742 - Finish: run

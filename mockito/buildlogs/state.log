@@ -1,0 +1,24 @@
+2014-08-09 23:18:16,067 - Mock Version: 1.1.41
+2014-08-09 23:18:16,079 - Start: device setup
+2014-08-09 23:18:16,082 - Finish: device setup
+2014-08-09 23:18:16,082 - Start: yum update
+2014-08-09 23:20:18,090 - Finish: yum update
+2014-08-09 23:20:20,661 - Finish: lock buildroot
+2014-08-09 23:20:20,661 - Finish: chroot init
+2014-08-09 23:20:20,733 - Finish: run
+2014-08-09 23:20:25,698 - Mock Version: 1.1.41
+2014-08-09 23:20:26,429 - Start: device setup
+2014-08-09 23:20:26,433 - Finish: device setup
+2014-08-09 23:20:26,433 - Start: yum update
+2014-08-09 23:20:26,443 - Finish: yum update
+2014-08-09 23:20:29,546 - Finish: lock buildroot
+2014-08-09 23:20:29,546 - Finish: chroot init
+2014-08-09 23:20:29,618 - Start: build phase for mockito-1.9.0-12.el7.centos.src.rpm
+2014-08-09 23:20:29,618 - Start: device setup
+2014-08-09 23:20:29,644 - Finish: device setup
+2014-08-09 23:20:29,656 - Start: build setup for mockito-1.9.0-12.el7.centos.src.rpm
+2014-08-09 23:22:03,560 - Finish: build setup for mockito-1.9.0-12.el7.centos.src.rpm
+2014-08-09 23:22:03,560 - Start: rpmbuild -bb mockito-1.9.0-12.el7.centos.src.rpm
+2014-08-09 23:22:18,132 - Finish: rpmbuild -bb mockito-1.9.0-12.el7.centos.src.rpm
+2014-08-09 23:22:18,148 - Finish: build phase for mockito-1.9.0-12.el7.centos.src.rpm
+2014-08-09 23:22:18,148 - Finish: run

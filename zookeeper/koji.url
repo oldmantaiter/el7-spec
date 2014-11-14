@@ -1,0 +1,2 @@
+srpm_url: https://kojipkgs.fedoraproject.org//packages/zookeeper/3.4.5/17.fc21/src/zookeeper-3.4.5-17.fc21.src.rpm
+package_url: http://koji.fedoraproject.org/koji/buildinfo?buildID=500278

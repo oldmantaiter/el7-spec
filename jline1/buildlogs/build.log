@@ -1,0 +1,318 @@
+Mock Version: 1.1.41
+Mock Version: 1.1.41
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bs --target noarch --nodeps builddir/build/SPECS/jline1.spec'], False, '/var/lib/mock/el7-build-139-83/root/', None, 86400, True, False, 996, 135, None, False, {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0x1484e10>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bs --target noarch --nodeps builddir/build/SPECS/jline1.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+warning: Could not canonicalize hostname: syseng01.internal.chango.com
+Building target platforms: noarch
+Building for target noarch
+Wrote: /builddir/build/SRPMS/jline1-1.0-9.el7.centos.src.rpm
+Child return code was: 0
+LEAVE do --> 
+
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bb --target noarch --nodeps  builddir/build/SPECS/jline1.spec'], False, '/var/lib/mock/el7-build-139-83/root/', None, 86400, True, False, 996, 135, None, False, {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0x1484e10>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bb --target noarch --nodeps  builddir/build/SPECS/jline1.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+Building target platforms: noarch
+Building for target noarch
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.ft4zyO
++ umask 022
++ cd /builddir/build/BUILD
++ cd /builddir/build/BUILD
++ rm -rf jline-1.0
++ /usr/bin/unzip -qq /builddir/build/SOURCES/jline-1.0.zip
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd jline-1.0
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ echo 'Patch #1 (jline-0.9.94-crosslink.patch):'
+Patch #1 (jline-0.9.94-crosslink.patch):
++ /usr/bin/cat /builddir/build/SOURCES/jline-0.9.94-crosslink.patch
++ /usr/bin/patch -p1 --fuzz=0
+patching file src/pom.xml
+Hunk #1 succeeded at 183 (offset 19 lines).
++ find -name '*.class' -exec rm -f '{}' ';'
++ find -name '*.jar' -exec rm -f '{}' ';'
++ rm src/src/main/resources/jline/jline32.dll src/src/main/resources/jline/jline64.dll
++ mkdir build
++ cp -p /builddir/build/SOURCES/CatalogManager.properties build/
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.6itBhl
++ umask 022
++ cd /builddir/build/BUILD
++ cd jline-1.0
++ export CLASSPATH=/builddir/build/BUILD/jline1-1.0/build
++ CLASSPATH=/builddir/build/BUILD/jline1-1.0/build
++ mv src tmp
++ mv tmp/pom.xml tmp/pom.xml.orig tmp/src .
++ python /usr/share/java-utils/mvn_compat_version.py : 1.0 1
++ python /usr/share/java-utils/mvn_build.py -n jline1
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for jline:jline:jar:1.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 115, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin is missing. @ line 107, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-site-plugin is missing. @ line 123, column 15
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 159, column 15
+[WARNING] 'reporting.plugins.plugin.version' for org.codehaus.mojo:jxr-maven-plugin is missing. @ line 172, column 15
+[WARNING] 'reporting.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ line 179, column 15
+[WARNING] 'reporting.plugins.plugin.version' for org.apache.maven.plugins:maven-pmd-plugin is missing. @ line 190, column 15
+[WARNING] 'reporting.plugins.plugin.version' for org.apache.maven.plugins:maven-project-info-reports-plugin is missing. @ line 194, column 15
+[WARNING] 'reporting.plugins.plugin.version' for org.codehaus.mojo:surefire-report-maven-plugin is missing. @ line 209, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building JLine 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jline ---
+[WARNING] Using platform encoding (ANSI_X3.4-1968 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ jline ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding ANSI_X3.4-1968, i.e. build is platform dependent!
+[INFO] Compiling 21 source files to /builddir/build/BUILD/jline-1.0/target/classes
+[WARNING] /builddir/build/BUILD/jline-1.0/src/main/java/jline/ConsoleReader.java: /builddir/build/BUILD/jline-1.0/src/main/java/jline/ConsoleReader.java uses or overrides a deprecated API.
+[WARNING] /builddir/build/BUILD/jline-1.0/src/main/java/jline/ConsoleReader.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /builddir/build/BUILD/jline-1.0/src/main/java/jline/ConsoleReader.java: Some input files use unchecked or unsafe operations.
+[WARNING] /builddir/build/BUILD/jline-1.0/src/main/java/jline/ConsoleReader.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-bundle-plugin:2.3.7:manifest (bundle-manifest) @ jline ---
+[WARNING] Manifest jline:jline:jar:1.0 : Did not find matching referal for !jline*
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jline ---
+[WARNING] Using platform encoding (ANSI_X3.4-1968 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ jline ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding ANSI_X3.4-1968, i.e. build is platform dependent!
+[INFO] Compiling 7 source files to /builddir/build/BUILD/jline-1.0/target/test-classes
+[WARNING] /builddir/build/BUILD/jline-1.0/src/test/java/jline/example/Example.java: /builddir/build/BUILD/jline-1.0/src/test/java/jline/example/Example.java uses unchecked or unsafe operations.
+[WARNING] /builddir/build/BUILD/jline-1.0/src/test/java/jline/example/Example.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.15:test (default-test) @ jline ---
+[INFO] Surefire report directory: /builddir/build/BUILD/jline-1.0/target/surefire-reports
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running jline.TestEditLine
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 sec - in jline.TestEditLine
+Running jline.TestHistory
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 sec - in jline.TestHistory
+Running jline.ConsoleReaderTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec - in jline.ConsoleReaderTest
+Running jline.TestCompletion
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 sec - in jline.TestCompletion
+Results :
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ jline ---
+[INFO] Building jar: /builddir/build/BUILD/jline-1.0/target/jline-1.0.jar
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building JLine 1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- xmvn-mojo:1.3.0:install (default-cli) @ jline ---
+[INFO] 
+[INFO] >>> maven-javadoc-plugin:2.9:aggregate (default-cli) @ jline >>>
+[INFO] 
+[INFO] <<< maven-javadoc-plugin:2.9:aggregate (default-cli) @ jline <<<
+[INFO] 
+[INFO] --- maven-javadoc-plugin:2.9:aggregate (default-cli) @ jline ---
+[WARNING] Source files encoding has not been set, using platform encoding ANSI_X3.4-1968, i.e. build is platform dependent!
+[INFO] 
+Loading source files for package jline...
+Constructing Javadoc information...
+Standard Doclet version 1.7.0_51
+Building tree for all the packages and classes...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/ANSIBuffer.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/ANSIBuffer.ANSICodes.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/ArgumentCompletor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/ArgumentCompletor.AbstractArgumentDelimiter.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/ArgumentCompletor.ArgumentDelimiter.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/ArgumentCompletor.ArgumentList.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/ArgumentCompletor.WhitespaceArgumentDelimiter.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/CandidateCycleCompletionHandler.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/CandidateListCompletionHandler.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/ClassNameCompletor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/CompletionHandler.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/Completor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/ConsoleOperations.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/ConsoleReader.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/ConsoleReaderInputStream.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/ConsoleRunner.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/CursorBuffer.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/FileNameCompletor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/History.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/MultiCompletor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/NullCompletor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/SimpleCompletor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/SimpleCompletor.NoOpFilter.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/SimpleCompletor.SimpleCompletorFilter.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/Terminal.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/UnixTerminal.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/UnsupportedTerminal.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/WindowsTerminal.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/package-frame.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/package-summary.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/package-tree.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/constant-values.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/MultiCompletor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/ClassNameCompletor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/ArgumentCompletor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/ArgumentCompletor.ArgumentDelimiter.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/ArgumentCompletor.AbstractArgumentDelimiter.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/ArgumentCompletor.WhitespaceArgumentDelimiter.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/ArgumentCompletor.ArgumentList.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/FileNameCompletor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/ANSIBuffer.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/ANSIBuffer.ANSICodes.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/CandidateListCompletionHandler.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/NullCompletor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/CandidateCycleCompletionHandler.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/ConsoleRunner.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/UnsupportedTerminal.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/ConsoleReaderInputStream.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/WindowsTerminal.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/SimpleCompletor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/SimpleCompletor.SimpleCompletorFilter.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/SimpleCompletor.NoOpFilter.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/Completor.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/History.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/CursorBuffer.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/CompletionHandler.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/ConsoleReader.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/ConsoleOperations.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/Terminal.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/class-use/UnixTerminal.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/jline/package-use.html...
+Building index for all the packages and classes...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/overview-tree.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/index-all.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/deprecated-list.html...
+Building index for all classes...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/allclasses-frame.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/allclasses-noframe.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/index.html...
+Generating /builddir/build/BUILD/jline-1.0/target/site/apidocs/help-doc.html...
+5 warnings
+[WARNING] Javadoc Warnings
+[WARNING] /builddir/build/BUILD/jline-1.0/src/main/java/jline/CandidateListCompletionHandler.java:90: warning - Tag @link: reference not found: getAutoprintThreshhold
+[WARNING] /builddir/build/BUILD/jline-1.0/src/main/java/jline/History.java:286: warning - @return tag has no arguments.
+[WARNING] /builddir/build/BUILD/jline-1.0/src/main/java/jline/History.java:276: warning - @param argument "searchTerm" is not a parameter name.
+[WARNING] /builddir/build/BUILD/jline-1.0/src/main/java/jline/Terminal.java:51: warning - Tag @link: reference not found: WindowsTerminalTest
+[WARNING] /builddir/build/BUILD/jline-1.0/src/main/java/jline/Terminal.java:111: warning - Tag @link: can't find VK_UP in jline.ConsoleOperations
+[INFO] 
+[INFO] --- xmvn-mojo:1.3.0:builddep (default-cli) @ jline ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.027s
+[INFO] Finished at: Fri Aug 08 19:01:10 UTC 2014
+[INFO] Final Memory: 18M/721M
+[INFO] ------------------------------------------------------------------------
+-----BEGIN MAVEN BUILD DEPENDENCIES-----
+H4sIAAAAAAACA8WROw+CQBCEe3/FSn+oPWLUisLKmNge3HquORZyDyL/XtAYsfBRmFjO7JeZ3Wyy
+OJcGGrSOKp5Hs3gaAXJRKWI9j3ZbsdyusyxapKNkLASsAhkFCmtk1WGEDjQyWulRQd7CftMwCNHR
+QyYdATyMtpedoW0V6kylp8Dkk8ld3obSejrIwj/mA6ePmzznvY6vrI5lLYsjxqVskOPaBE3s3jRe
+OeHIo7jBf2iXzmGZm/aXGxzQ0Pljcx5Yme8uH6j+zRdSFd6bTQIAAA==
+-----END MAVEN BUILD DEPENDENCIES-----
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.I5xacd
++ umask 022
++ cd /builddir/build/BUILD
++ '[' /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch '!=' / ']'
++ rm -rf /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch
+++ dirname /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch
++ cd jline-1.0
++ xmvn-install -R .xmvn-reactor -n jline1 -d /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch
+[INFO] ===============================================
+[INFO] SOURCE ARTIFACT:
+[INFO]     groupId: jline
+[INFO]  artifactId: jline
+[INFO]   extension: jar
+[INFO]  classifier: 
+[INFO]     version: 1.0
+[INFO]  stereotype: 
+[INFO]   namespace: 
+[INFO]        file: /builddir/build/BUILD/jline-1.0/target/jline-1.0.jar
+[INFO] -----------------------------------------------
+[INFO] TARGET ARTIFACT:
+[INFO]     groupId: JPP/jline1
+[INFO]  artifactId: jline
+[INFO]   extension: jar
+[INFO]  classifier: 
+[INFO]     version: 1.0
+[INFO]  stereotype: 
+[INFO]   namespace: 
+[INFO]        file: usr/share/java/jline1/jline-1.0.jar
+[INFO] -----------------------------------------------
+[INFO] TARGET ARTIFACT:
+[INFO]     groupId: JPP/jline1
+[INFO]  artifactId: jline
+[INFO]   extension: jar
+[INFO]  classifier: 
+[INFO]     version: 1
+[INFO]  stereotype: 
+[INFO]   namespace: 
+[INFO]        file: usr/share/java/jline1/jline-1.jar
+[INFO] ===============================================
++ jdir=target/site/apidocs
++ '[' -d target/site/apidocs ']'
++ install -dm755 /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch/usr/share/javadoc/jline1
++ cp -pr target/site/apidocs/allclasses-frame.html target/site/apidocs/allclasses-noframe.html target/site/apidocs/constant-values.html target/site/apidocs/deprecated-list.html target/site/apidocs/help-doc.html target/site/apidocs/index-all.html target/site/apidocs/index.html target/site/apidocs/jline target/site/apidocs/overview-tree.html target/site/apidocs/package-list target/site/apidocs/resources target/site/apidocs/stylesheet.css /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch/usr/share/javadoc/jline1
++ echo /usr/share/javadoc/jline1
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 50000000 /builddir/build/BUILD/jline-1.0
+/usr/lib/rpm/sepdebugcrcfix: Updated 0 CRC32s, 0 CRC32s did match.
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
++ /usr/lib/rpm/redhat/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-java-repack-jars
+Processing files: jline1-1.0-9.el7.centos.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.TpwT07
++ umask 022
++ cd /builddir/build/BUILD
++ cd jline-1.0
++ DOCDIR=/builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch/usr/share/doc/jline1-1.0
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch/usr/share/doc/jline1-1.0
++ cp -pr LICENSE.txt /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch/usr/share/doc/jline1-1.0
++ cp -pr src/main/resources/jline/keybindings.properties /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch/usr/share/doc/jline1-1.0
++ exit 0
+Provides: jline1 = 1.0-9.el7.centos mvn(jline:jline:1) = 1.0 mvn(jline:jline:1.0) = 1.0 osgi(jline) = 1.0.0
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: java >= 1.5 jpackage-utils
+Processing files: jline1-javadoc-1.0-9.el7.centos.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.taX7o3
++ umask 022
++ cd /builddir/build/BUILD
++ cd jline-1.0
++ DOCDIR=/builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch/usr/share/doc/jline1-javadoc-1.0
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch/usr/share/doc/jline1-javadoc-1.0
++ cp -pr LICENSE.txt /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch/usr/share/doc/jline1-javadoc-1.0
++ exit 0
+Provides: jline1-javadoc = 1.0-9.el7.centos
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: jpackage-utils
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch
+Wrote: /builddir/build/RPMS/jline1-1.0-9.el7.centos.noarch.rpm
+Wrote: /builddir/build/RPMS/jline1-javadoc-1.0-9.el7.centos.noarch.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.MvWW6V
++ umask 022
++ cd /builddir/build/BUILD
++ cd jline-1.0
++ /usr/bin/rm -rf /builddir/build/BUILDROOT/jline1-1.0-9.el7.centos.noarch
++ exit 0
+Child return code was: 0
+LEAVE do --> 
+

@@ -1,0 +1,278 @@
+Mock Version: 1.1.41
+Mock Version: 1.1.41
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bs --target noarch --nodeps builddir/build/SPECS/mockito.spec'], False, '/var/lib/mock/el7-build-192-111/root/', None, 86400, True, False, 996, 135, None, False, {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0x1671e10>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bs --target noarch --nodeps builddir/build/SPECS/mockito.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+warning: Could not canonicalize hostname: syseng01.internal.chango.com
+Building target platforms: noarch
+Building for target noarch
+Wrote: /builddir/build/SRPMS/mockito-1.9.0-12.el7.centos.src.rpm
+Child return code was: 0
+LEAVE do --> 
+
+ENTER do(['bash', '--login', '-c', 'rpmbuild -bb --target noarch --nodeps  builddir/build/SPECS/mockito.spec'], False, '/var/lib/mock/el7-build-192-111/root/', None, 86400, True, False, 996, 135, None, False, {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}, logger=<mockbuild.trace_decorator.getLog object at 0x1671e10>)
+Executing command: ['bash', '--login', '-c', 'rpmbuild -bb --target noarch --nodeps  builddir/build/SPECS/mockito.spec'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOSTNAME': 'mock', 'PROMPT_COMMAND': 'echo -n "<mock-chroot>"', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'}
+Building target platforms: noarch
+Building for target noarch
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.SvLZEL
++ umask 022
++ cd /builddir/build/BUILD
++ cd /builddir/build/BUILD
++ rm -rf mockito-1.9.0
++ /usr/bin/xz -dc /builddir/build/SOURCES/mockito-1.9.0.tar.xz
++ /usr/bin/tar -xf -
++ STATUS=0
++ '[' 0 -ne 0 ']'
++ cd mockito-1.9.0
++ /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
++ echo 'Patch #0 (fixup-ant-script.patch):'
+Patch #0 (fixup-ant-script.patch):
++ /usr/bin/cat /builddir/build/SOURCES/fixup-ant-script.patch
++ /usr/bin/patch -p1 --fuzz=0
+patching file build.xml
++ echo 'Patch #1 (fix-cglib-refs.patch):'
+Patch #1 (fix-cglib-refs.patch):
++ /usr/bin/cat /builddir/build/SOURCES/fix-cglib-refs.patch
++ /usr/bin/patch -p1 --fuzz=0
+patching file src/org/mockito/internal/creation/DelegatingMockitoMethodProxy.java
+patching file src/org/mockito/internal/creation/MethodInterceptorFilter.java
+patching file src/org/mockito/internal/creation/MockitoMethodProxy.java
+patching file src/org/mockito/internal/creation/SerializableMockitoMethodProxy.java
+patching file src/org/mockito/internal/creation/cglib/CGLIBHacker.java
+patching file src/org/mockito/internal/creation/cglib/MockitoNamingPolicy.java
+patching file src/org/mockito/internal/creation/jmock/ClassImposterizer.java
+patching file src/org/mockito/internal/creation/jmock/SerializableNoOp.java
+patching file src/org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java
+patching file src/org/mockito/internal/util/MockUtil.java
++ echo 'Patch #2 (maven-cglib-dependency.patch):'
+Patch #2 (maven-cglib-dependency.patch):
++ /usr/bin/cat /builddir/build/SOURCES/maven-cglib-dependency.patch
++ /usr/bin/patch -p1 --fuzz=0
+patching file maven/mockito-core.pom
++ sed -i 's/Bundle-Version= ${version}/Bundle-Version= 1.9.0/' conf/mockito-core.bnd
++ echo 'Patch #3 (fix-bnd-config.patch):'
+Patch #3 (fix-bnd-config.patch):
++ /usr/bin/cat /builddir/build/SOURCES/fix-bnd-config.patch
++ /usr/bin/patch -p0 --fuzz=0
+patching file conf/mockito-core.bnd
++ echo 'Patch #4 (mockito-matcher.patch):'
+Patch #4 (mockito-matcher.patch):
++ /usr/bin/cat /builddir/build/SOURCES/mockito-matcher.patch
++ /usr/bin/patch -p1 --fuzz=0
+patching file src/org/mockito/internal/matchers/LocalizedMatcher.java
++ exit 0
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.Jr2akJ
++ umask 022
++ cd /builddir/build/BUILD
++ cd mockito-1.9.0
++ ant jar javadoc
+Buildfile: /builddir/build/BUILD/mockito-1.9.0/build.xml
+  [taskdef] Could not load definitions from resource aQute/bnd/ant/taskdef.properties. It could not be found.
+  [taskdef] Could not load definitions from resource org/apache/maven/artifact/ant/antlib.xml. It could not be found.
+clean:
+prepare:
+    [mkdir] Created dir: /builddir/build/BUILD/mockito-1.9.0/target/classes
+    [mkdir] Created dir: /builddir/build/BUILD/mockito-1.9.0/target/test-classes
+    [mkdir] Created dir: /builddir/build/BUILD/mockito-1.9.0/target/reports/junit
+compile:
+    [javac] /builddir/build/BUILD/mockito-1.9.0/build.xml:86: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 255 source files to /builddir/build/BUILD/mockito-1.9.0/target/classes
+    [javac] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/configuration/DefaultMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/configuration/IMockitoConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/configuration/GlobalConfiguration.java:7: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:8: warning: [deprecation] InitializationError in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.InitializationError;
+    [javac]                                  ^
+    [javac] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/runners/JUnit44RunnerImpl.java:9: warning: [deprecation] JUnit4ClassRunner in org.junit.internal.runners has been deprecated
+    [javac] import org.junit.internal.runners.JUnit4ClassRunner;
+    [javac]                                  ^
+    [javac] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/stubbing/answers/AnswerReturnValuesAdapter.java:9: warning: [deprecation] ReturnValues in org.mockito has been deprecated
+    [javac] import org.mockito.ReturnValues;
+    [javac]                   ^
+    [javac] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:32: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/configuration/SpyAnnotationEngine.java:41: warning: [deprecation] createMockFor(Annotation,Field) in AnnotationEngine has been deprecated
+    [javac]     public Object createMockFor(Annotation annotation, Field field) {
+    [javac]                   ^
+    [javac] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/matchers/LocalizedMatcher.java:30: warning: [deprecation] _dont_implement_Matcher___instead_extend_BaseMatcher_() in Matcher has been deprecated
+    [javac]     public void _dont_implement_Matcher___instead_extend_BaseMatcher_() {
+    [javac]                 ^
+    [javac] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:24: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]             protected Statement withBefores(FrameworkMethod method, Object target,
+    [javac]                                 ^
+    [javac] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/runners/JUnit45AndHigherRunnerImpl.java:28: warning: [deprecation] withBefores(FrameworkMethod,Object,Statement) in BlockJUnit4ClassRunner has been deprecated
+    [javac]                 return super.withBefores(method, target, statement);
+    [javac]                             ^
+    [javac] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/verification/Timeout.java:64: warning: [deprecation] atMost(int) in VerificationWithTimeout has been deprecated
+    [javac]     public VerificationMode atMost(int maxNumberOfInvocations) {
+    [javac]                             ^
+    [javac] Note: Some input files use unchecked or unsafe operations.
+    [javac] Note: Recompile with -Xlint:unchecked for details.
+    [javac] 12 warnings
+jar:
+      [jar] Building jar: /builddir/build/BUILD/mockito-1.9.0/target/mockito-core-1.9.0.jar
+javadoc:
+  [javadoc] Generating Javadoc
+  [javadoc] Javadoc execution
+  [javadoc] Creating destination directory: "/builddir/build/BUILD/mockito-1.9.0/target/javadoc/"
+  [javadoc] Loading source files for package org.mockito...
+  [javadoc] Loading source files for package org.mockito.configuration...
+  [javadoc] Loading source files for package org.mockito.exceptions...
+  [javadoc] Loading source files for package org.mockito.exceptions.base...
+  [javadoc] Loading source files for package org.mockito.exceptions.misusing...
+  [javadoc] Loading source files for package org.mockito.exceptions.verification...
+  [javadoc] Loading source files for package org.mockito.exceptions.verification.junit...
+  [javadoc] Loading source files for package org.mockito.internal...
+  [javadoc] Loading source files for package org.mockito.internal.configuration...
+  [javadoc] Loading source files for package org.mockito.internal.configuration.injection...
+  [javadoc] Loading source files for package org.mockito.internal.configuration.injection.filter...
+  [javadoc] Loading source files for package org.mockito.internal.creation...
+  [javadoc] Loading source files for package org.mockito.internal.creation.cglib...
+  [javadoc] Loading source files for package org.mockito.internal.creation.jmock...
+  [javadoc] Loading source files for package org.mockito.internal.debugging...
+  [javadoc] Loading source files for package org.mockito.internal.exceptions...
+  [javadoc] Loading source files for package org.mockito.internal.exceptions.base...
+  [javadoc] Loading source files for package org.mockito.internal.exceptions.util...
+  [javadoc] Loading source files for package org.mockito.internal.invocation...
+  [javadoc] Loading source files for package org.mockito.internal.invocation.finder...
+  [javadoc] Loading source files for package org.mockito.internal.invocation.realmethod...
+  [javadoc] Loading source files for package org.mockito.internal.listeners...
+  [javadoc] Loading source files for package org.mockito.internal.matchers...
+  [javadoc] Loading source files for package org.mockito.internal.matchers.apachecommons...
+  [javadoc] Loading source files for package org.mockito.internal.progress...
+  [javadoc] Loading source files for package org.mockito.internal.reporting...
+  [javadoc] Loading source files for package org.mockito.internal.runners...
+  [javadoc] Loading source files for package org.mockito.internal.runners.util...
+  [javadoc] Loading source files for package org.mockito.internal.stubbing...
+  [javadoc] Loading source files for package org.mockito.internal.stubbing.answers...
+  [javadoc] Loading source files for package org.mockito.internal.stubbing.defaultanswers...
+  [javadoc] Loading source files for package org.mockito.internal.util...
+  [javadoc] Loading source files for package org.mockito.internal.util.junit...
+  [javadoc] Loading source files for package org.mockito.internal.util.reflection...
+  [javadoc] Loading source files for package org.mockito.internal.verification...
+  [javadoc] Loading source files for package org.mockito.internal.verification.api...
+  [javadoc] Loading source files for package org.mockito.internal.verification.argumentmatching...
+  [javadoc] Loading source files for package org.mockito.internal.verification.checkers...
+  [javadoc] Loading source files for package org.mockito.invocation...
+  [javadoc] Loading source files for package org.mockito.listeners...
+  [javadoc] Loading source files for package org.mockito.runners...
+  [javadoc] Loading source files for package org.mockito.stubbing...
+  [javadoc] Loading source files for package org.mockito.stubbing.answers...
+  [javadoc] Loading source files for package org.mockito.verification...
+  [javadoc] Constructing Javadoc information...
+  [javadoc] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:26: warning - Tag @see:illegal character: "123" in "{@link MockitoAnnotations}"
+  [javadoc] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:26: warning - Tag @see:illegal character: "64" in "{@link MockitoAnnotations}"
+  [javadoc] Standard Doclet version 1.7.0_51
+  [javadoc] Building tree for all the packages and classes...
+  [javadoc] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/configuration/DefaultAnnotationEngine.java:26: warning - Tag @see: reference not found: {@link MockitoAnnotations}
+  [javadoc] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/internal/configuration/InjectingAnnotationEngine.java:116: warning - @return tag has no arguments.
+  [javadoc] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/stubbing/Stubber.java:100: warning - Tag @link:illegal character: "60" in "Mockito#doThrow(Class<? extends Throwable>)"
+  [javadoc] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/stubbing/Stubber.java:100: warning - Tag @link:illegal character: "63" in "Mockito#doThrow(Class<? extends Throwable>)"
+  [javadoc] /builddir/build/BUILD/mockito-1.9.0/src/org/mockito/stubbing/Stubber.java:100: warning - Tag @link:illegal character: "62" in "Mockito#doThrow(Class<? extends Throwable>)"
+  [javadoc] Generating /builddir/build/BUILD/mockito-1.9.0/target/javadoc/serialized-form.html...
+  [javadoc] Copying file /builddir/build/BUILD/mockito-1.9.0/javadoc/stylesheet.css to file /builddir/build/BUILD/mockito-1.9.0/target/javadoc/stylesheet.css...
+  [javadoc] Building index for all the packages and classes...
+  [javadoc] Building index for all classes...
+  [javadoc] Generating /builddir/build/BUILD/mockito-1.9.0/target/javadoc/help-doc.html...
+  [javadoc] 7 warnings
+     [copy] Copying 1 file to /builddir/build/BUILD/mockito-1.9.0/target/javadoc/org/mockito
+     [copy] Copying 1 file to /builddir/build/BUILD/mockito-1.9.0/target/javadoc/js
+     [copy] Copying 1 file to /builddir/build/BUILD/mockito-1.9.0/target/javadoc/js
+BUILD SUCCESSFUL
+Total time: 6 seconds
++ pushd target
+~/build/BUILD/mockito-1.9.0/target ~/build/BUILD/mockito-1.9.0
+++ build-classpath aqute-bnd
++ java -jar /usr/share/java/aqute-bnd.jar wrap -output mockito-core-1.9.0.bar -properties ../conf/mockito-core.bnd mockito-core-1.9.0.jar
+mockito-core-1.9.0 295 0
+One warning
+1 : Did not find matching referal for org.apache.tools.ant.*
++ popd
+~/build/BUILD/mockito-1.9.0
++ exit 0
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.3sHw74
++ umask 022
++ cd /builddir/build/BUILD
++ '[' /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch '!=' / ']'
++ rm -rf /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch
+++ dirname /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch
++ mkdir -p /builddir/build/BUILDROOT
++ mkdir /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch
++ cd mockito-1.9.0
++ mkdir -p /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/java
++ sed -i -e 's|@version@|1.9.0|g' maven/mockito-core.pom
++ cp -p target/mockito-core-1.9.0.bar /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/java/mockito.jar
++ install -d -m 755 /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/maven-poms
++ install -pm 644 maven/mockito-core.pom /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/maven-poms/JPP-mockito.pom
++ mkdir -p /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/javadoc/mockito
++ cp -rp target/javadoc/allclasses-frame.html target/javadoc/allclasses-noframe.html target/javadoc/constant-values.html target/javadoc/deprecated-list.html target/javadoc/help-doc.html target/javadoc/index-all.html target/javadoc/index.html target/javadoc/js target/javadoc/org target/javadoc/overview-frame.html target/javadoc/overview-summary.html target/javadoc/overview-tree.html target/javadoc/package-list target/javadoc/resources target/javadoc/serialized-form.html target/javadoc/stylesheet.css /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/javadoc/mockito
++ set -e
++ _pompart=JPP-mockito.pom
++ _jarpart=mockito.jar
++ _filelist=.mfiles
++ install -dm 755 /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/maven-fragments
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/lib/java/mockito.jar ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f '/builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch%{_javajnidir}/mockito.jar' ']'
++ for _dir in /usr/lib/java '%{_javajnidir}' /usr/share/java
++ '[' -f /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/java/mockito.jar ']'
++ _jpath=/builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/java/mockito.jar
++ python -m /usr/share/java-utils/maven_depmap -a org.mockito:mockito-all -p /usr -n '' /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/maven-fragments/mockito /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/maven-poms/JPP-mockito.pom /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/java/mockito.jar
++ sed -i s:/builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch:: .mfiles
++ sort -u -o .mfiles .mfiles
++ /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 50000000 /builddir/build/BUILD/mockito-1.9.0
+/usr/lib/rpm/sepdebugcrcfix: Updated 0 CRC32s, 0 CRC32s did match.
++ /usr/lib/rpm/check-buildroot
++ /usr/lib/rpm/redhat/brp-compress
++ /usr/lib/rpm/redhat/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
++ /usr/lib/rpm/redhat/brp-python-hardlink
++ /usr/lib/rpm/redhat/brp-java-repack-jars
+Processing files: mockito-1.9.0-12.el7.centos.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.lrXhIt
++ umask 022
++ cd /builddir/build/BUILD
++ cd mockito-1.9.0
++ DOCDIR=/builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/doc/mockito-1.9.0
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/doc/mockito-1.9.0
++ cp -pr NOTICE /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/doc/mockito-1.9.0
++ cp -pr LICENSE /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/doc/mockito-1.9.0
++ exit 0
+Provides: mockito = 1.9.0-12.el7.centos mvn(org.mockito:mockito-all) = 1.9.0 mvn(org.mockito:mockito-core) = 1.9.0 osgi(org.mockito.mockito-core) = 1.9.0
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: jpackage-utils
+Processing files: mockito-javadoc-1.9.0-12.el7.centos.noarch
+Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.BziBPS
++ umask 022
++ cd /builddir/build/BUILD
++ cd mockito-1.9.0
++ DOCDIR=/builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/doc/mockito-javadoc-1.9.0
++ export DOCDIR
++ /usr/bin/mkdir -p /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/doc/mockito-javadoc-1.9.0
++ cp -pr LICENSE /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/doc/mockito-javadoc-1.9.0
++ cp -pr NOTICE /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch/usr/share/doc/mockito-javadoc-1.9.0
++ exit 0
+Provides: mockito-javadoc = 1.9.0-12.el7.centos
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: jpackage-utils
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch
+warning: Could not canonicalize hostname: syseng01.internal.chango.com
+Wrote: /builddir/build/RPMS/mockito-1.9.0-12.el7.centos.noarch.rpm
+Wrote: /builddir/build/RPMS/mockito-javadoc-1.9.0-12.el7.centos.noarch.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.gFFEp5
++ umask 022
++ cd /builddir/build/BUILD
++ cd mockito-1.9.0
++ /usr/bin/rm -rf /builddir/build/BUILDROOT/mockito-1.9.0-12.el7.centos.noarch
++ exit 0
+Child return code was: 0
+LEAVE do --> 
+
